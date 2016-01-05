@@ -23,7 +23,7 @@
 
 using std::string;
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 
 static const uint8_t *kBase64EncodeTable = (const uint8_t *)
@@ -76,4 +76,4 @@ void base64_decode(uint8_t *buf, uint32_t len) {
 }
 
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol

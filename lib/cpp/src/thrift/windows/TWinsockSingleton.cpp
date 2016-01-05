@@ -23,7 +23,7 @@
 #include <boost/assert.hpp>
 #include <stdexcept>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 TWinsockSingleton::instance_ptr TWinsockSingleton::instance_ptr_(NULL);
 #if USE_BOOST_THREAD
@@ -70,4 +70,4 @@ void TWinsockSingleton::init(void)
     instance_ptr_.reset(new TWinsockSingleton);
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

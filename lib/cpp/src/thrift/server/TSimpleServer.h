@@ -23,7 +23,7 @@
 #include <thrift/server/TServer.h>
 #include <thrift/transport/TServerTransport.h>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 /**
  * This is the most basic simple server. It is single-threaded and runs a
@@ -97,6 +97,6 @@ class TSimpleServer : public TServer {
 
 };
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server
 
 #endif // #ifndef _THRIFT_SERVER_TSIMPLESERVER_H_

@@ -22,8 +22,8 @@
 #include <iostream>
 #include <thrift/Thrift.h>
 #include <thrift/transport/TFDTransport.h>
-using apache::thrift::transport::TTransportException;
-using apache::thrift::transport::TFDTransport;
+using p4::thrift::transport::TTransportException;
+using p4::thrift::transport::TFDTransport;
 
 class DummyException : std::exception {
 };

@@ -24,7 +24,7 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * A thread factory to create std::threads.
@@ -67,6 +67,6 @@ private:
   boost::shared_ptr<Impl> impl_;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_STDTHREADFACTORY_H_

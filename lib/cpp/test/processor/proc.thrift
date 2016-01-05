@@ -1,4 +1,4 @@
-namespace cpp apache.thrift.test
+namespace cpp p4.thrift.test
 
 exception MyError {
   1: string message

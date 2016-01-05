@@ -26,7 +26,7 @@
 namespace thrift { namespace test {
 
 bool Insanity::operator<(thrift::test::Insanity const& other) const {
-  using apache::thrift::ThriftDebugString;
+  using p4::thrift::ThriftDebugString;
   return ThriftDebugString(*this) < ThriftDebugString(other);
 }
 

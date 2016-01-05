@@ -8,8 +8,8 @@
 using std::cout;
 using std::endl;
 using namespace thrift::test::debug;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::protocol;
 
 typedef TBinaryProtocolT<TMemoryBuffer> MyProtocol;
 //typedef TBinaryProtocolT<TTransport> MyProtocol;

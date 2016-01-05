@@ -105,7 +105,7 @@
 
     <!-- remote repositories used to download dependencies from -->
     <artifact:remoteRepository id="central" url="${mvn.repo}"/>
-    <artifact:remoteRepository id="apache" url="${apache.repo}"/>
+    <artifact:remoteRepository id="p4" url="${apache.repo}"/>
 
     <!-- Pom file information -->
     <artifact:pom id="pom" 
@@ -118,7 +118,7 @@
       packaging="pom"
     >
       <remoteRepository refid="central"/>
-      <remoteRepository refid="apache"/>
+      <remoteRepository refid="p4"/>
       <license name="The Apache Software License, Version 2.0" url="${license}"/>
       <scm connection="scm:git:https://git-wip-us.apache.org/repos/asf/thrift.git" 
       developerConnection="scm:git:https://git-wip-us.apache.org/repos/asf/thrift.git"
@@ -152,7 +152,7 @@
   </target>
 
   <macrodef name="signAndDeploy">
-    <!-- Sign and deploy jars to apache repo -->
+    <!-- Sign and deploy jars to p4 repo -->
     <attribute name="file"/>
     <attribute name="classifier" default=""/>
     <attribute name="packaging" default="jar"/>
@@ -172,7 +172,7 @@
   </macrodef>
 
   <target name="publish" depends="clean,compile,mvn.init">
-    <!-- Compile, packages and then send release to apache maven repo -->
+    <!-- Compile, packages and then send release to p4 maven repo -->
     <!-- run with: ant -Drelease=true publish -->
     <signAndDeploy file="${as3.pom.xml}" packaging="pom" classifier="" pom="${as3.pom.xml}"/>
     <signAndDeploy file="${as3.swc.file}" packaging="swc" classifier="" pom="${as3.pom.xml}"/>

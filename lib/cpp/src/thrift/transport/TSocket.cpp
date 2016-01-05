@@ -63,7 +63,7 @@ inline SOCKOPT_CAST_T* cast_sockopt(T* v) {
     return reinterpret_cast<SOCKOPT_CAST_T*>(v);
 }
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 
@@ -845,4 +845,4 @@ const std::string TSocket::getOrigin() {
   return oss.str();
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

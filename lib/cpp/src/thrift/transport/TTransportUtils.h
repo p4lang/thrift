@@ -29,7 +29,7 @@
 #include <thrift/transport/TBufferTransports.h>
 #include <thrift/transport/TFileTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * The null transport is a dummy transport that doesn't actually do anything.
@@ -325,6 +325,6 @@ class TPipedFileReaderTransportFactory : public TPipedTransportFactory {
   }
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TTRANSPORTUTILS_H_

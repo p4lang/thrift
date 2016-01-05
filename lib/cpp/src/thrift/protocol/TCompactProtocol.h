@@ -25,7 +25,7 @@
 #include <stack>
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 /**
  * C++ Implementation of the Compact Protocol as described in THRIFT-110
@@ -283,7 +283,7 @@ class TCompactProtocolFactoryT : public TProtocolFactory {
 
 typedef TCompactProtocolFactoryT<TTransport> TCompactProtocolFactory;
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #include <thrift/protocol/TCompactProtocol.tcc>
 

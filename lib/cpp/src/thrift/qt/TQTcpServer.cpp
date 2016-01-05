@@ -28,17 +28,17 @@
 #include <thrift/async/TAsyncProcessor.h>
 
 using boost::shared_ptr;
-using apache::thrift::protocol::TProtocol;
-using apache::thrift::protocol::TProtocolFactory;
-using apache::thrift::transport::TTransport;
-using apache::thrift::transport::TTransportException;
-using apache::thrift::transport::TQIODeviceTransport;
-using apache::thrift::stdcxx::function;
-using apache::thrift::stdcxx::bind;
+using p4::thrift::protocol::TProtocol;
+using p4::thrift::protocol::TProtocolFactory;
+using p4::thrift::transport::TTransport;
+using p4::thrift::transport::TTransportException;
+using p4::thrift::transport::TQIODeviceTransport;
+using p4::thrift::stdcxx::function;
+using p4::thrift::stdcxx::bind;
 
 QT_USE_NAMESPACE
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 struct TQTcpServer::ConnectionContext {
   shared_ptr<QTcpSocket> connection_;
@@ -121,7 +121,7 @@ void TQTcpServer::beginDecode()
   try {
     processor_->process(
       bind(&TQTcpServer::finish, this,
-           ctx, apache::thrift::stdcxx::placeholders::_1),
+           ctx, p4::thrift::stdcxx::placeholders::_1),
       ctx->iprot_, ctx->oprot_);
   } catch(const TTransportException& ex) {
     qWarning("[TQTcpServer] TTransportException during processing: '%s'",
@@ -154,4 +154,4 @@ void TQTcpServer::finish(shared_ptr<ConnectionContext> ctx, bool healthy)
   }
 }
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async

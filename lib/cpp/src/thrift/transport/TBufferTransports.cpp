@@ -24,7 +24,7 @@
 
 using std::string;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 
 uint32_t TBufferedTransport::readSlow(uint8_t* buf, uint32_t len) {
@@ -407,4 +407,4 @@ const uint8_t* TMemoryBuffer::borrowSlow(uint8_t* buf, uint32_t* len) {
   return NULL;
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

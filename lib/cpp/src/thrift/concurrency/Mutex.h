@@ -23,7 +23,7 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/noncopyable.hpp>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 #ifndef THRIFT_NO_CONTENTION_PROFILING
 
@@ -183,6 +183,6 @@ class RWGuard : boost::noncopyable {
     const ReadWriteMutex& rw_mutex_;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_MUTEX_H_

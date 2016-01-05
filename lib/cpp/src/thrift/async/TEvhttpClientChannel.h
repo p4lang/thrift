@@ -28,11 +28,11 @@ struct event_base;
 struct evhttp_connection;
 struct evhttp_request;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 class TMemoryBuffer;
 }}}
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 class TEvhttpClientChannel : public TAsyncChannel {
  public:
@@ -47,11 +47,11 @@ class TEvhttpClientChannel : public TAsyncChannel {
   ~TEvhttpClientChannel();
 
   virtual void sendAndRecvMessage(const VoidCallback& cob,
-                                  apache::thrift::transport::TMemoryBuffer* sendBuf,
-                                  apache::thrift::transport::TMemoryBuffer* recvBuf);
+                                  p4::thrift::transport::TMemoryBuffer* sendBuf,
+                                  p4::thrift::transport::TMemoryBuffer* recvBuf);
 
-  virtual void sendMessage(const VoidCallback& cob, apache::thrift::transport::TMemoryBuffer* message);
-  virtual void recvMessage(const VoidCallback& cob, apache::thrift::transport::TMemoryBuffer* message);
+  virtual void sendMessage(const VoidCallback& cob, p4::thrift::transport::TMemoryBuffer* message);
+  virtual void recvMessage(const VoidCallback& cob, p4::thrift::transport::TMemoryBuffer* message);
 
   void finish(struct evhttp_request* req);
 
@@ -66,11 +66,11 @@ class TEvhttpClientChannel : public TAsyncChannel {
   std::string host_;
   std::string path_;
   VoidCallback cob_;
-  apache::thrift::transport::TMemoryBuffer* recvBuf_;
+  p4::thrift::transport::TMemoryBuffer* recvBuf_;
   struct evhttp_connection* conn_;
 
 };
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async
 
 #endif // #ifndef _THRIFT_TEVHTTP_CLIENT_CHANNEL_H_

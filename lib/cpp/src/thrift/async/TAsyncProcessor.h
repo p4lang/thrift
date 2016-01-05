@@ -25,7 +25,7 @@
 #include <thrift/protocol/TProtocol.h>
 #include <thrift/TProcessor.h>
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 /**
  * Async version of a TProcessor.  It is not expected to complete by the time
@@ -38,12 +38,12 @@ class TAsyncProcessor {
  public:
   virtual ~TAsyncProcessor() {}
 
-  virtual void process(apache::thrift::stdcxx::function<void(bool success)> _return,
+  virtual void process(p4::thrift::stdcxx::function<void(bool success)> _return,
                        boost::shared_ptr<protocol::TProtocol> in,
                        boost::shared_ptr<protocol::TProtocol> out) = 0;
 
-  void process(apache::thrift::stdcxx::function<void(bool success)> _return,
-               boost::shared_ptr<apache::thrift::protocol::TProtocol> io) {
+  void process(p4::thrift::stdcxx::function<void(bool success)> _return,
+               boost::shared_ptr<p4::thrift::protocol::TProtocol> io) {
     return process(_return, io, io);
   }
 
@@ -87,11 +87,11 @@ class TAsyncProcessorFactory {
 
 
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async
 
 // XXX I'm lazy for now
-namespace apache { namespace thrift {
-using apache::thrift::async::TAsyncProcessor;
+namespace p4 { namespace thrift {
+using p4::thrift::async::TAsyncProcessor;
 }}
 
 #endif // #ifndef _THRIFT_TASYNCPROCESSOR_H_

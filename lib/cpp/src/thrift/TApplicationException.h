@@ -23,7 +23,7 @@
 #include <thrift/Thrift.h>
 
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 namespace protocol {
   class TProtocol;
@@ -110,6 +110,6 @@ class TApplicationException : public TException {
 
 };
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // #ifndef _THRIFT_TAPPLICATIONEXCEPTION_H_

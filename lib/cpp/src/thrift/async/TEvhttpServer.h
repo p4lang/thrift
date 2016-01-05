@@ -26,7 +26,7 @@ struct event_base;
 struct evhttp;
 struct evhttp_request;
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 class TAsyncBufferProcessor;
 
@@ -66,6 +66,6 @@ class TEvhttpServer {
   struct evhttp* eh_;
 };
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async
 
 #endif // #ifndef _THRIFT_TEVHTTP_SERVER_H_

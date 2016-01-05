@@ -25,7 +25,7 @@
 #include <thrift/transport/THttpClient.h>
 #include <thrift/transport/TSocket.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 
@@ -114,4 +114,4 @@ void THttpClient::flush() {
   readHeaders_ = true;
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

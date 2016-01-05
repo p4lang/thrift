@@ -22,7 +22,7 @@
 
 #include <thrift/transport/THttpTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 class THttpClient : public THttpTransport {
  public:
@@ -44,6 +44,6 @@ class THttpClient : public THttpTransport {
 
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_THTTPCLIENT_H_

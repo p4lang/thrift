@@ -36,7 +36,7 @@
 #  endif
 #endif
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 class Thread;
 
@@ -74,7 +74,7 @@ class Runnable {
  * is difficult to abstract across platforms and is left for platform-specific
  * ThreadFactory implemtations to deal with
  *
- * @see apache::thrift::concurrency::ThreadFactory)
+ * @see p4::thrift::concurrency::ThreadFactory)
  */
 class Thread {
 
@@ -147,6 +147,6 @@ class ThreadFactory {
   virtual Thread::id_t getCurrentThreadId() const = 0;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_THREAD_H_

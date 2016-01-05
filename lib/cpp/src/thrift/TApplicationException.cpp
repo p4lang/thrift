@@ -20,31 +20,31 @@
 #include <thrift/TApplicationException.h>
 #include <thrift/protocol/TProtocol.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
-uint32_t TApplicationException::read(apache::thrift::protocol::TProtocol* iprot) {
+uint32_t TApplicationException::read(p4::thrift::protocol::TProtocol* iprot) {
   uint32_t xfer = 0;
   std::string fname;
-  apache::thrift::protocol::TType ftype;
+  p4::thrift::protocol::TType ftype;
   int16_t fid;
 
   xfer += iprot->readStructBegin(fname);
 
   while (true) {
     xfer += iprot->readFieldBegin(fname, ftype, fid);
-    if (ftype == apache::thrift::protocol::T_STOP) {
+    if (ftype == p4::thrift::protocol::T_STOP) {
       break;
     }
     switch (fid) {
     case 1:
-      if (ftype == apache::thrift::protocol::T_STRING) {
+      if (ftype == p4::thrift::protocol::T_STRING) {
         xfer += iprot->readString(message_);
       } else {
         xfer += iprot->skip(ftype);
       }
       break;
     case 2:
-      if (ftype == apache::thrift::protocol::T_I32) {
+      if (ftype == p4::thrift::protocol::T_I32) {
         int32_t type;
         xfer += iprot->readI32(type);
         type_ = (TApplicationExceptionType)type;
@@ -63,13 +63,13 @@ uint32_t TApplicationException::read(apache::thrift::protocol::TProtocol* iprot)
   return xfer;
 }
 
-uint32_t TApplicationException::write(apache::thrift::protocol::TProtocol* oprot) const {
+uint32_t TApplicationException::write(p4::thrift::protocol::TProtocol* oprot) const {
   uint32_t xfer = 0;
   xfer += oprot->writeStructBegin("TApplicationException");
-  xfer += oprot->writeFieldBegin("message", apache::thrift::protocol::T_STRING, 1);
+  xfer += oprot->writeFieldBegin("message", p4::thrift::protocol::T_STRING, 1);
   xfer += oprot->writeString(message_);
   xfer += oprot->writeFieldEnd();
-  xfer += oprot->writeFieldBegin("type", apache::thrift::protocol::T_I32, 2);
+  xfer += oprot->writeFieldBegin("type", p4::thrift::protocol::T_I32, 2);
   xfer += oprot->writeI32(type_);
   xfer += oprot->writeFieldEnd();
   xfer += oprot->writeFieldStop();
@@ -77,4 +77,4 @@ uint32_t TApplicationException::write(apache::thrift::protocol::TProtocol* oprot
   return xfer;
 }
 
-}} // apache::thrift
+}} // p4::thrift

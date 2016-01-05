@@ -29,7 +29,7 @@
 #include <boost/thread.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Monitor implementation using the boost thread library
@@ -208,4 +208,4 @@ void Monitor::notify() const { const_cast<Monitor::Impl*>(impl_)->notify(); }
 
 void Monitor::notifyAll() const { const_cast<Monitor::Impl*>(impl_)->notifyAll(); }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency

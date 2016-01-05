@@ -25,13 +25,13 @@
 #include <thrift/protocol/TProtocol.h>
 #include <TProcessor.h>
 
-namespace apache { namespace thrift { namespace processor {
+namespace p4 { namespace thrift { namespace processor {
 
 /*
  * Class for keeping track of function call statistics and printing them if desired
  *
  */
-class StatsProcessor : public apache::thrift::TProcessor {
+class StatsProcessor : public p4::thrift::TProcessor {
 public:
   StatsProcessor(bool print, bool frequency)
     : print_(print),
@@ -39,22 +39,22 @@ public:
   {}
   virtual ~StatsProcessor() {};
 
-  virtual bool process(boost::shared_ptr<apache::thrift::protocol::TProtocol> piprot,
-                       boost::shared_ptr<apache::thrift::protocol::TProtocol> poprot,
+  virtual bool process(boost::shared_ptr<p4::thrift::protocol::TProtocol> piprot,
+                       boost::shared_ptr<p4::thrift::protocol::TProtocol> poprot,
                        void* serverContext) {
 
     piprot_ = piprot;
 
     std::string fname;
-    apache::thrift::protocol::TMessageType mtype;
+    p4::thrift::protocol::TMessageType mtype;
     int32_t seqid;
 
     piprot_->readMessageBegin(fname, mtype, seqid);
-    if (mtype != apache::thrift::protocol::T_CALL && mtype != apache::thrift::protocol::T_ONEWAY) {
+    if (mtype != p4::thrift::protocol::T_CALL && mtype != apache::thrift::protocol::T_ONEWAY) {
       if (print_) {
         printf("Unknown message type\n");
       }
-      throw apache::thrift::TException("Unexpected message type");
+      throw p4::thrift::TException("Unexpected message type");
     }
     if (print_) {
       printf("%s (", fname.c_str());
@@ -67,12 +67,12 @@ public:
       }
     }
 
-    apache::thrift::protocol::TType ftype;
+    p4::thrift::protocol::TType ftype;
     int16_t fid;
 
     while (true) {
       piprot_->readFieldBegin(fname, ftype, fid);
-      if (ftype == apache::thrift::protocol::T_STOP) {
+      if (ftype == p4::thrift::protocol::T_STOP) {
         break;
       }
 
@@ -93,9 +93,9 @@ public:
   }
 
 protected:
-  void printAndPassToBuffer(apache::thrift::protocol::TType ftype) {
+  void printAndPassToBuffer(p4::thrift::protocol::TType ftype) {
     switch (ftype) {
-      case apache::thrift::protocol::T_BOOL:
+      case p4::thrift::protocol::T_BOOL:
         {
           bool boolv;
           piprot_->readBool(boolv);
@@ -104,7 +104,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_BYTE:
+      case p4::thrift::protocol::T_BYTE:
         {
           int8_t bytev;
           piprot_->readByte(bytev);
@@ -113,7 +113,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_I16:
+      case p4::thrift::protocol::T_I16:
         {
           int16_t i16;
           piprot_->readI16(i16);
@@ -122,7 +122,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_I32:
+      case p4::thrift::protocol::T_I32:
         {
           int32_t i32;
           piprot_->readI32(i32);
@@ -131,7 +131,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_I64:
+      case p4::thrift::protocol::T_I64:
         {
           int64_t i64;
           piprot_->readI64(i64);
@@ -140,7 +140,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_DOUBLE:
+      case p4::thrift::protocol::T_DOUBLE:
         {
           double dub;
           piprot_->readDouble(dub);
@@ -149,7 +149,7 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_STRING:
+      case p4::thrift::protocol::T_STRING:
         {
           std::string str;
           piprot_->readString(str);
@@ -158,18 +158,18 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_STRUCT:
+      case p4::thrift::protocol::T_STRUCT:
         {
           std::string name;
           int16_t fid;
-          apache::thrift::protocol::TType ftype;
+          p4::thrift::protocol::TType ftype;
           piprot_->readStructBegin(name);
           if (print_) {
             printf("<");
           }
           while (true) {
             piprot_->readFieldBegin(name, ftype, fid);
-            if (ftype == apache::thrift::protocol::T_STOP) {
+            if (ftype == p4::thrift::protocol::T_STOP) {
               break;
             }
             printAndPassToBuffer(ftype);
@@ -184,10 +184,10 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_MAP:
+      case p4::thrift::protocol::T_MAP:
         {
-          apache::thrift::protocol::TType keyType;
-          apache::thrift::protocol::TType valType;
+          p4::thrift::protocol::TType keyType;
+          p4::thrift::protocol::TType valType;
           uint32_t i, size;
           piprot_->readMapBegin(keyType, valType, size);
           if (print_) {
@@ -209,9 +209,9 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_SET:
+      case p4::thrift::protocol::T_SET:
         {
-          apache::thrift::protocol::TType elemType;
+          p4::thrift::protocol::TType elemType;
           uint32_t i, size;
           piprot_->readSetBegin(elemType, size);
           if (print_) {
@@ -229,9 +229,9 @@ protected:
           }
         }
         break;
-      case apache::thrift::protocol::T_LIST:
+      case p4::thrift::protocol::T_LIST:
         {
-          apache::thrift::protocol::TType elemType;
+          p4::thrift::protocol::TType elemType;
           uint32_t i, size;
           piprot_->readListBegin(elemType, size);
           if (print_) {
@@ -254,13 +254,13 @@ protected:
     }
   }
 
-  boost::shared_ptr<apache::thrift::protocol::TProtocol> piprot_;
+  boost::shared_ptr<p4::thrift::protocol::TProtocol> piprot_;
   std::map<std::string, int64_t> frequency_map_;
 
   bool print_;
   bool frequency_;
 };
 
-}}} // apache::thrift::processor
+}}} // p4::thrift::processor
 
 #endif

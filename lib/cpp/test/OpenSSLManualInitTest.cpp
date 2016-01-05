@@ -28,7 +28,7 @@
 #include <thrift/transport/TSSLSocket.h>
 
 using namespace std;
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
 void make_isolated_sslsocketfactory() {
   // Here we create an isolated TSSLSocketFactory to ensure the

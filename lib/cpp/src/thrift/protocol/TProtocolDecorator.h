@@ -23,7 +23,7 @@
 #include <thrift/protocol/TProtocol.h>
 #include <boost/shared_ptr.hpp>
 
-namespace apache
+namespace p4
 {
     namespace thrift
     {
@@ -38,7 +38,7 @@ namespace apache
              *
              * <p>See p.175 of Design Patterns (by Gamma et al.)</p>
              *
-             * @see apache::thrift::protocol::TMultiplexedProtocol
+             * @see p4::thrift::protocol::TMultiplexedProtocol
              */
             class TProtocolDecorator : public TProtocol
             {

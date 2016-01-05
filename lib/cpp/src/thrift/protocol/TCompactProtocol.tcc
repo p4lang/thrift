@@ -41,7 +41,7 @@
 #define UNLIKELY(val) (val)
 #endif
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 namespace detail { namespace compact {
 
@@ -819,6 +819,6 @@ TType TCompactProtocolT<Transport_>::getTType(int8_t type) {
   }
 }
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // _THRIFT_PROTOCOL_TCOMPACTPROTOCOL_TCC_

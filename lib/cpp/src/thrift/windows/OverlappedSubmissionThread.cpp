@@ -23,7 +23,7 @@
 #include <boost/scope_exit.hpp>
 #include <process.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 TOverlappedWorkItem::TOverlappedWorkItem() :
   SLIST_ENTRY(),

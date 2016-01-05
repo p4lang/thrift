@@ -24,9 +24,9 @@
 #include <thrift/protocol/TBase64Utils.h>
 #include <thrift/transport/TTransportException.h>
 
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 
 // Static data
@@ -904,7 +904,7 @@ uint32_t TJSONProtocol::readFieldBegin(std::string& name,
   // Check if we hit the end of the list
   uint8_t ch = reader_.peek();
   if (ch == kJSONObjectEnd) {
-    fieldType = apache::thrift::protocol::T_STOP;
+    fieldType = p4::thrift::protocol::T_STOP;
   }
   else {
     uint64_t tmpVal = 0;
@@ -1020,4 +1020,4 @@ uint32_t TJSONProtocol::readBinary(std::string &str) {
   return readJSONBase64(str);
 }
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol

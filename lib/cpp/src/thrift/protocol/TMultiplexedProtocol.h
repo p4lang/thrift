@@ -22,7 +22,7 @@
 
 #include <thrift/protocol/TProtocolDecorator.h>
 
-namespace apache
+namespace p4
 {
     namespace thrift
     {
@@ -36,7 +36,7 @@ namespace apache
              * by prepending the service name to the function name during function calls.
              *
              * \note THIS IS NOT USED BY SERVERS.  On the server, use
-             * {@link apache::thrift::TMultiplexedProcessor TMultiplexedProcessor} to handle requests
+             * {@link p4::thrift::TMultiplexedProcessor TMultiplexedProcessor} to handle requests
              * from a multiplexing client.
              *
              * This example uses a single socket transport to invoke two services:
@@ -57,7 +57,7 @@ namespace apache
              *     int temp = service2->getTemperature();
              * </code></blockquote>
              *
-             * @see apache::thrift::protocol::TProtocolDecorator
+             * @see p4::thrift::protocol::TProtocolDecorator
              */
              class TMultiplexedProtocol : public TProtocolDecorator
             {

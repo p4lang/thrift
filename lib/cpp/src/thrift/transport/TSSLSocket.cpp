@@ -41,13 +41,13 @@
 #define OPENSSL_VERSION_NO_THREAD_ID 0x10000000L
 
 using namespace std;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 struct CRYPTO_dynlock_value {
   Mutex mutex;
 };
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 // OpenSSL initialization/cleanup
 

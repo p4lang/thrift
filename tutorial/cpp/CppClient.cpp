@@ -26,9 +26,9 @@
 #include "../gen-cpp/Calculator.h"
 
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 
 using namespace tutorial;
 using namespace shared;

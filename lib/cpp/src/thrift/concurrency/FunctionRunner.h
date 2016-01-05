@@ -23,7 +23,7 @@
 #include <thrift/cxxfunctional.h>
 #include <thrift/concurrency/Thread.h>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Convenient implementation of Runnable that will execute arbitrary callbacks.
@@ -42,7 +42,7 @@ namespace apache { namespace thrift { namespace concurrency {
  *  A* a = new A();
  *  // To create a thread that executes a.foo() every 100 milliseconds:
  *  factory->newThread(FunctionRunner::create(
- *    apache::thrift::stdcxx::bind(&A::foo, a), 100))->start();
+ *    p4::thrift::stdcxx::bind(&A::foo, a), 100))->start();
  *
  */
 
@@ -51,9 +51,9 @@ class FunctionRunner : public Runnable {
   // This is the type of callback 'pthread_create()' expects.
   typedef void* (*PthreadFuncPtr)(void *arg);
   // This a fully-generic void(void) callback for custom bindings.
-  typedef apache::thrift::stdcxx::function<void()> VoidFunc;
+  typedef p4::thrift::stdcxx::function<void()> VoidFunc;
 
-  typedef apache::thrift::stdcxx::function<bool()> BoolFunc;
+  typedef p4::thrift::stdcxx::function<bool()> BoolFunc;
 
   /**
    * Syntactic sugar to make it easier to create new FunctionRunner
@@ -80,7 +80,7 @@ public:
    * execute the given callback.  Note that the 'void*' return value is ignored.
    */
   FunctionRunner(PthreadFuncPtr func, void* arg)
-   : func_(apache::thrift::stdcxx::bind(pthread_func_wrapper, func, arg))
+   : func_(p4::thrift::stdcxx::bind(pthread_func_wrapper, func, arg))
   { }
 
   /**
@@ -116,6 +116,6 @@ public:
   int intervalMs_;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_FUNCTION_RUNNER_H

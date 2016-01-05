@@ -27,7 +27,7 @@
 #endif
 #include <boost/noncopyable.hpp>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Windows Pipes implementation of the TTransport interface.
@@ -98,7 +98,7 @@ class TPipe : public TVirtualTransport<TPipe> {
 typedef TSocket TPipe;
 #endif
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TPIPE_H_
 

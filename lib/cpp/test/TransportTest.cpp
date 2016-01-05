@@ -40,7 +40,7 @@
 #endif
 
 
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
 static boost::mt19937 rng;
 
@@ -345,7 +345,7 @@ struct TriggerInfo {
   TriggerInfo* next;
 };
 
-apache::thrift::concurrency::Monitor g_alarm_monitor;
+p4::thrift::concurrency::Monitor g_alarm_monitor;
 TriggerInfo* g_triggerInfo;
 unsigned int g_numTriggersFired;
 bool g_teardown = false;
@@ -353,7 +353,7 @@ bool g_teardown = false;
 void alarm_handler() {
   TriggerInfo *info = NULL;
   {
-    apache::thrift::concurrency::Synchronized s(g_alarm_monitor);
+    p4::thrift::concurrency::Synchronized s(g_alarm_monitor);
     // The alarm timed out, which almost certainly means we're stuck
     // on a transport that is incorrectly blocked.
     ++g_numTriggersFired;
@@ -387,7 +387,7 @@ void alarm_handler_wrapper() {
   while(true) {
     bool fireHandler = false;
     {
-      apache::thrift::concurrency::Synchronized s(g_alarm_monitor);
+      p4::thrift::concurrency::Synchronized s(g_alarm_monitor);
       if(g_teardown)
          return;
       //calculate timeout
@@ -419,7 +419,7 @@ void add_trigger(unsigned int seconds,
                  uint32_t write_len) {
   TriggerInfo* info = new TriggerInfo(seconds, transport, write_len);
   {
-    apache::thrift::concurrency::Synchronized s(g_alarm_monitor);
+    p4::thrift::concurrency::Synchronized s(g_alarm_monitor);
     if (g_triggerInfo == NULL) {
       // This is the first trigger.
       // Set g_triggerInfo, and schedule the alarm
@@ -440,7 +440,7 @@ void clear_triggers() {
   TriggerInfo *info = NULL;
 
   {
-    apache::thrift::concurrency::Synchronized s(g_alarm_monitor);
+    p4::thrift::concurrency::Synchronized s(g_alarm_monitor);
     info = g_triggerInfo;
     g_triggerInfo = NULL;
     g_numTriggersFired = 0;
@@ -956,7 +956,7 @@ class TransportTestGen {
       maxOutstanding << ")";
 
     boost::unit_test::callback0<> test_func =
-      apache::thrift::stdcxx::bind(test_rw<CoupledTransports>, totalSize,
+      p4::thrift::stdcxx::bind(test_rw<CoupledTransports>, totalSize,
                      wSizeGen, rSizeGen, wChunkSizeGen, rChunkSizeGen,
                      maxOutstanding);
     boost::unit_test::test_case* tc =
@@ -1020,22 +1020,22 @@ class TransportTestGen {
  **************************************************************************/
 
 struct global_fixture {
-  boost::shared_ptr<apache::thrift::concurrency::Thread> alarmThread_;
+  boost::shared_ptr<p4::thrift::concurrency::Thread> alarmThread_;
   global_fixture() {
   #if _WIN32
-    apache::thrift::transport::TWinsockSingleton::create();
+    p4::thrift::transport::TWinsockSingleton::create();
   #endif
 
-    apache::thrift::concurrency::PlatformThreadFactory factory;
+    p4::thrift::concurrency::PlatformThreadFactory factory;
     factory.setDetached(false);
 
     alarmThread_ = factory.newThread(
-      apache::thrift::concurrency::FunctionRunner::create(alarm_handler_wrapper));
+      p4::thrift::concurrency::FunctionRunner::create(alarm_handler_wrapper));
     alarmThread_->start();
   }
   ~global_fixture() {
     {
-      apache::thrift::concurrency::Synchronized s(g_alarm_monitor);
+      p4::thrift::concurrency::Synchronized s(g_alarm_monitor);
       g_teardown = true;
       g_alarm_monitor.notify();
     }

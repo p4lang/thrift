@@ -30,7 +30,7 @@
 
 #include <thrift/transport/TFileTransport.h>
 
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
 /**************************************************************************
  * Global state
@@ -100,7 +100,7 @@ class TempFile {
 
     fd_ = mkstemp(path_);
     if (fd_ < 0) {
-      throw apache::thrift::TException("mkstemp() failed");
+      throw p4::thrift::TException("mkstemp() failed");
     }
   }
 

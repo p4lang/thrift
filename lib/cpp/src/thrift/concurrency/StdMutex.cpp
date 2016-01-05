@@ -26,7 +26,7 @@
 #include <chrono>
 #include <mutex>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Implementation of Mutex class using C++11 std::timed_mutex
@@ -51,5 +51,5 @@ void Mutex::unlock() const { impl_->unlock(); }
 void Mutex::DEFAULT_INITIALIZER(void* arg) {
 }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 

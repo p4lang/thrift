@@ -29,9 +29,9 @@
 #include <set>
 #include <stdint.h>
 
-namespace apache { namespace thrift { namespace concurrency { namespace test {
+namespace p4 { namespace thrift { namespace concurrency { namespace test {
 
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 class ThreadManagerTests {
 
@@ -369,6 +369,6 @@ public:
 
 const double ThreadManagerTests::TEST_TOLERANCE = .20;
 
-}}}} // apache::thrift::concurrency
+}}}} // p4::thrift::concurrency
 
-using namespace apache::thrift::concurrency::test;
+using namespace p4::thrift::concurrency::test;

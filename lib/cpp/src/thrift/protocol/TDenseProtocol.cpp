@@ -117,10 +117,10 @@ using std::string;
 #define UNLIKELY(val) (val)
 #endif
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 const int TDenseProtocol::FP_PREFIX_LEN =
-  apache::thrift::reflection::local::FP_PREFIX_LEN;
+  p4::thrift::reflection::local::FP_PREFIX_LEN;
 
 // Top TypeSpec.  TypeSpec of the structure being encoded.
 #define TTS  (ts_stack_.back())  // type = TypeSpec*
@@ -765,4 +765,4 @@ uint32_t TDenseProtocol::subReadString(std::string& str) {
   return xfer + readStringBody(str, size);
 }
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol

@@ -20,7 +20,7 @@
 #include "TZmqClient.h"
 #include <cstring>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 uint32_t TZmqClient::read(uint8_t* buf, uint32_t len) {
   if (rbuf_.available_read() == 0) {
@@ -44,4 +44,4 @@ void TZmqClient::writeEnd() {
   wbuf_.resetBuffer(true);
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

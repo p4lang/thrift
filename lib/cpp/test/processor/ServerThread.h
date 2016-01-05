@@ -26,7 +26,7 @@
 
 #include "EventLog.h"
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 /**
  * A helper class to tell ServerThread how to create the server
@@ -138,6 +138,6 @@ class ServerThread {
   boost::shared_ptr<concurrency::Thread> thread_;
 };
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test
 
 #endif // _THRIFT_TEST_SERVERTHREAD_H_

@@ -31,9 +31,9 @@
  *
  */
 
-namespace apache { namespace thrift { namespace reflection { namespace local {
+namespace p4 { namespace thrift { namespace reflection { namespace local {
 
-using apache::thrift::protocol::TType;
+using p4::thrift::protocol::TType;
 
 // We include this many bytes of the structure's fingerprint when serializing
 // a top-level structure.  Long enough to make collisions unlikely, short
@@ -91,6 +91,6 @@ struct TypeSpec {
 
 };
 
-}}}} // apache::thrift::reflection::local
+}}}} // p4::thrift::reflection::local
 
 #endif // #ifndef _THRIFT_TREFLECTIONLOCAL_H_

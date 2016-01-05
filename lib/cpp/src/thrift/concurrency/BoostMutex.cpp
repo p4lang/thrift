@@ -28,7 +28,7 @@
 #include <boost/thread/mutex.hpp>
 #include <boost/date_time/posix_time/posix_time.hpp>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Implementation of Mutex class using boost interprocess mutex
@@ -55,4 +55,4 @@ void Mutex::DEFAULT_INITIALIZER(void* arg) {
   THRIFT_UNUSED_VARIABLE(arg);
 }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency

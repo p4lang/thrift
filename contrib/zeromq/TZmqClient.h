@@ -23,7 +23,7 @@
 #include <zmq.hpp>
 #include <thrift/transport/TBufferTransports.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 class TZmqClient : public TTransport {
  public:
@@ -60,6 +60,6 @@ class TZmqClient : public TTransport {
   int zmq_type_;
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TZMQCLIENT_H_

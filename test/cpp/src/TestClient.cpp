@@ -42,11 +42,11 @@
 #include "ThriftTest.h"
 
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 using namespace thrift::test;
-using namespace apache::thrift::async;
+using namespace p4::thrift::async;
 
 // Length of argv[0] - Length of script dir
 #define EXECUTABLE_FILE_NAME_LENGTH 19

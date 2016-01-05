@@ -31,7 +31,7 @@ Thrift 0.9.2
     * [THRIFT-2588] - Thrift compiler is not buildable in Visual Studio 2010
     * [THRIFT-2577] - TFileTransport  missuse of closesocket on windows platform
     * [THRIFT-2576] - Implement Thrift.Protocol.prototype.skip method in JavaScript library
-    * [THRIFT-2575] - Thrift includes siginfo_t within apache::thrift::protocol namespace
+    * [THRIFT-2575] - Thrift includes siginfo_t within p4::thrift::protocol namespace
     * [THRIFT-2570] - Wrong URL given in http://thrift.apache.org/developers
     * [THRIFT-2559] - Centos 6.5 unable to "make" with Thrift 0.9.1
     * [THRIFT-2565] - autoconf fails to find mingw-g++ cross compiler on travis CI
@@ -811,7 +811,7 @@ Thrift 0.9
     * [THRIFT-1491] - Uninitialize processorFactory_ member in TServer.h
     * [THRIFT-1475] - Incomplete records generation for Erlang
     * [THRIFT-1486] - Javascript manual testserver not returning content types
-    * [THRIFT-1488] - src/concurrency/Thread.h:91:58: error: invalid conversion from 'pthread_t {aka _opaque_pthread_t*}' to 'apache::thrift::concurrency::Thread::id_t {aka long long unsigned int}' [-fpermissive]
+    * [THRIFT-1488] - src/concurrency/Thread.h:91:58: error: invalid conversion from 'pthread_t {aka _opaque_pthread_t*}' to 'p4::thrift::concurrency::Thread::id_t {aka long long unsigned int}' [-fpermissive]
     * [THRIFT-1490] - Windows-specific header files - fixes & tweaks
     * [THRIFT-1526] - Union TupleSchemeFactory returns StandardSchemes
     * [THRIFT-1527] - Generated implementation of tupleReadStruct in unions return null when the setfield is unrecognized

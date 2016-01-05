@@ -71,7 +71,7 @@
 
 #define THRIFT_UNUSED_VARIABLE(x) ((void)(x))
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 class TEnumIterator : public std::iterator<std::forward_iterator_tag, std::pair<int, const char*> > {
  public:
@@ -198,6 +198,6 @@ void profile_print_info();
 void profile_write_pprof(FILE* gen_calls_f, FILE* virtual_calls_f);
 #endif
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // #ifndef _THRIFT_THRIFT_H_

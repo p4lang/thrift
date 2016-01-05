@@ -31,7 +31,7 @@
 
 #define TPIPE_SERVER_MAX_CONNS_DEFAULT PIPE_UNLIMITED_INSTANCES
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Windows Pipes implementation of TServerTransport.
@@ -94,6 +94,6 @@ protected:
 typedef TServerSocket TPipeServer;
 #endif
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSERVERWINPIPES_H_

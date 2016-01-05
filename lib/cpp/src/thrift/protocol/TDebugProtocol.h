@@ -24,7 +24,7 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 /*
 
@@ -167,18 +167,18 @@ class TDebugProtocolFactory : public TProtocolFactory {
 
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 
 // TODO(dreiss): Move (part of) ThriftDebugString into a .cpp file and remove this.
 #include <thrift/transport/TBufferTransports.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 template<typename ThriftStruct>
 std::string ThriftDebugString(const ThriftStruct& ts) {
-  using namespace apache::thrift::transport;
-  using namespace apache::thrift::protocol;
+  using namespace p4::thrift::transport;
+  using namespace p4::thrift::protocol;
   TMemoryBuffer* buffer = new TMemoryBuffer;
   boost::shared_ptr<TTransport> trans(buffer);
   TDebugProtocol protocol(trans);
@@ -195,8 +195,8 @@ std::string ThriftDebugString(const ThriftStruct& ts) {
 #if 0
 template<typename Object>
 std::string DebugString(const std::vector<Object>& vec) {
-  using namespace apache::thrift::transport;
-  using namespace apache::thrift::protocol;
+  using namespace p4::thrift::transport;
+  using namespace p4::thrift::protocol;
   TMemoryBuffer* buffer = new TMemoryBuffer;
   boost::shared_ptr<TTransport> trans(buffer);
   TDebugProtocol protocol(trans);
@@ -219,7 +219,7 @@ std::string DebugString(const std::vector<Object>& vec) {
 }
 #endif // 0
 
-}} // apache::thrift
+}} // p4::thrift
 
 
 #endif // #ifndef _THRIFT_PROTOCOL_TDEBUGPROTOCOL_H_

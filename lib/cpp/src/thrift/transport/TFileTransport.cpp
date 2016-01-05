@@ -48,13 +48,13 @@
 #include <io.h>
 #endif
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using boost::scoped_ptr;
 using boost::shared_ptr;
 using namespace std;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::concurrency;
 
 TFileTransport::TFileTransport(string path, bool readOnly)
   : readState_()
@@ -171,7 +171,7 @@ bool TFileTransport::initBufferAndWriteThread() {
 
   if(!writerThread_.get()) {
     writerThread_ = threadFactory_.newThread(
-      apache::thrift::concurrency::FunctionRunner::create(startWriterThread, this));
+      p4::thrift::concurrency::FunctionRunner::create(startWriterThread, this));
     writerThread_->start();
   }
 
@@ -1057,4 +1057,4 @@ void TFileProcessor::processChunk() {
   }
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

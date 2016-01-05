@@ -21,7 +21,7 @@
 
 #include <thrift/async/TAsyncProcessor.h>
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 /**
  * TAsyncDispatchProcessor is a helper class to parse the message header then
@@ -32,7 +32,7 @@ namespace apache { namespace thrift { namespace async {
 template <class Protocol_>
 class TAsyncDispatchProcessorT : public TAsyncProcessor {
  public:
-  virtual void process(apache::thrift::stdcxx::function<void(bool success)> _return,
+  virtual void process(p4::thrift::stdcxx::function<void(bool success)> _return,
                        boost::shared_ptr<protocol::TProtocol> in,
                        boost::shared_ptr<protocol::TProtocol> out) {
     protocol::TProtocol* inRaw = in.get();
@@ -69,7 +69,7 @@ class TAsyncDispatchProcessorT : public TAsyncProcessor {
     return this->dispatchCall(_return, inRaw, outRaw, fname, seqid);
   }
 
-  void processFast(apache::thrift::stdcxx::function<void(bool success)> _return,
+  void processFast(p4::thrift::stdcxx::function<void(bool success)> _return,
                    Protocol_* in, Protocol_* out) {
     std::string fname;
     protocol::TMessageType mtype;
@@ -86,12 +86,12 @@ class TAsyncDispatchProcessorT : public TAsyncProcessor {
     return this->dispatchCallTemplated(_return, in, out, fname, seqid);
   }
 
-  virtual void dispatchCall(apache::thrift::stdcxx::function<void(bool ok)> _return,
-                            apache::thrift::protocol::TProtocol* in,
-                            apache::thrift::protocol::TProtocol* out,
+  virtual void dispatchCall(p4::thrift::stdcxx::function<void(bool ok)> _return,
+                            p4::thrift::protocol::TProtocol* in,
+                            p4::thrift::protocol::TProtocol* out,
                             const std::string& fname, int32_t seqid) = 0;
 
-  virtual void dispatchCallTemplated(apache::thrift::stdcxx::function<void(bool ok)> _return,
+  virtual void dispatchCallTemplated(p4::thrift::stdcxx::function<void(bool ok)> _return,
                                      Protocol_* in, Protocol_* out,
                                      const std::string& fname,
                                      int32_t seqid) = 0;
@@ -103,7 +103,7 @@ class TAsyncDispatchProcessorT : public TAsyncProcessor {
  */
 class TAsyncDispatchProcessor : public TAsyncProcessor {
  public:
-  virtual void process(apache::thrift::stdcxx::function<void(bool success)> _return,
+  virtual void process(p4::thrift::stdcxx::function<void(bool success)> _return,
                        boost::shared_ptr<protocol::TProtocol> in,
                        boost::shared_ptr<protocol::TProtocol> out) {
     protocol::TProtocol* inRaw = in.get();
@@ -129,9 +129,9 @@ class TAsyncDispatchProcessor : public TAsyncProcessor {
     return dispatchCall(_return, inRaw, outRaw, fname, seqid);
   }
 
-  virtual void dispatchCall(apache::thrift::stdcxx::function<void(bool ok)> _return,
-                            apache::thrift::protocol::TProtocol* in,
-                            apache::thrift::protocol::TProtocol* out,
+  virtual void dispatchCall(p4::thrift::stdcxx::function<void(bool ok)> _return,
+                            p4::thrift::protocol::TProtocol* in,
+                            p4::thrift::protocol::TProtocol* out,
                             const std::string& fname, int32_t seqid) = 0;
 };
 
@@ -144,6 +144,6 @@ template <>
 class TAsyncDispatchProcessorT<protocol::TProtocol> :
   public TAsyncDispatchProcessor {};
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async
 
 #endif // _THRIFT_ASYNC_TASYNCDISPATCHPROCESSOR_H_

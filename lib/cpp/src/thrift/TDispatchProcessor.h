@@ -21,7 +21,7 @@
 
 #include <thrift/TProcessor.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 /**
  * TDispatchProcessor is a helper class to parse the message header then call
@@ -88,8 +88,8 @@ class TDispatchProcessorT : public TProcessor {
   /**
    * dispatchCall() methods must be implemented by subclasses
    */
-  virtual bool dispatchCall(apache::thrift::protocol::TProtocol* in,
-                            apache::thrift::protocol::TProtocol* out,
+  virtual bool dispatchCall(p4::thrift::protocol::TProtocol* in,
+                            p4::thrift::protocol::TProtocol* out,
                             const std::string& fname, int32_t seqid,
                             void* callContext) = 0;
 
@@ -122,8 +122,8 @@ class TDispatchProcessor : public TProcessor {
   }
 
  protected:
-  virtual bool dispatchCall(apache::thrift::protocol::TProtocol* in,
-                            apache::thrift::protocol::TProtocol* out,
+  virtual bool dispatchCall(p4::thrift::protocol::TProtocol* in,
+                            p4::thrift::protocol::TProtocol* out,
                             const std::string& fname, int32_t seqid,
                             void* callContext) = 0;
 };
@@ -137,6 +137,6 @@ template <>
 class TDispatchProcessorT<protocol::TProtocol> :
   public TDispatchProcessor {};
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // _THRIFT_TDISPATCHPROCESSOR_H_

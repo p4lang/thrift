@@ -33,7 +33,7 @@
 
 using namespace std;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 void TFDTransport::close() {
   if (!isOpen()) {
@@ -94,4 +94,4 @@ void TFDTransport::write(const uint8_t* buf, uint32_t len) {
   }
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

@@ -26,12 +26,12 @@
 
 class QIODevice;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  *  Transport that operates on a QIODevice (socket, file, etc).
  */
-class TQIODeviceTransport : public apache::thrift::transport::TVirtualTransport<TQIODeviceTransport> {
+class TQIODeviceTransport : public p4::thrift::transport::TVirtualTransport<TQIODeviceTransport> {
  public:
   explicit TQIODeviceTransport(boost::shared_ptr<QIODevice> dev);
   virtual ~TQIODeviceTransport();
@@ -58,7 +58,7 @@ class TQIODeviceTransport : public apache::thrift::transport::TVirtualTransport<
 
    boost::shared_ptr<QIODevice> dev_;
 };
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_ASYNC_TQIODEVICE_TRANSPORT_H_
 

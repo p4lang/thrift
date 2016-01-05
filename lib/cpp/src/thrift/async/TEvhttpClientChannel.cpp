@@ -25,10 +25,10 @@
 #include <iostream>
 #include <sstream>
 
-using namespace apache::thrift::protocol;
-using apache::thrift::transport::TTransportException;
+using namespace p4::thrift::protocol;
+using p4::thrift::transport::TTransportException;
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 
 TEvhttpClientChannel::TEvhttpClientChannel(
@@ -59,8 +59,8 @@ TEvhttpClientChannel::~TEvhttpClientChannel() {
 
 void TEvhttpClientChannel::sendAndRecvMessage(
     const VoidCallback& cob,
-    apache::thrift::transport::TMemoryBuffer* sendBuf,
-    apache::thrift::transport::TMemoryBuffer* recvBuf) {
+    p4::thrift::transport::TMemoryBuffer* sendBuf,
+    p4::thrift::transport::TMemoryBuffer* recvBuf) {
   cob_ = cob;
   recvBuf_ = recvBuf;
 
@@ -97,7 +97,7 @@ void TEvhttpClientChannel::sendAndRecvMessage(
 
 
 void TEvhttpClientChannel::sendMessage(
-    const VoidCallback& cob, apache::thrift::transport::TMemoryBuffer* message) {
+    const VoidCallback& cob, p4::thrift::transport::TMemoryBuffer* message) {
   (void) cob;
   (void) message;
   throw TProtocolException(TProtocolException::NOT_IMPLEMENTED,
@@ -106,7 +106,7 @@ void TEvhttpClientChannel::sendMessage(
 
 
 void TEvhttpClientChannel::recvMessage(
-    const VoidCallback& cob, apache::thrift::transport::TMemoryBuffer* message) {
+    const VoidCallback& cob, p4::thrift::transport::TMemoryBuffer* message) {
   (void) cob;
   (void) message;
   throw TProtocolException(TProtocolException::NOT_IMPLEMENTED,
@@ -159,4 +159,4 @@ void TEvhttpClientChannel::finish(struct evhttp_request* req) {
 }
 
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async

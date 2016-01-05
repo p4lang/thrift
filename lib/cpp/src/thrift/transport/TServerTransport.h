@@ -24,7 +24,7 @@
 #include <thrift/transport/TTransportException.h>
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Server transport framework. A server needs to have some facility for
@@ -87,6 +87,6 @@ class TServerTransport {
 
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSERVERTRANSPORT_H_

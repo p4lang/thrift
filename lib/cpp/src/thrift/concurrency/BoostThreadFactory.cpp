@@ -29,7 +29,7 @@
 #include <boost/weak_ptr.hpp>
 #include <boost/thread.hpp>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 using boost::shared_ptr;
 using boost::weak_ptr;
@@ -179,6 +179,6 @@ void BoostThreadFactory::setDetached(bool value) { impl_->setDetached(value); }
 
 Thread::id_t BoostThreadFactory::getCurrentThreadId() const { return impl_->getCurrentThreadId(); }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // USE_BOOST_THREAD

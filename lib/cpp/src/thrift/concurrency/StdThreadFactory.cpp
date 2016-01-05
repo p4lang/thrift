@@ -30,7 +30,7 @@
 #include <boost/weak_ptr.hpp>
 #include <thread>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * The C++11 thread class.
@@ -170,6 +170,6 @@ void StdThreadFactory::setDetached(bool value) { impl_->setDetached(value); }
 
 Thread::id_t StdThreadFactory::getCurrentThreadId() const { return impl_->getCurrentThreadId(); }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // USE_STD_THREAD

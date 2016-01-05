@@ -27,7 +27,7 @@
 #include <thrift/transport/TBufferTransports.h>
 #include <thrift/transport/TServerSocket.h>
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 void ServerThread::start() {
   assert(!running_);
@@ -143,6 +143,6 @@ void ServerThread::preServe() {
   }
 }
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test
 
 #endif // _THRIFT_TEST_SERVERTHREAD_TCC_

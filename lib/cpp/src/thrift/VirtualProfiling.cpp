@@ -42,10 +42,10 @@
 #include <execinfo.h>
 #include <stdio.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
-using ::apache::thrift::concurrency::Mutex;
-using ::apache::thrift::concurrency::Guard;
+using ::p4::thrift::concurrency::Mutex;
+using ::p4::thrift::concurrency::Guard;
 
 static const unsigned int MAX_STACK_DEPTH = 15;
 
@@ -450,6 +450,6 @@ void profile_write_pprof(FILE* gen_calls_f, FILE* virtual_calls_f) {
   profile_write_pprof_file(virtual_calls_f, virtual_calls);
 }
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // T_GLOBAL_PROFILE_VIRTUAL > 0

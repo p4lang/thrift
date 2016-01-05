@@ -31,7 +31,7 @@
 
 using boost::shared_ptr;
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 #ifndef THRIFT_NO_CONTENTION_PROFILING
 
@@ -349,5 +349,5 @@ void NoStarveReadWriteMutex::acquireWrite() const
   mutex_.unlock();
 }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 

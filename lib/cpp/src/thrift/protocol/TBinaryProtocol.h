@@ -25,7 +25,7 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 /**
  * The default binary protocol for thrift. Writes all data in a very basic
@@ -275,7 +275,7 @@ class TBinaryProtocolFactoryT : public TProtocolFactory {
 
 typedef TBinaryProtocolFactoryT<TTransport> TBinaryProtocolFactory;
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #include <thrift/protocol/TBinaryProtocol.tcc>
 

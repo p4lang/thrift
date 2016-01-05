@@ -31,7 +31,7 @@
 #include <io.h>
 #endif
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 TSimpleFileTransport::
 TSimpleFileTransport(const std::string& path, bool read, bool write)
@@ -64,4 +64,4 @@ TSimpleFileTransport(const std::string& path, bool read, bool write)
   open();
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

@@ -22,7 +22,7 @@
 
 #include <thrift/transport/TFDTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Dead-simple wrapper around a file.
@@ -36,6 +36,6 @@ class TSimpleFileTransport : public TFDTransport {
                        bool write = false);
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif //  _THRIFT_TRANSPORT_TSIMPLEFILETRANSPORT_H_

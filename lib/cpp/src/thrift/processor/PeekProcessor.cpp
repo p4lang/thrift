@@ -19,11 +19,11 @@
 
 #include <thrift/processor/PeekProcessor.h>
 
-using namespace apache::thrift::transport;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift;
 
-namespace apache { namespace thrift { namespace processor {
+namespace p4 { namespace thrift { namespace processor {
 
 PeekProcessor::PeekProcessor() {
   memoryBuffer_.reset(new TMemoryBuffer());

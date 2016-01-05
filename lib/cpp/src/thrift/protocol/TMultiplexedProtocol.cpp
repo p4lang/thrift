@@ -21,7 +21,7 @@
 #include <thrift/processor/TMultiplexedProcessor.h>
 #include <thrift/protocol/TProtocolDecorator.h>
 
-namespace apache
+namespace p4
 {
     namespace thrift
     {

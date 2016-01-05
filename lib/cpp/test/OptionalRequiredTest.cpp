@@ -34,9 +34,9 @@ using std::endl;
 using std::map;
 using std::string;
 using namespace thrift::test;
-using namespace apache::thrift;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::protocol;
 
 
 /*

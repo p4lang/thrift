@@ -23,7 +23,7 @@
 #include <vector>
 #include <thrift/transport/TSocket.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
  /**
   * Class to hold server information for TSocketPool
@@ -190,7 +190,7 @@ class TSocketPool : public TSocket {
    bool alwaysTryLast_;
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSOCKETPOOL_H_
 

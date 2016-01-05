@@ -30,7 +30,7 @@
 #include <unistd.h>
 #endif
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 #ifdef HAVE_SYS_RESOURCE_H
 int increase_max_fds(int max_fds=(1<<24))  {
@@ -46,4 +46,4 @@ int increase_max_fds(int max_fds=(1<<24))  {
 }
 #endif
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server

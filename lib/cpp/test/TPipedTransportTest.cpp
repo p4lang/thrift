@@ -23,9 +23,9 @@
 #include <thrift/transport/TTransportUtils.h>
 #include <thrift/transport/TBufferTransports.h>
 using namespace std;
-using apache::thrift::transport::TTransportException;
-using apache::thrift::transport::TPipedTransport;
-using apache::thrift::transport::TMemoryBuffer;
+using p4::thrift::transport::TTransportException;
+using p4::thrift::transport::TPipedTransport;
+using p4::thrift::transport::TMemoryBuffer;
 
 int main() {
   boost::shared_ptr<TMemoryBuffer> underlying(new TMemoryBuffer);

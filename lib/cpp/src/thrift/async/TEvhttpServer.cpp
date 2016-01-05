@@ -28,15 +28,15 @@
 #define HTTP_INTERNAL 500
 #endif
 
-using apache::thrift::transport::TMemoryBuffer;
+using p4::thrift::transport::TMemoryBuffer;
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 
 struct TEvhttpServer::RequestContext {
   struct evhttp_request* req;
-  boost::shared_ptr<apache::thrift::transport::TMemoryBuffer> ibuf;
-  boost::shared_ptr<apache::thrift::transport::TMemoryBuffer> obuf;
+  boost::shared_ptr<p4::thrift::transport::TMemoryBuffer> ibuf;
+  boost::shared_ptr<p4::thrift::transport::TMemoryBuffer> obuf;
 
   RequestContext(struct evhttp_request* req);
 };
@@ -116,11 +116,11 @@ void TEvhttpServer::request(struct evhttp_request* req, void* self) {
 void TEvhttpServer::process(struct evhttp_request* req) {
   RequestContext* ctx = new RequestContext(req);
   return processor_->process(
-      apache::thrift::stdcxx::bind(
+      p4::thrift::stdcxx::bind(
         &TEvhttpServer::complete,
         this,
         ctx,
-        apache::thrift::stdcxx::placeholders::_1),
+        p4::thrift::stdcxx::placeholders::_1),
       ctx->ibuf,
       ctx->obuf);
 }
@@ -166,4 +166,4 @@ struct event_base* TEvhttpServer::getEventBase() {
 }
 
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async

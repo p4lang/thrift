@@ -26,7 +26,7 @@
 #include <boost/utility.hpp>
 
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * A monitor is a combination mutex and condition-event.  Waiting and
@@ -125,6 +125,6 @@ class Synchronized {
 };
 
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_MONITOR_H_

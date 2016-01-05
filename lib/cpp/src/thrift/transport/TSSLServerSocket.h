@@ -23,7 +23,7 @@
 #include <boost/shared_ptr.hpp>
 #include <thrift/transport/TServerSocket.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 class TSSLSocketFactory;
 

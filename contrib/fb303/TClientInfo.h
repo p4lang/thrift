@@ -26,11 +26,11 @@
 #include <thrift/transport/TSocket.h>
 #include <thrift/concurrency/Mutex.h>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
-using namespace apache::thrift;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::concurrency;
 using boost::shared_ptr;
 using std::string;
 using std::vector;
@@ -315,6 +315,6 @@ class TClientInfoCallHandler : public TProcessorEventHandler {
   virtual void* getContext(const char* fn_name, void* serverContext);
 };
 
-} } } // namespace apache::thrift::server
+} } } // namespace p4::thrift::server
 
 #endif // !_FACEBOOK_THRIFT_SERVER_TCLIENTINFO_H_

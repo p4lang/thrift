@@ -54,8 +54,8 @@ public:
 int main() {
   using namespace std;
   using namespace thrift::test::debug;
-  using namespace apache::thrift::transport;
-  using namespace apache::thrift::protocol;
+  using namespace p4::thrift::transport;
+  using namespace p4::thrift::protocol;
   using namespace boost;
 
   OneOfEach ooe;
@@ -101,7 +101,7 @@ int main() {
       TBinaryProtocolT<TBufferBase> prot(buf2);
       ooe2.read(&prot);
 
-      //cout << apache::thrift::ThriftDebugString(ooe2) << endl << endl;
+      //cout << p4::thrift::ThriftDebugString(ooe2) << endl << endl;
     }
     cout << " Read: " << num / (1000 * timer.frame()) << " kHz" << endl;
   }

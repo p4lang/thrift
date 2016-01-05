@@ -25,7 +25,7 @@
 #include <limits>
 
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 template <class Transport_>
 uint32_t TBinaryProtocolT<Transport_>::writeMessageBegin(const std::string& name,
@@ -451,6 +451,6 @@ uint32_t TBinaryProtocolT<Transport_>::readStringBody(StrType& str,
   return (uint32_t)size;
 }
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #ifndef _THRIFT_PROTOCOL_TBINARYPROTOCOL_TCC_

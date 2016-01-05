@@ -23,7 +23,7 @@
 #include "gen-cpp/ParentService.h"
 #include "gen-cpp/ChildService.h"
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 class ParentHandler : virtual public ParentServiceIf {
  public:
@@ -336,6 +336,6 @@ class ProcessorEventHandler : public TProcessorEventHandler {
   boost::shared_ptr<EventLog> log_;
 };
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test
 
 #endif // _THRIFT_PROCESSOR_TEST_HANDLERS_H_

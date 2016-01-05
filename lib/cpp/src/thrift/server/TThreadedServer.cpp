@@ -28,14 +28,14 @@
 #include <unistd.h>
 #endif
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 using boost::shared_ptr;
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::concurrency;
 
 class TThreadedServer::Task: public Runnable {
 
@@ -238,4 +238,4 @@ void TThreadedServer::serve() {
 
 }
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server

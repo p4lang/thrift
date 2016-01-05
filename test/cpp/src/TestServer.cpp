@@ -55,12 +55,12 @@
 
 using namespace std;
 
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
-using namespace apache::thrift::async;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
+using namespace p4::thrift::async;
 
 using namespace thrift::test;
 
@@ -284,7 +284,7 @@ class TestHandler : public ThriftTestIf {
   }
 
   void testException(const std::string &arg)
-    throw(Xception, apache::thrift::TException)
+    throw(Xception, p4::thrift::TException)
   {
     printf("testException(%s)\n", arg.c_str());
     if (arg.compare("Xception") == 0) {
@@ -293,7 +293,7 @@ class TestHandler : public ThriftTestIf {
       e.message = arg;
       throw e;
     } else if (arg.compare("TException") == 0) {
-      apache::thrift::TException e;
+      p4::thrift::TException e;
       throw e;
     } else {
       Xtruct result;
@@ -466,22 +466,22 @@ public:
     cob(res);
   }
 
-  virtual void testException(tcxx::function<void()> cob, tcxx::function<void(::apache::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg) {
+  virtual void testException(tcxx::function<void()> cob, tcxx::function<void(::p4::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg) {
     try {
       _delegate->testException(arg);
-    } catch(const apache::thrift::TException& e) {
-      exn_cob(apache::thrift::TDelayedException::delayException(e));
+    } catch(const p4::thrift::TException& e) {
+      exn_cob(p4::thrift::TDelayedException::delayException(e));
       return;
     }
     cob();
   }
 
-  virtual void testMultiException(tcxx::function<void(Xtruct const& _return)> cob, tcxx::function<void(::apache::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg0, const std::string& arg1) {
+  virtual void testMultiException(tcxx::function<void(Xtruct const& _return)> cob, tcxx::function<void(::p4::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg0, const std::string& arg1) {
     Xtruct res;
     try {
       _delegate->testMultiException(res, arg0, arg1);
-    } catch(const apache::thrift::TException& e) {
-      exn_cob(apache::thrift::TDelayedException::delayException(e));
+    } catch(const p4::thrift::TException& e) {
+      exn_cob(p4::thrift::TDelayedException::delayException(e));
       return;
     }
     cob(res);
@@ -645,7 +645,7 @@ int main(int argc, char **argv) {
   cout << endl;
 
   // Server
-  boost::shared_ptr<apache::thrift::server::TServer> server;
+  boost::shared_ptr<p4::thrift::server::TServer> server;
 
   if (server_type == "simple") {
     server.reset(new TSimpleServer(testProcessor,
@@ -693,10 +693,10 @@ int main(int argc, char **argv) {
 
   if(server.get() != NULL)
   {
-    apache::thrift::concurrency::PlatformThreadFactory factory;
+    p4::thrift::concurrency::PlatformThreadFactory factory;
     factory.setDetached(false);
-    boost::shared_ptr<apache::thrift::concurrency::Runnable> serverThreadRunner(server);
-    boost::shared_ptr<apache::thrift::concurrency::Thread> thread = factory.newThread(serverThreadRunner);
+    boost::shared_ptr<p4::thrift::concurrency::Runnable> serverThreadRunner(server);
+    boost::shared_ptr<p4::thrift::concurrency::Thread> thread = factory.newThread(serverThreadRunner);
     thread->start();
 
     // HACK: cross language test suite is unable to handle cin properly

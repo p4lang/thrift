@@ -25,11 +25,11 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 class TProtocolFactory;
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
-namespace apache { namespace thrift { namespace async {
+namespace p4 { namespace thrift { namespace async {
 
 class TAsyncProcessor;
 
@@ -43,7 +43,7 @@ class TQTcpServer : public QObject {
  public:
   TQTcpServer(boost::shared_ptr<QTcpServer> server,
               boost::shared_ptr<TAsyncProcessor> processor,
-              boost::shared_ptr<apache::thrift::protocol::TProtocolFactory> protocolFactory,
+              boost::shared_ptr<p4::thrift::protocol::TProtocolFactory> protocolFactory,
               QT_PREPEND_NAMESPACE(QObject)* parent = NULL);
   virtual ~TQTcpServer();
 
@@ -62,11 +62,11 @@ class TQTcpServer : public QObject {
 
   boost::shared_ptr<QTcpServer> server_;
   boost::shared_ptr<TAsyncProcessor> processor_;
-  boost::shared_ptr<apache::thrift::protocol::TProtocolFactory> pfact_;
+  boost::shared_ptr<p4::thrift::protocol::TProtocolFactory> pfact_;
 
   std::map<QT_PREPEND_NAMESPACE(QTcpSocket)*, boost::shared_ptr<ConnectionContext> > ctxMap_;
 };
 
-}}} // apache::thrift::async
+}}} // p4::thrift::async
 
 #endif // #ifndef _THRIFT_TASYNC_QTCP_SERVER_H_

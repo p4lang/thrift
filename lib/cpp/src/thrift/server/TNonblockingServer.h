@@ -41,18 +41,18 @@
 
 
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
-using apache::thrift::transport::TMemoryBuffer;
-using apache::thrift::transport::TSocket;
-using apache::thrift::protocol::TProtocol;
-using apache::thrift::concurrency::Runnable;
-using apache::thrift::concurrency::ThreadManager;
-using apache::thrift::concurrency::PlatformThreadFactory;
-using apache::thrift::concurrency::ThreadFactory;
-using apache::thrift::concurrency::Thread;
-using apache::thrift::concurrency::Mutex;
-using apache::thrift::concurrency::Guard;
+using p4::thrift::transport::TMemoryBuffer;
+using p4::thrift::transport::TSocket;
+using p4::thrift::protocol::TProtocol;
+using p4::thrift::concurrency::Runnable;
+using p4::thrift::concurrency::ThreadManager;
+using p4::thrift::concurrency::PlatformThreadFactory;
+using p4::thrift::concurrency::ThreadFactory;
+using p4::thrift::concurrency::Thread;
+using p4::thrift::concurrency::Mutex;
+using p4::thrift::concurrency::Guard;
 
 #ifdef LIBEVENT_VERSION_NUMBER
 #define LIBEVENT_VERSION_MAJOR (LIBEVENT_VERSION_NUMBER >> 24)
@@ -939,6 +939,6 @@ class TNonblockingIOThread : public Runnable {
   boost::shared_ptr<Thread> thread_;
 };
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server
 
 #endif // #ifndef _THRIFT_SERVER_TNONBLOCKINGSERVER_H_

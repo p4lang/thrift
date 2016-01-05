@@ -24,7 +24,7 @@
 #include <stdarg.h>
 #include <stdio.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 TOutput GlobalOutput;
 
@@ -122,4 +122,4 @@ std::string TOutput::strerror_s(int errno_copy) {
 #endif  // HAVE_STRERROR_R
 }
 
-}} // apache::thrift
+}} // p4::thrift

@@ -39,7 +39,7 @@
 #include <thrift/transport/TZlibTransport.h>
 
 using namespace std;
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
 boost::mt19937 rng;
 
@@ -335,7 +335,7 @@ void test_no_write() {
     ::std::ostringstream name_ss; \
     name_ss << name << "-" << BOOST_STRINGIZE(function); \
     ::boost::unit_test::test_case* tc = ::boost::unit_test::make_test_case( \
-        ::apache::thrift::stdcxx::bind(function, ## __VA_ARGS__), \
+        ::p4::thrift::stdcxx::bind(function, ## __VA_ARGS__), \
         name_ss.str()); \
     (suite)->add(tc); \
   } while (0)

@@ -28,7 +28,7 @@
 #include <map>
 #include <time.h>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Timer Manager
@@ -125,6 +125,6 @@ class TimerManager {
   typedef std::pair<task_iterator, task_iterator> task_range;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_TIMERMANAGER_H_

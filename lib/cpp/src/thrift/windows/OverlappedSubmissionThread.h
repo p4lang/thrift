@@ -59,7 +59,7 @@
   until the operation has completed.
 */
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 DECLSPEC_ALIGN(MEMORY_ALLOCATION_ALIGNMENT) struct TOverlappedWorkItem : public SLIST_ENTRY {
   TOverlappedWorkItem();
@@ -124,6 +124,6 @@ public:
   TOverlappedSubmissionThread *operator->() {return p;}
 };
 
-}}} //apache::thrift::transport
+}}} //p4::thrift::transport
 
 #endif

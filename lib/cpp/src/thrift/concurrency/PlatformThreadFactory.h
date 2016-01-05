@@ -29,7 +29,7 @@
 #  include <thrift/concurrency/PosixThreadFactory.h>
 #endif
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 #ifdef USE_BOOST_THREAD
   typedef BoostThreadFactory PlatformThreadFactory;
@@ -39,6 +39,6 @@ namespace apache { namespace thrift { namespace concurrency {
   typedef PosixThreadFactory PlatformThreadFactory;
 #endif
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_PLATFORMTHREADFACTORY_H_

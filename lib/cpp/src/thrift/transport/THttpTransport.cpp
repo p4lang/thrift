@@ -21,7 +21,7 @@
 
 #include <thrift/transport/THttpTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 

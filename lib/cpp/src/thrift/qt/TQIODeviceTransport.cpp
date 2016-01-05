@@ -26,7 +26,7 @@
 
 using boost::shared_ptr;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 TQIODeviceTransport::TQIODeviceTransport(shared_ptr<QIODevice> dev)
   : dev_(dev)
@@ -175,5 +175,5 @@ void TQIODeviceTransport::consume(uint32_t len)
   throw TTransportException(TTransportException::UNKNOWN);
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 

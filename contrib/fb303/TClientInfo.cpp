@@ -19,10 +19,10 @@
 
 #include <thrift/server/TClientInfo.h>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
-using namespace apache::thrift;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::transport;
 
 TClientInfoConnection::TClientInfoConnection() {
   call_[kNameLen - 1] = '\0';    // insure NUL terminator is there
@@ -176,4 +176,4 @@ void* TClientInfoCallHandler::getContext(const char* fn_name, void* serverContex
   return NULL;
 }
 
-} } } // namespace apache::thrift::server
+} } } // namespace p4::thrift::server

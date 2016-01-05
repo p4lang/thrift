@@ -136,9 +136,9 @@ static inline To bitwise_cast(From from) {
 # error "Can't define htonll or ntohll!"
 #endif
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
-using apache::thrift::transport::TTransport;
+using p4::thrift::transport::TTransport;
 
 /**
  * Enumerated definition of the types that the Thrift protocol supports.
@@ -646,7 +646,7 @@ class TProtocol {
     return skip_virt(type);
   }
   virtual uint32_t skip_virt(TType type) {
-    return ::apache::thrift::protocol::skip(*this, type);
+    return ::p4::thrift::protocol::skip(*this, type);
   }
 
   inline boost::shared_ptr<TTransport> getTransport() {
@@ -707,6 +707,6 @@ class TProtocolFactory {
 class TDummyProtocol : public TProtocol {
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #define _THRIFT_PROTOCOL_TPROTOCOL_H_ 1

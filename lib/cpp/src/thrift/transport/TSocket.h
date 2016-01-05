@@ -37,7 +37,7 @@
 #include <netdb.h>
 #endif
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * TCP Socket implementation of the TTransport interface.
@@ -315,7 +315,7 @@ class TSocket : public TVirtualTransport<TSocket> {
   void local_open();
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSOCKET_H_
 

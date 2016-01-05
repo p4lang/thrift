@@ -22,7 +22,7 @@
 
 #include <string>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 /**
  * Class to encapsulate all the possible types of protocol errors that may
@@ -32,7 +32,7 @@ namespace apache { namespace thrift { namespace protocol {
  * pipes etc.
  *
  */
-class TProtocolException : public apache::thrift::TException {
+class TProtocolException : public p4::thrift::TException {
  public:
 
   /**
@@ -49,19 +49,19 @@ class TProtocolException : public apache::thrift::TException {
   };
 
   TProtocolException() :
-    apache::thrift::TException(),
+    p4::thrift::TException(),
     type_(UNKNOWN) {}
 
   TProtocolException(TProtocolExceptionType type) :
-    apache::thrift::TException(),
+    p4::thrift::TException(),
     type_(type) {}
 
   TProtocolException(const std::string& message) :
-    apache::thrift::TException(message),
+    p4::thrift::TException(message),
     type_(UNKNOWN) {}
 
   TProtocolException(TProtocolExceptionType type, const std::string& message) :
-    apache::thrift::TException(message),
+    p4::thrift::TException(message),
     type_(type) {}
 
   virtual ~TProtocolException() throw() {}
@@ -100,6 +100,6 @@ class TProtocolException : public apache::thrift::TException {
 
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #ifndef _THRIFT_PROTOCOL_TPROTOCOLEXCEPTION_H_

@@ -45,11 +45,11 @@
 
 using namespace std;
 
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
+using namespace p4::thrift::concurrency;
 
 using namespace test::stress;
 
@@ -217,24 +217,24 @@ public:
   Monitor _sleep;
 };
 
-class TStartObserver : public apache::thrift::server::TServerEventHandler
+class TStartObserver : public p4::thrift::server::TServerEventHandler
 {
 public:
    TStartObserver() : awake_(false) {}
    virtual void preServe()
    {
-      apache::thrift::concurrency::Synchronized s(m_);
+      p4::thrift::concurrency::Synchronized s(m_);
       awake_ = true;
       m_.notifyAll();
    }
    void waitForService()
    {
-      apache::thrift::concurrency::Synchronized s(m_);
+      p4::thrift::concurrency::Synchronized s(m_);
       while(!awake_)
          m_.waitForever();
    }
  private:
-   apache::thrift::concurrency::Monitor m_;
+   p4::thrift::concurrency::Monitor m_;
    bool awake_;
 };
 

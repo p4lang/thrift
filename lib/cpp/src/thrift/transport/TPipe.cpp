@@ -24,7 +24,7 @@
   #include <thrift/windows/Sync.h>
 #endif
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 
@@ -410,4 +410,4 @@ void TPipe::setConnectTimeout(long seconds) {
 
 #endif //_WIN32
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

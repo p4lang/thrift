@@ -34,11 +34,11 @@
 using namespace std;
 using namespace boost;
 
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
 
 using namespace thrift::test;
 
@@ -48,7 +48,7 @@ using namespace thrift::test;
 namespace thrift { namespace test {
 
 bool Insanity::operator<(thrift::test::Insanity const& other) const {
-  using apache::thrift::ThriftDebugString;
+  using p4::thrift::ThriftDebugString;
   return ThriftDebugString(*this) < ThriftDebugString(other);
 }
 
@@ -264,7 +264,7 @@ class TestHandler : public ThriftTestIf {
   }
 
   void testException(const std::string &arg)
-    throw(Xception, apache::thrift::TException)
+    throw(Xception, p4::thrift::TException)
   {
     printf("[C -> C++] testException(%s)\n", arg.c_str());
     if (arg.compare("Xception") == 0) {
@@ -273,7 +273,7 @@ class TestHandler : public ThriftTestIf {
       e.message = arg;
       throw e;
     } else if (arg.compare("ApplicationException") == 0) {
-      apache::thrift::TException e;
+      p4::thrift::TException e;
       throw e;
     } else {
       Xtruct result;

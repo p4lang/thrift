@@ -130,7 +130,7 @@
        <attribute name="Import-Package" value="javax.net,javax.net.ssl,javax.security.auth.callback,javax.security.sasl,javax.servlet;resolution:=optional,javax.servlet.http;resolution:=optional,org.slf4j;resolution:=optional;version=&quot;[1.4,2)&quot;"/>
       </manifest>
       <fileset dir="${build.dir}">
-        <include name="org/apache/thrift/**/*.class"/>
+        <include name="org.apache/thrift/**/*.class"/>
         <include name="META-INF/*.txt"/>
       </fileset>
     </jar>
@@ -310,7 +310,7 @@
 
     <!-- remote repositories used to download dependencies from -->
     <artifact:remoteRepository id="central" url="${mvn.repo}"/>
-    <artifact:remoteRepository id="apache" url="${apache.repo}"/>
+    <artifact:remoteRepository id="p4" url="${apache.repo}"/>
 
     <!-- Pom file information -->
     <artifact:pom id="pom" 
@@ -323,7 +323,7 @@
       packaging="pom"
     >
       <remoteRepository refid="central"/>
-      <remoteRepository refid="apache"/>
+      <remoteRepository refid="p4"/>
       <license name="The Apache Software License, Version 2.0" url="${license}"/>
       <scm connection="scm:git:https://git-wip-us.apache.org/repos/asf/thrift.git" 
       developerConnection="scm:git:https://git-wip-us.apache.org/repos/asf/thrift.git"
@@ -384,7 +384,7 @@
   </target>
 
   <macrodef name="signAndDeploy">
-    <!-- Sign and deploy jars to apache repo -->
+    <!-- Sign and deploy jars to p4 repo -->
     <attribute name="file"/>
     <attribute name="classifier" default=""/>
     <attribute name="packaging" default="jar"/>
@@ -404,7 +404,7 @@
   </macrodef>
 
   <target name="publish" depends="clean,init,test,dist,javadoc,pack.src">
-    <!-- Compile, package, test and then send release to apache maven repo -->
+    <!-- Compile, package, test and then send release to p4 maven repo -->
     <!-- run with: ant -Drelease=true publish-->
     <signAndDeploy file="${pom.xml}" packaging="pom" classifier="" pom="${pom.xml}"/>
     <signAndDeploy file="${jar.file}" packaging="jar" classifier="" pom="${pom.xml}"/>

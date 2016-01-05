@@ -27,13 +27,13 @@
 
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
-using apache::thrift::TProcessor;
-using apache::thrift::transport::TServerTransport;
-using apache::thrift::transport::TTransportFactory;
-using apache::thrift::concurrency::Monitor;
-using apache::thrift::concurrency::ThreadFactory;
+using p4::thrift::TProcessor;
+using p4::thrift::transport::TServerTransport;
+using p4::thrift::transport::TTransportFactory;
+using p4::thrift::concurrency::Monitor;
+using p4::thrift::concurrency::ThreadFactory;
 
 class TThreadedServer : public TServer {
 
@@ -140,6 +140,6 @@ TThreadedServer::TThreadedServer(
   init();
 }
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server
 
 #endif // #ifndef _THRIFT_SERVER_TTHREADEDSERVER_H_

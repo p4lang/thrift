@@ -25,7 +25,7 @@
 #include <thrift/Thrift.h>
 
 using boost::shared_ptr;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift::protocol;
 
 /* ClassName Helper for cleaner exceptions */
 class ClassNames {

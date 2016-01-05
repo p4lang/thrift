@@ -26,7 +26,7 @@
 #include <sys/time.h>
 #endif
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 int64_t Util::currentTimeTicks(int64_t ticksPerSec) {
   int64_t result;
@@ -38,4 +38,4 @@ int64_t Util::currentTimeTicks(int64_t ticksPerSec) {
   return result;
 }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency

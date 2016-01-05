@@ -31,7 +31,7 @@
 #  include <Aclapi.h>
 #endif //_WIN32
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 #ifdef _WIN32
 
@@ -447,4 +447,4 @@ void TPipeServer::setMaxConnections(uint32_t maxconnections)
 
 #endif //_WIN32
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

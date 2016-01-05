@@ -24,7 +24,7 @@
 
 #include <thrift/transport/TSocketPool.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 
@@ -251,4 +251,4 @@ void TSocketPool::close() {
   }
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

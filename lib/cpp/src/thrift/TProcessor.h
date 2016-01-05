@@ -24,7 +24,7 @@
 #include <thrift/protocol/TProtocol.h>
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 /**
  * Virtual interface class that can handle events from the processor. To
@@ -122,7 +122,7 @@ class TProcessorContextFreer {
   ~TProcessorContextFreer() { if (handler_ != NULL) handler_->freeContext(context_, method_); }
   void unregister() { handler_ = NULL; }
  private:
-  apache::thrift::TProcessorEventHandler* handler_;
+  p4::thrift::TProcessorEventHandler* handler_;
   void* context_;
   const char* method_;
 };
@@ -142,7 +142,7 @@ class TProcessor {
                        boost::shared_ptr<protocol::TProtocol> out,
                        void* connectionContext) = 0;
 
-  bool process(boost::shared_ptr<apache::thrift::protocol::TProtocol> io,
+  bool process(boost::shared_ptr<p4::thrift::protocol::TProtocol> io,
                void* connectionContext) {
     return process(io, io, connectionContext);
   }
@@ -228,6 +228,6 @@ class TSingletonProcessorFactory : public TProcessorFactory {
   boost::shared_ptr<TProcessor> processor_;
 };
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // #ifndef _THRIFT_TPROCESSOR_H_

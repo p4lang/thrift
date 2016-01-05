@@ -23,7 +23,7 @@
 #include <thrift/transport/TBufferTransports.h>
 #include <thrift/transport/TVirtualTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * HTTP implementation of the thrift transport. This was irritating
@@ -105,6 +105,6 @@ class THttpTransport : public TVirtualTransport<THttpTransport> {
   static const int CRLF_LEN;
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_THTTPCLIENT_H_

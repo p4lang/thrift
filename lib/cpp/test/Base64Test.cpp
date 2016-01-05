@@ -20,8 +20,8 @@
 #include <boost/test/auto_unit_test.hpp>
 #include <thrift/protocol/TBase64Utils.h>
 
-using apache::thrift::protocol::base64_encode;
-using apache::thrift::protocol::base64_decode;
+using p4::thrift::protocol::base64_encode;
+using p4::thrift::protocol::base64_decode;
 
 BOOST_AUTO_TEST_SUITE( Base64Test )
 

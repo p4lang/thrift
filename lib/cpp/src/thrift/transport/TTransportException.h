@@ -23,7 +23,7 @@
 #include <string>
 #include <thrift/Thrift.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Class to encapsulate all the possible types of transport errors that may
@@ -33,7 +33,7 @@ namespace apache { namespace thrift { namespace transport {
  * pipes etc.
  *
  */
-class TTransportException : public apache::thrift::TException {
+class TTransportException : public p4::thrift::TException {
  public:
   /**
    * Error codes for the various types of exceptions.
@@ -50,25 +50,25 @@ class TTransportException : public apache::thrift::TException {
   };
 
   TTransportException() :
-    apache::thrift::TException(),
+    p4::thrift::TException(),
     type_(UNKNOWN) {}
 
   TTransportException(TTransportExceptionType type) :
-    apache::thrift::TException(),
+    p4::thrift::TException(),
     type_(type) {}
 
   TTransportException(const std::string& message) :
-    apache::thrift::TException(message),
+    p4::thrift::TException(message),
     type_(UNKNOWN) {}
 
   TTransportException(TTransportExceptionType type, const std::string& message) :
-    apache::thrift::TException(message),
+    p4::thrift::TException(message),
     type_(type) {}
 
   TTransportException(TTransportExceptionType type,
                       const std::string& message,
                       int errno_copy) :
-    apache::thrift::TException(message + ": " + TOutput::strerror_s(errno_copy)),
+    p4::thrift::TException(message + ": " + TOutput::strerror_s(errno_copy)),
     type_(type) {}
 
   virtual ~TTransportException() throw() {}
@@ -94,6 +94,6 @@ class TTransportException : public apache::thrift::TException {
 
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TTRANSPORTEXCEPTION_H_

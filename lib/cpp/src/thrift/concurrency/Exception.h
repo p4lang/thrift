@@ -23,35 +23,35 @@
 #include <exception>
 #include <thrift/Thrift.h>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
-class NoSuchTaskException : public apache::thrift::TException {};
+class NoSuchTaskException : public p4::thrift::TException {};
 
-class UncancellableTaskException : public apache::thrift::TException {};
+class UncancellableTaskException : public p4::thrift::TException {};
 
-class InvalidArgumentException : public apache::thrift::TException {};
+class InvalidArgumentException : public p4::thrift::TException {};
 
-class IllegalStateException : public apache::thrift::TException {
+class IllegalStateException : public p4::thrift::TException {
 public:
   IllegalStateException() {}
   IllegalStateException(const std::string& message) : TException(message) {}
 };
 
-class TimedOutException : public apache::thrift::TException {
+class TimedOutException : public p4::thrift::TException {
 public:
   TimedOutException():TException("TimedOutException"){};
   TimedOutException(const std::string& message ) :
     TException(message) {}
 };
 
-class TooManyPendingTasksException : public apache::thrift::TException {
+class TooManyPendingTasksException : public p4::thrift::TException {
 public:
   TooManyPendingTasksException():TException("TooManyPendingTasksException"){};
   TooManyPendingTasksException(const std::string& message ) :
     TException(message) {}
 };
 
-class SystemResourceException : public apache::thrift::TException {
+class SystemResourceException : public p4::thrift::TException {
 public:
     SystemResourceException() {}
 
@@ -59,6 +59,6 @@ public:
         TException(message) {}
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_EXCEPTION_H_

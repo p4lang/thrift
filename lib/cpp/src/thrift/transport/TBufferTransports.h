@@ -35,7 +35,7 @@
 #define TDB_UNLIKELY(val) (val)
 #endif
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 
 /**
@@ -80,7 +80,7 @@ class TBufferBase : public TVirtualTransport<TBufferBase> {
       rBase_ = new_rBase;
       return len;
     }
-    return apache::thrift::transport::readAll(*this, buf, len);
+    return p4::thrift::transport::readAll(*this, buf, len);
   }
 
   /**
@@ -747,6 +747,6 @@ class TMemoryBuffer : public TVirtualTransport<TMemoryBuffer, TBufferBase> {
   // you add new members.
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TBUFFERTRANSPORTS_H_

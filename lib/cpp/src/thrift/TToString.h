@@ -28,7 +28,7 @@
 #include <string>
 #include <sstream>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 template <typename T>
 std::string to_string(const T& t) {
@@ -84,6 +84,6 @@ std::string to_string(const std::set<T>& s) {
   return o.str();
 }
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // _THRIFT_TOSTRING_H_

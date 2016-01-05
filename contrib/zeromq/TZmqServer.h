@@ -23,7 +23,7 @@
 #include <zmq.hpp>
 #include <thrift/server/TServer.h>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 class TZmqServer : public TServer {
  public:
@@ -76,6 +76,6 @@ class TZmqMultiServer {
 };
 
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server
 
 #endif // #ifndef _THRIFT_SERVER_TZMQSERVER_H_

@@ -28,8 +28,8 @@
 
 using namespace std;
 using boost::shared_ptr;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::protocol;
 
 void usage() {
   fprintf(stderr,

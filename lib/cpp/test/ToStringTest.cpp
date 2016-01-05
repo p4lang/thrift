@@ -28,7 +28,7 @@
 #include "gen-cpp/OptionalRequiredTest_types.h"
 #include "gen-cpp/DebugProtoTest_types.h"
 
-using apache::thrift::to_string;
+using p4::thrift::to_string;
 
 BOOST_AUTO_TEST_SUITE( ToStringTest )
 

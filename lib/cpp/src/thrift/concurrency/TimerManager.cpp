@@ -25,7 +25,7 @@
 #include <iostream>
 #include <set>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 using boost::shared_ptr;
 
@@ -301,5 +301,5 @@ void TimerManager::remove(shared_ptr<Runnable> task) {
 
 TimerManager::STATE TimerManager::state() const { return state_; }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 

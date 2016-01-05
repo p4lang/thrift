@@ -31,7 +31,7 @@
 
 #include <thrift/transport/PlatformSocket.h>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Utility methods
@@ -147,6 +147,6 @@ class Util {
   static int64_t currentTimeUsec() { return currentTimeTicks(US_PER_S); }
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_UTIL_H_

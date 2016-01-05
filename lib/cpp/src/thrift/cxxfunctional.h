@@ -71,7 +71,7 @@
 #if _THRIFT_USING_MICROSOFT_STDLIB
   #include <functional>
 
-  namespace apache { namespace thrift { namespace stdcxx {
+  namespace p4 { namespace thrift { namespace stdcxx {
     using ::std::tr1::function;
     using ::std::tr1::bind;
 
@@ -82,13 +82,13 @@
       using ::std::tr1::placeholders::_4;
       using ::std::tr1::placeholders::_5;
       using ::std::tr1::placeholders::_6;
-    } // apache::thrift::stdcxx::placeholders
-  }}} // apache::thrift::stdcxx
+    } // p4::thrift::stdcxx::placeholders
+  }}} // p4::thrift::stdcxx
 
 #elif _THRIFT_USING_CLANG_LIBCXX
   #include <functional>
 
-  namespace apache { namespace thrift { namespace stdcxx {
+  namespace p4 { namespace thrift { namespace stdcxx {
     using ::std::function;
     using ::std::bind;
 
@@ -99,13 +99,13 @@
       using ::std::placeholders::_4;
       using ::std::placeholders::_5;
       using ::std::placeholders::_6;
-    } // apache::thrift::stdcxx::placeholders
-  }}} // apache::thrift::stdcxx
+    } // p4::thrift::stdcxx::placeholders
+  }}} // p4::thrift::stdcxx
 
 #elif _THRIFT_USING_GNU_LIBSTDCXX
   #include <tr1/functional>
 
-  namespace apache { namespace thrift { namespace stdcxx {
+  namespace p4 { namespace thrift { namespace stdcxx {
     using ::std::tr1::function;
     using ::std::tr1::bind;
 
@@ -116,11 +116,11 @@
       using ::std::tr1::placeholders::_4;
       using ::std::tr1::placeholders::_5;
       using ::std::tr1::placeholders::_6;
-    } // apache::thrift::stdcxx::placeholders
-  }}} // apache::thrift::stdcxx
+    } // p4::thrift::stdcxx::placeholders
+  }}} // p4::thrift::stdcxx
 #endif
 
   // Alias for thrift c++ compatibility namespace
-  namespace tcxx = apache::thrift::stdcxx;
+  namespace tcxx = p4::thrift::stdcxx;
 
 #endif // #ifndef _THRIFT_CXXFUNCTIONAL_H_

@@ -34,7 +34,7 @@
 #include <iostream>
 #endif //defined(DEBUG)
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 using boost::shared_ptr;
 using boost::dynamic_pointer_cast;
@@ -577,5 +577,5 @@ shared_ptr<ThreadManager> ThreadManager::newSimpleThreadManager(size_t count, si
   return shared_ptr<ThreadManager>(new SimpleThreadManager(count, pendingTaskCountMax));
 }
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 

@@ -26,7 +26,7 @@
 using std::string;
 using boost::lexical_cast;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
   const char* TTransportException::what() const throw() {
     if (message_.empty()) {
@@ -47,4 +47,4 @@ namespace apache { namespace thrift { namespace transport {
   }
 
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

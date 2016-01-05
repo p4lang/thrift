@@ -24,10 +24,10 @@
 
 using std::string;
 using boost::shared_ptr;
-using apache::thrift::transport::TMemoryBuffer;
-using apache::thrift::transport::TBufferedTransport;
-using apache::thrift::transport::TFramedTransport;
-using apache::thrift::transport::test::TShortReadTransport;
+using p4::thrift::transport::TMemoryBuffer;
+using p4::thrift::transport::TBufferedTransport;
+using p4::thrift::transport::TFramedTransport;
+using p4::thrift::transport::test::TShortReadTransport;
 
 // Shamelessly copied from ZlibTransport.  TODO: refactor.
 unsigned int dist[][5000] = {

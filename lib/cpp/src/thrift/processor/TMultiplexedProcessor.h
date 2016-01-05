@@ -25,7 +25,7 @@
 #include <thrift/TProcessor.h>
 #include <boost/tokenizer.hpp>
 
-namespace apache
+namespace p4
 {
     namespace thrift
     {
@@ -145,14 +145,14 @@ namespace apache
 
                 if( type != protocol::T_CALL && type != protocol::T_ONEWAY ) {
                     // Unexpected message type.
-                    in->skip(::apache::thrift::protocol::T_STRUCT);
+                    in->skip(::p4::thrift::protocol::T_STRUCT);
                     in->readMessageEnd();
                     in->getTransport()->readEnd();
                     const std::string msg("TMultiplexedProcessor: Unexpected message type");
-                    ::apache::thrift::TApplicationException x(
-                        ::apache::thrift::TApplicationException::PROTOCOL_ERROR,
+                    ::p4::thrift::TApplicationException x(
+                        ::p4::thrift::TApplicationException::PROTOCOL_ERROR,
                         msg);
-                    out->writeMessageBegin(name, ::apache::thrift::protocol::T_EXCEPTION, seqid);
+                    out->writeMessageBegin(name, ::p4::thrift::protocol::T_EXCEPTION, seqid);
                     x.write(out.get());
                     out->writeMessageEnd();
                     out->getTransport()->writeEnd();
@@ -187,16 +187,16 @@ namespace apache
                     else
                     {
                         // Unknown service.
-                        in->skip(::apache::thrift::protocol::T_STRUCT);
+                        in->skip(::p4::thrift::protocol::T_STRUCT);
                         in->readMessageEnd();
                         in->getTransport()->readEnd();
 
                         std::string msg("TMultiplexedProcessor: Unknown service: ");
                         msg += tokens[0];
-                        ::apache::thrift::TApplicationException x(
-                            ::apache::thrift::TApplicationException::PROTOCOL_ERROR,
+                        ::p4::thrift::TApplicationException x(
+                            ::p4::thrift::TApplicationException::PROTOCOL_ERROR,
                             msg);
-                        out->writeMessageBegin(name, ::apache::thrift::protocol::T_EXCEPTION, seqid);
+                        out->writeMessageBegin(name, ::p4::thrift::protocol::T_EXCEPTION, seqid);
                         x.write(out.get());
                         out->writeMessageEnd();
                         out->getTransport()->writeEnd();

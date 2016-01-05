@@ -103,7 +103,7 @@
 #include <thrift/concurrency/Mutex.h>
 
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
   class ThreadManager;
 }}}
 
@@ -145,20 +145,20 @@ public:
                  Stopwatch::Unit stopwatchUnit
                  = Stopwatch::UNIT_MILLISECONDS);
 
-  void setThreadManager(boost::shared_ptr<apache::thrift::concurrency::ThreadManager> threadManager);
+  void setThreadManager(boost::shared_ptr<p4::thrift::concurrency::ThreadManager> threadManager);
 
 private:
 
   facebook::fb303::FacebookBase *handler_;
   void (*logMethod_)(int, const std::string &);
-  boost::shared_ptr<apache::thrift::concurrency::ThreadManager> threadManager_;
+  boost::shared_ptr<p4::thrift::concurrency::ThreadManager> threadManager_;
 
   bool featureCheckpoint_;
   bool featureStatusCheck_;
   bool featureThreadCheck_;
   Stopwatch::Unit stopwatchUnit_;
 
-  apache::thrift::concurrency::Mutex statisticsMutex_;
+  p4::thrift::concurrency::Mutex statisticsMutex_;
   time_t checkpointTime_;
   uint64_t checkpointServices_;
   uint64_t checkpointDuration_;

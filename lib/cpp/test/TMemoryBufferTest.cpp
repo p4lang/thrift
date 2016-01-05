@@ -28,8 +28,8 @@
 BOOST_AUTO_TEST_SUITE( TMemoryBufferTest )
 
 BOOST_AUTO_TEST_CASE( test_roundtrip ) {
-    using apache::thrift::transport::TMemoryBuffer;
-    using apache::thrift::protocol::TBinaryProtocol;
+    using p4::thrift::transport::TMemoryBuffer;
+    using p4::thrift::protocol::TBinaryProtocol;
     using boost::shared_ptr;
 
     shared_ptr<TMemoryBuffer> strBuffer(new TMemoryBuffer());
@@ -55,7 +55,7 @@ BOOST_AUTO_TEST_CASE( test_roundtrip ) {
 
 BOOST_AUTO_TEST_CASE( test_copy )
   {
-    using apache::thrift::transport::TMemoryBuffer;
+    using p4::thrift::transport::TMemoryBuffer;
     using std::string;
     using std::cout;
     using std::endl;
@@ -81,8 +81,8 @@ BOOST_AUTO_TEST_CASE( test_copy )
 
 BOOST_AUTO_TEST_CASE( test_exceptions )
   {
-    using apache::thrift::transport::TTransportException;
-    using apache::thrift::transport::TMemoryBuffer;
+    using p4::thrift::transport::TTransportException;
+    using p4::thrift::transport::TMemoryBuffer;
     using std::string;
 
     char data[] = "foo\0bar";

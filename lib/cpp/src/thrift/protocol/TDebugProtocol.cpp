@@ -39,7 +39,7 @@ static string byte_to_hex(const uint8_t byte) {
 }
 
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 string TDebugProtocol::fieldTypeName(TType type) {
   switch (type) {
@@ -355,4 +355,4 @@ uint32_t TDebugProtocol::writeBinary(const string& str) {
   return TDebugProtocol::writeString(str);
 }
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol

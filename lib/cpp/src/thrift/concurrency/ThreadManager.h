@@ -25,7 +25,7 @@
 #include <sys/types.h>
 #include <thrift/concurrency/Thread.h>
 
-namespace apache { namespace thrift { namespace concurrency {
+namespace p4 { namespace thrift { namespace concurrency {
 
 /**
  * Thread Pool Manager and related classes
@@ -57,7 +57,7 @@ class ThreadManager {
   ThreadManager() {}
 
  public:
-  typedef apache::thrift::stdcxx::function<void(boost::shared_ptr<Runnable>)> ExpireCallback;
+  typedef p4::thrift::stdcxx::function<void(boost::shared_ptr<Runnable>)> ExpireCallback;
 
   virtual ~ThreadManager() {}
 
@@ -196,6 +196,6 @@ class ThreadManager {
   class Impl;
 };
 
-}}} // apache::thrift::concurrency
+}}} // p4::thrift::concurrency
 
 #endif // #ifndef _THRIFT_CONCURRENCY_THREADMANAGER_H_

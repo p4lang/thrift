@@ -42,13 +42,13 @@
 
 using namespace std;
 using namespace boost;
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::server;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::server;
+using namespace p4::thrift::transport;
 
-using namespace apache::thrift::test;
+using namespace p4::thrift::test;
 
 /*
  * Traits classes that encapsulate how to create various types of servers.
@@ -562,7 +562,7 @@ void testEventSequencing() {
 
   // Send the rest of the request
   protocol.writeStructBegin("ParentService_getDataNotified_pargs");
-  protocol.writeFieldBegin("length", apache::thrift::protocol::T_I32, 1);
+  protocol.writeFieldBegin("length", p4::thrift::protocol::T_I32, 1);
   protocol.writeI32(8*1024*1024);
   protocol.writeFieldEnd();
   protocol.writeFieldStop();
@@ -609,7 +609,7 @@ void testEventSequencing() {
   // Read the response header
   std::string responseName;
   int32_t responseSeqid = 0;
-  apache::thrift::protocol::TMessageType responseType;
+  p4::thrift::protocol::TMessageType responseType;
   protocol.readMessageBegin(responseName, responseType, responseSeqid);
   BOOST_CHECK_EQUAL(responseSeqid, seqid);
   BOOST_CHECK_EQUAL(requestName, responseName);

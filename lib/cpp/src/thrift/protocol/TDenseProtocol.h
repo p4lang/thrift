@@ -22,7 +22,7 @@
 
 #include <thrift/protocol/TBinaryProtocol.h>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 /**
  * !!!WARNING!!!
@@ -64,7 +64,7 @@ class TDenseProtocol
   static const int32_t VERSION_2 = ((int32_t)0x80020000);
 
  public:
-  typedef apache::thrift::reflection::local::TypeSpec TypeSpec;
+  typedef p4::thrift::reflection::local::TypeSpec TypeSpec;
   static const int FP_PREFIX_LEN;
 
   /**
@@ -249,6 +249,6 @@ class TDenseProtocol
   bool standalone_;
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #ifndef _THRIFT_PROTOCOL_TDENSEPROTOCOL_H_

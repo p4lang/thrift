@@ -24,7 +24,7 @@
 
 using std::string;
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 // Don't call this outside of the constructor.
 void TZlibTransport::initZlib() {
@@ -396,4 +396,4 @@ void TZlibTransport::verifyChecksum() {
 }
 
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

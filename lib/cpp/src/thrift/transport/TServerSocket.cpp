@@ -69,7 +69,7 @@ inline SOCKOPT_CAST_T* cast_sockopt(T* v) {
     return reinterpret_cast<SOCKOPT_CAST_T*>(v);
 }
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 using namespace std;
 using boost::shared_ptr;
@@ -529,4 +529,4 @@ void TServerSocket::close() {
   intSock2_ = THRIFT_INVALID_SOCKET;
 }
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport

@@ -23,7 +23,7 @@
 #include <stdint.h>
 #include <string>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 // in must be at least len bytes
 // len must be 1, 2, or 3
@@ -37,6 +37,6 @@ void base64_encode(const uint8_t *in, uint32_t len, uint8_t *buf);
 // no '=' padding should be included in the input
 void base64_decode(uint8_t *buf, uint32_t len);
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #define _THRIFT_PROTOCOL_TBASE64UTILS_H_

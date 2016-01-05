@@ -65,14 +65,14 @@
 #define PRIu64 "I64u"
 #endif
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::concurrency;
 using namespace std;
-using apache::thrift::transport::TSocket;
-using apache::thrift::transport::TTransportException;
+using p4::thrift::transport::TSocket;
+using p4::thrift::transport::TTransportException;
 using boost::shared_ptr;
 
 /// Three states for sockets: recv frame size, recv data, and send mode
@@ -1128,7 +1128,7 @@ void TNonblockingServer::listenSocket(THRIFT_SOCKET s) {
 void TNonblockingServer::setThreadManager(boost::shared_ptr<ThreadManager> threadManager) {
   threadManager_ = threadManager;
   if (threadManager) {
-    threadManager->setExpireCallback(apache::thrift::stdcxx::bind(&TNonblockingServer::expireClose, this, apache::thrift::stdcxx::placeholders::_1));
+    threadManager->setExpireCallback(p4::thrift::stdcxx::bind(&TNonblockingServer::expireClose, this, p4::thrift::stdcxx::placeholders::_1));
     threadPoolProcessing_ = true;
   } else {
     threadPoolProcessing_ = false;
@@ -1561,4 +1561,4 @@ void TNonblockingIOThread::join() {
   }
 }
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server

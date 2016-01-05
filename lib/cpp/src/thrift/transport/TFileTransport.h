@@ -35,12 +35,12 @@
 #include <thrift/concurrency/PlatformThreadFactory.h>
 #include <thrift/concurrency/Thread.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
-using apache::thrift::TProcessor;
-using apache::thrift::protocol::TProtocolFactory;
-using apache::thrift::concurrency::Mutex;
-using apache::thrift::concurrency::Monitor;
+using p4::thrift::TProcessor;
+using p4::thrift::protocol::TProtocolFactory;
+using p4::thrift::concurrency::Mutex;
+using p4::thrift::concurrency::Monitor;
 
 // Data pertaining to a single event
 typedef struct eventInfo {
@@ -370,8 +370,8 @@ class TFileTransport : public TFileReaderTransport,
   static const uint32_t DEFAULT_WRITER_THREAD_SLEEP_TIME_US = 60 * 1000 * 1000;
 
   // writer thread
-  apache::thrift::concurrency::PlatformThreadFactory threadFactory_;
-  boost::shared_ptr<apache::thrift::concurrency::Thread> writerThread_;
+  p4::thrift::concurrency::PlatformThreadFactory threadFactory_;
+  boost::shared_ptr<p4::thrift::concurrency::Thread> writerThread_;
 
   // buffers to hold data before it is flushed. Each element of the buffer stores a msg that
   // needs to be written to the file.  The buffers are swapped by the writer thread.
@@ -469,6 +469,6 @@ class TFileProcessor {
 };
 
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // _THRIFT_TRANSPORT_TFILETRANSPORT_H_

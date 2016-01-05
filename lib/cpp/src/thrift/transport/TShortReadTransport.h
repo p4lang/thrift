@@ -25,7 +25,7 @@
 #include <thrift/transport/TTransport.h>
 #include <thrift/transport/TVirtualTransport.h>
 
-namespace apache { namespace thrift { namespace transport { namespace test {
+namespace p4 { namespace thrift { namespace transport { namespace test {
 
 /**
  * This class is only meant for testing.  It wraps another transport.
@@ -92,6 +92,6 @@ class TShortReadTransport : public TVirtualTransport<TShortReadTransport> {
   double fullProb_;
 };
 
-}}}} // apache::thrift::transport::test
+}}}} // p4::thrift::transport::test
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSHORTREADTRANSPORT_H_

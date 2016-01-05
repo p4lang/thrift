@@ -24,7 +24,7 @@
 
 #include <stack>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
 // Forward declaration
 class TJSONContext;
@@ -310,18 +310,18 @@ class TJSONProtocolFactory : public TProtocolFactory {
   }
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 
 // TODO(dreiss): Move part of ThriftJSONString into a .cpp file and remove this.
 #include <thrift/transport/TBufferTransports.h>
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 template<typename ThriftStruct>
   std::string ThriftJSONString(const ThriftStruct& ts) {
-  using namespace apache::thrift::transport;
-  using namespace apache::thrift::protocol;
+  using namespace p4::thrift::transport;
+  using namespace p4::thrift::protocol;
   TMemoryBuffer* buffer = new TMemoryBuffer;
   boost::shared_ptr<TTransport> trans(buffer);
   TJSONProtocol protocol(trans);
@@ -334,6 +334,6 @@ template<typename ThriftStruct>
   return std::string((char*)buf, (unsigned int)size);
 }
 
-}} // apache::thrift
+}} // p4::thrift
 
 #endif // #define _THRIFT_PROTOCOL_TJSONPROTOCOL_H_ 1

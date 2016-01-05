@@ -22,12 +22,12 @@
 #include <string>
 #include <iostream>
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 using boost::shared_ptr;
 
 /**
@@ -150,4 +150,4 @@ void TSimpleServer::serve() {
   }
 }
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server

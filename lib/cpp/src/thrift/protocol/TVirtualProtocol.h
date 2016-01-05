@@ -22,9 +22,9 @@
 
 #include <thrift/protocol/TProtocol.h>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
-using apache::thrift::transport::TTransport;
+using p4::thrift::transport::TTransport;
 
 /**
  * Helper class that provides default implementations of TProtocol methods.
@@ -306,7 +306,7 @@ class TProtocolDefaults : public TProtocol {
   }
 
   uint32_t skip(TType type) {
-    return ::apache::thrift::protocol::skip(*this, type);
+    return ::p4::thrift::protocol::skip(*this, type);
   }
 
  protected:
@@ -535,7 +535,7 @@ class TVirtualProtocol : public Super_ {
    */
   uint32_t skip(TType type) {
     Protocol_* const prot = static_cast<Protocol_*>(this);
-    return ::apache::thrift::protocol::skip(*prot, type);
+    return ::p4::thrift::protocol::skip(*prot, type);
   }
 
   /*
@@ -559,6 +559,6 @@ class TVirtualProtocol : public Super_ {
   {}
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #define _THRIFT_PROTOCOL_TVIRTUALPROTOCOL_H_ 1

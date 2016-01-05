@@ -22,9 +22,9 @@
 
 #include <thrift/protocol/TVirtualProtocol.h>
 
-namespace apache { namespace thrift { namespace protocol {
+namespace p4 { namespace thrift { namespace protocol {
 
-using apache::thrift::transport::TTransport;
+using p4::thrift::transport::TTransport;
 
 /**
  * Puts a wiretap on a protocol object.  Any reads to this class are passed
@@ -183,6 +183,6 @@ class TProtocolTap : public TVirtualProtocol<TProtocolTap> {
   boost::shared_ptr<TProtocol> sink_;
 };
 
-}}} // apache::thrift::protocol
+}}} // p4::thrift::protocol
 
 #endif // #define _THRIFT_PROTOCOL_TPROTOCOLTAP_H_ 1

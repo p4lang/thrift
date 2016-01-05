@@ -27,10 +27,10 @@
 #include <iostream>
 #include <set>
 
-namespace apache { namespace thrift { namespace concurrency { namespace test {
+namespace p4 { namespace thrift { namespace concurrency { namespace test {
 
 using boost::shared_ptr;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 /**
  * ThreadManagerTests class
@@ -350,4 +350,4 @@ public:
 
 const double ThreadFactoryTests::TEST_TOLERANCE = .20;
 
-}}}} // apache::thrift::concurrency::test
+}}}} // p4::thrift::concurrency::test

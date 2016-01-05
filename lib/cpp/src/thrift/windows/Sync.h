@@ -33,7 +33,7 @@
   code, use the classes found in the concurrency namespace
 */
 
-namespace apache { namespace thrift {
+namespace p4 { namespace thrift {
 
 struct TCriticalSection : boost::noncopyable {
   CRITICAL_SECTION cs;
@@ -56,7 +56,7 @@ struct TAutoResetEvent : boost::noncopyable {
     h = CreateEvent( NULL, FALSE, FALSE, NULL);
     if(h == NULL) {
       GlobalOutput.perror("TAutoResetEvent unable to create event, GLE=", GetLastError());
-      throw apache::thrift::concurrency::SystemResourceException("CreateEvent failed");
+      throw p4::thrift::concurrency::SystemResourceException("CreateEvent failed");
     }
   }
   ~TAutoResetEvent() {CloseHandle(h);}
@@ -69,7 +69,7 @@ struct TManualResetEvent : boost::noncopyable {
     h = CreateEvent( NULL, TRUE, FALSE, NULL);
     if(h == NULL) {
       GlobalOutput.perror("TManualResetEvent unable to create event, GLE=", GetLastError());
-      throw apache::thrift::concurrency::SystemResourceException("CreateEvent failed");
+      throw p4::thrift::concurrency::SystemResourceException("CreateEvent failed");
     }
   }
   ~TManualResetEvent() {CloseHandle(h);}
@@ -97,6 +97,6 @@ struct TAutoHandle : boost::noncopyable {
   }
 };
 
-}} //apache::thrift
+}} //p4::thrift
 
 #endif

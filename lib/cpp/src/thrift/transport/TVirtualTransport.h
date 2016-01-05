@@ -22,7 +22,7 @@
 
 #include <thrift/transport/TTransport.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 
 /**
@@ -123,7 +123,7 @@ class TVirtualTransport : public Super_ {
    */
   uint32_t readAll(uint8_t* buf, uint32_t len) {
     Transport_* trans = static_cast<Transport_*>(this);
-    return ::apache::thrift::transport::readAll(*trans, buf, len);
+    return ::p4::thrift::transport::readAll(*trans, buf, len);
   }
 
  protected:
@@ -141,6 +141,6 @@ class TVirtualTransport : public Super_ {
   TVirtualTransport(Arg1_ const& a1, Arg2_ const& a2) : Super_(a1, a2) { }
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TVIRTUALTRANSPORT_H_

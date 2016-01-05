@@ -25,7 +25,7 @@
 #include <thrift/transport/TTransportException.h>
 #include <string>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 /**
  * Helper template to hoist readAll implementation out of TTransport
@@ -126,7 +126,7 @@ class TTransport {
     return readAll_virt(buf, len);
   }
   virtual uint32_t readAll_virt(uint8_t* buf, uint32_t len) {
-    return apache::thrift::transport::readAll(*this, buf, len);
+    return p4::thrift::transport::readAll(*this, buf, len);
   }
 
   /**
@@ -277,6 +277,6 @@ class TTransportFactory {
 
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TTRANSPORT_H_

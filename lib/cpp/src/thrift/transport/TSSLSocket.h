@@ -26,7 +26,7 @@
 #include <thrift/concurrency/Mutex.h>
 #include <thrift/transport/TSocket.h>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 class AccessManager;
 class SSLContext;

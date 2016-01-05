@@ -25,7 +25,7 @@
 #include <thrift/cxxfunctional.h>
 #include <boost/shared_ptr.hpp>
 
-namespace apache { namespace thrift { namespace transport {
+namespace p4 { namespace thrift { namespace transport {
 
 class TSocket;
 
@@ -36,7 +36,7 @@ class TSocket;
  */
 class TServerSocket : public TServerTransport {
  public:
-  typedef apache::thrift::stdcxx::function<void(THRIFT_SOCKET fd)> socket_func_t;
+  typedef p4::thrift::stdcxx::function<void(THRIFT_SOCKET fd)> socket_func_t;
 
   const static int DEFAULT_BACKLOG = 1024;
 
@@ -102,6 +102,6 @@ class TServerSocket : public TServerTransport {
   socket_func_t acceptCallback_;
 };
 
-}}} // apache::thrift::transport
+}}} // p4::thrift::transport
 
 #endif // #ifndef _THRIFT_TRANSPORT_TSERVERSOCKET_H_
