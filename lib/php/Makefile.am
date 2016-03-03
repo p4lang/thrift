@@ -120,7 +120,7 @@ EXTRA_DIST = \
   src/Thrift.php \
   src/TStringUtils.php \
   thrift_protocol.ini \
-  README.p4.md \
+  README.apache.md \
   README.md
 
 MAINTAINERCLEANFILES = \

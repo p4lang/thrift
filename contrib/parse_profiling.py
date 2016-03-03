@@ -19,7 +19,7 @@
 #
 """
 This script can be used to make the output from
-p4::thrift::profile_print_info() more human-readable.
+apache::thrift::profile_print_info() more human-readable.
 
 It translates each executable file name and address into the corresponding
 source file name, line number, and function name.  By default, it also
