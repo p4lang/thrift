@@ -22,7 +22,7 @@
 
 #include <thrift/protocol/TBinaryProtocol.h>
 #include <thrift/transport/TBufferTransports.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 using boost::shared_ptr;
 using namespace p4::thrift::protocol;

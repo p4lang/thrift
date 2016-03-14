@@ -28,7 +28,7 @@
  */
 
 #include <thrift/windows/SocketPair.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 // stl
 #include <string.h>

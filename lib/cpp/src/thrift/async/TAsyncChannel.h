@@ -21,7 +21,7 @@
 #define _THRIFT_ASYNC_TASYNCCHANNEL_H_ 1
 
 #include <thrift/cxxfunctional.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 namespace p4 { namespace thrift { namespace transport {
 class TMemoryBuffer;

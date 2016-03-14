@@ -20,7 +20,7 @@
 #ifndef _THRIFT_SERVER_TNONBLOCKINGSERVER_H_
 #define _THRIFT_SERVER_TNONBLOCKINGSERVER_H_ 1
 
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <thrift/server/TServer.h>
 #include <thrift/transport/PlatformSocket.h>
 #include <thrift/transport/TBufferTransports.h>

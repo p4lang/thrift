@@ -122,7 +122,7 @@
     <ClInclude Include="src\thrift\protocol\TBinaryProtocol.h">
       <Filter>protocal</Filter>
     </ClInclude>
-    <ClInclude Include="src\thrift\Thrift.h" />
+    <ClInclude Include="src\thrift\P4Thrift.h" />
     <ClInclude Include="src\thrift\TProcessor.h" />
     <ClInclude Include="src\thrift\TApplicationException.h" />
     <ClInclude Include="src\thrift\windows\StdAfx.h">

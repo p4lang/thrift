@@ -128,7 +128,7 @@ include_p4thrift_HEADERS = \
                          $(top_builddir)/config.h \
                          src/thrift/thrift-config.h \
                          src/thrift/TDispatchProcessor.h \
-                         src/thrift/Thrift.h \
+                         src/thrift/P4Thrift.h \
                          src/thrift/TReflectionLocal.h \
                          src/thrift/TProcessor.h \
                          src/thrift/TApplicationException.h \

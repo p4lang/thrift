@@ -19,7 +19,7 @@
 
 #include <thrift/thrift-config.h>
 
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <thrift/concurrency/Util.h>
 
 #if defined(HAVE_SYS_TIME_H)

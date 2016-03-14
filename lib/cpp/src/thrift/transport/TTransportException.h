@@ -21,7 +21,7 @@
 #define _THRIFT_TRANSPORT_TTRANSPORTEXCEPTION_H_ 1
 
 #include <string>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

@@ -19,7 +19,7 @@
 
 #include <cstdlib>
 #include <stdexcept>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <thrift/transport/TTransportUtils.h>
 #include <thrift/transport/TBufferTransports.h>
 using namespace std;

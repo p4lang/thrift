@@ -21,7 +21,7 @@
 #define _THRIFT_TRANSPORT_TFILETRANSPORT_H_ 1
 
 #include <thrift/transport/TTransport.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <thrift/TProcessor.h>
 
 #include <string>

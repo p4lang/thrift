@@ -21,7 +21,7 @@
 
 #include <thrift/concurrency/Mutex.h>
 #include <thrift/concurrency/Util.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 #include <cassert>
 #include <boost/thread.hpp>

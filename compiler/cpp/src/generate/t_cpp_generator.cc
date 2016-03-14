@@ -380,7 +380,7 @@ void t_cpp_generator::init_generator() {
   // Include base types
   f_types_ <<
     "#include <iosfwd>" << endl << endl <<
-    "#include <thrift/Thrift.h>" << endl <<
+    "#include <thrift/P4Thrift.h>" << endl <<
     "#include <thrift/TApplicationException.h>" << endl <<
     "#include <thrift/protocol/TProtocol.h>" << endl <<
     "#include <thrift/transport/TTransport.h>" << endl <<

@@ -24,7 +24,7 @@
 
 #include <thrift/protocol/TBinaryProtocol.h>
 #include <thrift/transport/TBufferTransports.h>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 
 #include "GenericHelpers.h"
 

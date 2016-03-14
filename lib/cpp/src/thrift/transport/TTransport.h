@@ -20,7 +20,7 @@
 #ifndef _THRIFT_TRANSPORT_TTRANSPORT_H_
 #define _THRIFT_TRANSPORT_TTRANSPORT_H_ 1
 
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <boost/shared_ptr.hpp>
 #include <thrift/transport/TTransportException.h>
 #include <string>

@@ -20,7 +20,7 @@
 #include <cstdlib>
 #include <stdexcept>
 #include <iostream>
-#include <thrift/Thrift.h>
+#include <thrift/P4Thrift.h>
 #include <thrift/transport/TFDTransport.h>
 using p4::thrift::transport::TTransportException;
 using p4::thrift::transport::TFDTransport;
