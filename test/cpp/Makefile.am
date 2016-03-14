@@ -89,7 +89,7 @@ StressTestNonBlocking_LDADD = \
 #
 # Common thrift code generation rules
 #
-THRIFT = $(top_builddir)/compiler/cpp/thrift
+THRIFT = $(top_builddir)/compiler/cpp/p4thrift
 
 gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_types.cpp gen-cpp/ThriftTest_constants.cpp: $(top_srcdir)/test/ThriftTest.thrift
 	$(THRIFT) --gen cpp:templates,cob_style -r $<
