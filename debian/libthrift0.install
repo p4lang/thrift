@@ -1,4 +1,4 @@
-usr/lib/libthrift.so*
+usr/lib/libp4thrift.so*
 usr/lib/libthrift-*.so*
 usr/lib/libthriftnb*.so*
 usr/lib/libthriftqt*.so*

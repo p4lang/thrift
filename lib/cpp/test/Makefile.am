@@ -48,7 +48,7 @@ nodist_libprocessortest_la_SOURCES = \
 ThriftTest_extras.o: gen-cpp/ThriftTest_types.h
 DebugProtoTest_extras.o: gen-cpp/DebugProtoTest_types.h
 
-libtestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libthrift.la
+libtestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libp4thrift.la
 
 noinst_PROGRAMS = Benchmark \
 	processor_test \
@@ -106,7 +106,7 @@ TransportTest_SOURCES = \
 
 TransportTest_LDADD = \
   libtestgencpp.la \
-  $(top_builddir)/lib/cpp/libthriftz.la \
+  $(top_builddir)/lib/cpp/libp4thriftz.la \
   -l:libboost_unit_test_framework.a \
   -lz
 
@@ -115,7 +115,7 @@ ZlibTest_SOURCES = \
 
 ZlibTest_LDADD = \
   libtestgencpp.la \
-  $(top_builddir)/lib/cpp/libthriftz.la \
+  $(top_builddir)/lib/cpp/libp4thriftz.la \
   -l:libboost_unit_test_framework.a \
   -lz
 
@@ -140,7 +140,7 @@ TFDTransportTest_SOURCES = \
 	TFDTransportTest.cpp
 
 TFDTransportTest_LDADD = \
-	$(top_builddir)/lib/cpp/libthrift.la
+	$(top_builddir)/lib/cpp/libp4thrift.la
 
 
 #
@@ -150,7 +150,7 @@ TPipedTransportTest_SOURCES = \
 	TPipedTransportTest.cpp
 
 TPipedTransportTest_LDADD = \
-	$(top_builddir)/lib/cpp/libthrift.la
+	$(top_builddir)/lib/cpp/libp4thrift.la
 
 #
 # AllProtocolsTest
@@ -210,7 +210,7 @@ concurrency_test_SOURCES = \
 	concurrency/TimerManagerTests.h
 
 concurrency_test_LDADD = \
-  $(top_builddir)/lib/cpp/libthrift.la
+  $(top_builddir)/lib/cpp/libp4thrift.la
 
 link_test_SOURCES = \
   link/LinkTest.cpp \
@@ -226,8 +226,8 @@ processor_test_SOURCES = \
 	processor/ServerThread.h
 
 processor_test_LDADD = libprocessortest.la \
-                       $(top_builddir)/lib/cpp/libthrift.la \
-                       $(top_builddir)/lib/cpp/libthriftnb.la \
+                       $(top_builddir)/lib/cpp/libp4thrift.la \
+                       $(top_builddir)/lib/cpp/libp4thriftnb.la \
                        $(BOOST_LDFLAGS) \
                        -levent \
                        -l:libboost_unit_test_framework.a
@@ -236,7 +236,7 @@ OpenSSLManualInitTest_SOURCES = \
 	OpenSSLManualInitTest.cpp
 
 OpenSSLManualInitTest_LDADD = \
-	$(top_builddir)/lib/cpp/libthrift.la \
+	$(top_builddir)/lib/cpp/libp4thrift.la \
 	-l:libboost_unit_test_framework.a
 
 #

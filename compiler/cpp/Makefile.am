@@ -25,13 +25,13 @@ AM_YFLAGS = -d
 LIBS =
 BUILT_SOURCES = thrifty.cc
 
-bin_PROGRAMS = thrift
+bin_PROGRAMS = p4thrift
 
 noinst_LIBRARIES = libparse.a
 
-thrift_OBJDIR = obj
+p4thrift_OBJDIR = obj
 
-thrift_SOURCES = src/main.cc \
+p4thrift_SOURCES = src/main.cc \
                  src/md5.c \
                  src/generate/t_generator.cc \
                  src/generate/t_generator_registry.h \
@@ -67,7 +67,7 @@ thrift_SOURCES = src/main.cc \
                  src/windows/version.h
 
 # Specific client generator source
-thrift_SOURCES += src/generate/t_c_glib_generator.cc \
+p4thrift_SOURCES += src/generate/t_c_glib_generator.cc \
                   src/generate/t_cpp_generator.cc \
                   src/generate/t_java_generator.cc \
                   src/generate/t_json_generator.cc \
@@ -92,9 +92,9 @@ thrift_SOURCES += src/generate/t_c_glib_generator.cc \
                   src/generate/t_d_generator.cc \
                   src/generate/t_lua_generator.cc
 
-thrift_CPPFLAGS = -I$(srcdir)/src
-thrift_CXXFLAGS = -Wall -Wextra -pedantic
-thrift_LDADD = @LEXLIB@ libparse.a
+p4thrift_CPPFLAGS = -I$(srcdir)/src
+p4thrift_CXXFLAGS = -Wall -Wextra -pedantic
+p4thrift_LDADD = @LEXLIB@ libparse.a
 
 libparse_a_CPPFLAGS = -I$(srcdir)/src
 libparse_a_CXXFLAGS = -Wall -Wno-sign-compare -Wno-unused
