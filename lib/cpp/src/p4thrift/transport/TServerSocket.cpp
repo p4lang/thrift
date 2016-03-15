@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #include <cstring>
 #include <sys/types.h>
@@ -42,9 +42,9 @@
 #include <unistd.h>
 #endif
 
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 #include <boost/shared_ptr.hpp>
 
 #ifndef AF_LOCAL

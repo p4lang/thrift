@@ -17,10 +17,10 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/P4Thrift.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/P4Thrift.h>
+#include <p4thrift/concurrency/Util.h>
 
 #if defined(HAVE_SYS_TIME_H)
 #include <sys/time.h>

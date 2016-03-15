@@ -17,16 +17,16 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 #include <cstring>
 
-#include <thrift/transport/TPipe.h>
-#include <thrift/transport/TPipeServer.h>
+#include <p4thrift/transport/TPipe.h>
+#include <p4thrift/transport/TPipeServer.h>
 #include <boost/shared_ptr.hpp>
 #include <boost/noncopyable.hpp>
 
 #ifdef _WIN32
-#  include <thrift/windows/OverlappedSubmissionThread.h>
+#  include <p4thrift/windows/OverlappedSubmissionThread.h>
 #  include <AccCtrl.h>
 #  include <Aclapi.h>
 #endif //_WIN32

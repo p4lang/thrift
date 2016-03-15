@@ -26,14 +26,14 @@
 #include <tr1/functional>
 #include <boost/test/unit_test.hpp>
 
-#include <thrift/concurrency/PosixThreadFactory.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/server/TNonblockingServer.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/transport/TSocket.h>
+#include <p4thrift/concurrency/PosixThreadFactory.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/server/TNonblockingServer.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/transport/TSocket.h>
 
 #include "EventLog.h"
 #include "ServerThread.h"

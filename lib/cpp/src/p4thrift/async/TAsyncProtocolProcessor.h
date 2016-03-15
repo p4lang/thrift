@@ -20,9 +20,9 @@
 #ifndef _THRIFT_TNAME_ME_H_
 #define _THRIFT_TNAME_ME_H_ 1
 
-#include <thrift/async/TAsyncProcessor.h>
-#include <thrift/async/TAsyncBufferProcessor.h>
-#include <thrift/protocol/TProtocol.h>
+#include <p4thrift/async/TAsyncProcessor.h>
+#include <p4thrift/async/TAsyncBufferProcessor.h>
+#include <p4thrift/protocol/TProtocol.h>
 
 namespace p4 { namespace thrift { namespace async {
 

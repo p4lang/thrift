@@ -20,8 +20,8 @@
 #define _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TJSONProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TJSONProtocol.h>
 #include "gen-cpp/DebugProtoTest_types.h"
 
 int main() {

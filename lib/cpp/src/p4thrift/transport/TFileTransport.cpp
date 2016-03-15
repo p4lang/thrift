@@ -17,12 +17,12 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/transport/TFileTransport.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/transport/PlatformSocket.h>
-#include <thrift/concurrency/FunctionRunner.h>
+#include <p4thrift/transport/TFileTransport.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/transport/PlatformSocket.h>
+#include <p4thrift/concurrency/FunctionRunner.h>
 
 #ifdef HAVE_SYS_TIME_H
 #include <sys/time.h>

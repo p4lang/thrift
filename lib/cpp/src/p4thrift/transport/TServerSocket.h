@@ -20,9 +20,9 @@
 #ifndef _THRIFT_TRANSPORT_TSERVERSOCKET_H_
 #define _THRIFT_TRANSPORT_TSERVERSOCKET_H_ 1
 
-#include <thrift/transport/TServerTransport.h>
-#include <thrift/transport/PlatformSocket.h>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/transport/TServerTransport.h>
+#include <p4thrift/transport/PlatformSocket.h>
+#include <p4thrift/cxxfunctional.h>
 #include <boost/shared_ptr.hpp>
 
 namespace p4 { namespace thrift { namespace transport {

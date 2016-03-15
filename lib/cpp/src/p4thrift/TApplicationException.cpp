@@ -17,8 +17,8 @@
  * under the License.
  */
 
-#include <thrift/TApplicationException.h>
-#include <thrift/protocol/TProtocol.h>
+#include <p4thrift/TApplicationException.h>
+#include <p4thrift/protocol/TProtocol.h>
 
 namespace p4 { namespace thrift {
 

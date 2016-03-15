@@ -17,10 +17,10 @@
  * under the License.
  */
 
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Exception.h>
-#include <thrift/concurrency/Util.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/Util.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #include <boost/scoped_ptr.hpp>
 

@@ -17,12 +17,12 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/transport/TTransportException.h>
-#include <thrift/concurrency/Thread.h>
-#include <thrift/concurrency/ThreadManager.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/transport/TTransportException.h>
+#include <p4thrift/concurrency/Thread.h>
+#include <p4thrift/concurrency/ThreadManager.h>
 #include <string>
 #include <iostream>
 

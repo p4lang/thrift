@@ -34,7 +34,7 @@
 
 // Win32
 #include <Winsock2.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #if WINVER <= 0x0502 //XP, Server2003
 struct thrift_pollfd {

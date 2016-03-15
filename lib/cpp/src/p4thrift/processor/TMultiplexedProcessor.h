@@ -20,9 +20,9 @@
 #ifndef THRIFT_TMULTIPLEXEDPROCESSOR_H_
 #define THRIFT_TMULTIPLEXEDPROCESSOR_H_ 1
 
-#include <thrift/protocol/TProtocolDecorator.h>
-#include <thrift/TApplicationException.h>
-#include <thrift/TProcessor.h>
+#include <p4thrift/protocol/TProtocolDecorator.h>
+#include <p4thrift/TApplicationException.h>
+#include <p4thrift/TProcessor.h>
 #include <boost/tokenizer.hpp>
 
 namespace p4

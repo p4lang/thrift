@@ -24,8 +24,8 @@
 #include <limits>
 #include <boost/scoped_array.hpp>
 
-#include <thrift/transport/TTransport.h>
-#include <thrift/transport/TVirtualTransport.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/transport/TVirtualTransport.h>
 
 #ifdef __GNUC__
 #define TDB_LIKELY(val) (__builtin_expect((val), 1))

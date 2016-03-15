@@ -22,7 +22,7 @@
 
 #include <boost/test/auto_unit_test.hpp>
 
-#include <thrift/TToString.h>
+#include <p4thrift/TToString.h>
 
 #include "gen-cpp/ThriftTest_types.h"
 #include "gen-cpp/OptionalRequiredTest_types.h"

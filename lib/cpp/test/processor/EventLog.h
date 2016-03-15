@@ -19,7 +19,7 @@
 #ifndef _THRIFT_TEST_EVENTLOG_H_
 #define _THRIFT_TEST_EVENTLOG_H_ 1
 
-#include <thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Monitor.h>
 
 namespace p4 { namespace thrift { namespace test {
 

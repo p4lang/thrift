@@ -20,9 +20,9 @@
 #ifndef _THRIFT_THRIFT_H_
 #define _THRIFT_THRIFT_H_ 1
 
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #include <stdio.h>
 #include <assert.h>
@@ -45,7 +45,7 @@
 #include <boost/utility/enable_if.hpp>
 #include <boost/type_traits/is_convertible.hpp>
 
-#include <thrift/TLogging.h>
+#include <p4thrift/TLogging.h>
 
 /**
  * Helper macros to allow function overloading even when using

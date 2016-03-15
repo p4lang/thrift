@@ -25,7 +25,7 @@
 
 #include <openssl/evp.h>
 
-#include <thrift/transport/TSSLSocket.h>
+#include <p4thrift/transport/TSSLSocket.h>
 
 using namespace std;
 using namespace p4::thrift::transport;

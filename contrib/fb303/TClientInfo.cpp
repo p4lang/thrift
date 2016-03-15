@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/server/TClientInfo.h>
+#include <p4thrift/server/TClientInfo.h>
 
 namespace p4 { namespace thrift { namespace server {
 

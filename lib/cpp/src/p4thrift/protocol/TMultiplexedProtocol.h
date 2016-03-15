@@ -20,7 +20,7 @@
 #ifndef THRIFT_TMULTIPLEXEDPROTOCOL_H_
 #define THRIFT_TMULTIPLEXEDPROTOCOL_H_ 1
 
-#include <thrift/protocol/TProtocolDecorator.h>
+#include <p4thrift/protocol/TProtocolDecorator.h>
 
 namespace p4
 {

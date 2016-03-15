@@ -19,7 +19,7 @@
 
 #include <sstream>
 
-#include <thrift/transport/THttpTransport.h>
+#include <p4thrift/transport/THttpTransport.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

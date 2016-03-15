@@ -17,9 +17,9 @@
  * under the License.
  */
 
-#include <thrift/protocol/TMultiplexedProtocol.h>
-#include <thrift/processor/TMultiplexedProcessor.h>
-#include <thrift/protocol/TProtocolDecorator.h>
+#include <p4thrift/protocol/TMultiplexedProtocol.h>
+#include <p4thrift/processor/TMultiplexedProcessor.h>
+#include <p4thrift/protocol/TProtocolDecorator.h>
 
 namespace p4
 {

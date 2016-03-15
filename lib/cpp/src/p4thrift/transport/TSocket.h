@@ -22,10 +22,10 @@
 
 #include <string>
 
-#include <thrift/transport/TTransport.h>
-#include <thrift/transport/TVirtualTransport.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/transport/TVirtualTransport.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #ifdef HAVE_ARPA_INET_H
 #include <arpa/inet.h>

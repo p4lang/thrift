@@ -17,8 +17,8 @@
  * under the License.
  */
 
-#include <thrift/transport/TSSLServerSocket.h>
-#include <thrift/transport/TSSLSocket.h>
+#include <p4thrift/transport/TSSLServerSocket.h>
+#include <p4thrift/transport/TSSLSocket.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

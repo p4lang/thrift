@@ -29,7 +29,7 @@
 #include <sys/time.h>
 #endif
 
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 namespace p4 { namespace thrift { namespace concurrency {
 

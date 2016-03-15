@@ -19,7 +19,7 @@
 #ifndef _THRIFT_ASYNC_TASYNCDISPATCHPROCESSOR_H_
 #define _THRIFT_ASYNC_TASYNCDISPATCHPROCESSOR_H_ 1
 
-#include <thrift/async/TAsyncProcessor.h>
+#include <p4thrift/async/TAsyncProcessor.h>
 
 namespace p4 { namespace thrift { namespace async {
 

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #include <errno.h>
 #include <string>
@@ -34,9 +34,9 @@
 #include <openssl/rand.h>
 #include <openssl/ssl.h>
 #include <openssl/x509v3.h>
-#include <thrift/concurrency/Mutex.h>
-#include <thrift/transport/TSSLSocket.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/concurrency/Mutex.h>
+#include <p4thrift/transport/TSSLSocket.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #define OPENSSL_VERSION_NO_THREAD_ID 0x10000000L
 

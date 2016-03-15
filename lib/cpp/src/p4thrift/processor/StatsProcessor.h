@@ -21,8 +21,8 @@
 #define STATSPROCESSOR_H
 
 #include <boost/shared_ptr.hpp>
-#include <thrift/transport/TTransport.h>
-#include <thrift/protocol/TProtocol.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/protocol/TProtocol.h>
 #include <TProcessor.h>
 
 namespace p4 { namespace thrift { namespace processor {

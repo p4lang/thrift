@@ -20,10 +20,10 @@
 #ifndef _THRIFT_TASYNC_BUFFER_PROCESSOR_H_
 #define _THRIFT_TASYNC_BUFFER_PROCESSOR_H_ 1
 
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 #include <boost/shared_ptr.hpp>
 
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TBufferTransports.h>
 
 namespace p4 { namespace thrift { namespace async {
 

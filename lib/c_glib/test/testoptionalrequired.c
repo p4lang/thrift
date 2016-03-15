@@ -20,10 +20,10 @@
 #include <assert.h>
 #include <glib.h>
 
-#include <thrift/c_glib/thrift_struct.h>
-#include <thrift/c_glib/protocol/thrift_protocol.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
-#include <thrift/c_glib/transport/thrift_memory_buffer.h>
+#include <p4thrift/c_glib/thrift_struct.h>
+#include <p4thrift/c_glib/protocol/thrift_protocol.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/transport/thrift_memory_buffer.h>
 #include "gen-c_glib/t_test_optional_required_test_types.h"
 
 #include "gen-c_glib/t_test_optional_required_test_types.c"

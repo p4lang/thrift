@@ -17,9 +17,9 @@
  * under the License.
  */
 
-#include <thrift/async/TEvhttpServer.h>
-#include <thrift/async/TAsyncBufferProcessor.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/async/TEvhttpServer.h>
+#include <p4thrift/async/TAsyncBufferProcessor.h>
+#include <p4thrift/transport/TBufferTransports.h>
 #include <evhttp.h>
 
 #include <iostream>

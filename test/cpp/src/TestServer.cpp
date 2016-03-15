@@ -20,24 +20,24 @@
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TCompactProtocol.h>
-#include <thrift/protocol/TJSONProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/async/TEvhttpServer.h>
-#include <thrift/async/TAsyncBufferProcessor.h>
-#include <thrift/async/TAsyncProtocolProcessor.h>
-#include <thrift/server/TNonblockingServer.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/TSSLServerSocket.h>
-#include <thrift/transport/TSSLSocket.h>
-#include <thrift/transport/THttpServer.h>
-#include <thrift/transport/THttpTransport.h>
-#include <thrift/transport/TTransportUtils.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TCompactProtocol.h>
+#include <p4thrift/protocol/TJSONProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/async/TEvhttpServer.h>
+#include <p4thrift/async/TAsyncBufferProcessor.h>
+#include <p4thrift/async/TAsyncProtocolProcessor.h>
+#include <p4thrift/server/TNonblockingServer.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TSSLServerSocket.h>
+#include <p4thrift/transport/TSSLSocket.h>
+#include <p4thrift/transport/THttpServer.h>
+#include <p4thrift/transport/THttpTransport.h>
+#include <p4thrift/transport/TTransportUtils.h>
 #include "ThriftTest.h"
 
 #include <iostream>
@@ -46,11 +46,11 @@
 
 #include <boost/program_options.hpp>
 #include <boost/filesystem.hpp>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 
 #include <signal.h>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 using namespace std;

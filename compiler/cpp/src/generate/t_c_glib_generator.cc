@@ -203,8 +203,8 @@ void t_c_glib_generator::init_generator() {
   f_types_ <<
     "/* base includes */" << endl <<
     "#include <glib-object.h>" << endl <<
-    "#include <thrift/c_glib/thrift_struct.h>" << endl <<
-    "#include <thrift/c_glib/protocol/thrift_protocol.h>" << endl;
+    "#include <p4thrift/c_glib/thrift_struct.h>" << endl <<
+    "#include <p4thrift/c_glib/protocol/thrift_protocol.h>" << endl;
 
   /* include other thrift includes */
   const vector<t_program *> &includes = program_->get_includes();
@@ -241,7 +241,7 @@ void t_c_glib_generator::init_generator() {
     endl <<
     "#include \"" << this->nspace_lc << program_name_u << 
         "_types.h\"" << endl <<
-    "#include <thrift/c_glib/thrift.h>" << endl <<
+    "#include <p4thrift/c_glib/thrift.h>" << endl <<
     endl;
 
   f_types_ <<
@@ -429,7 +429,7 @@ void t_c_glib_generator::generate_service (t_service *tservice) {
 
   // add standard includes
   f_header_ <<
-    "#include <thrift/c_glib/processor/thrift_dispatch_processor.h>" << endl <<
+    "#include <p4thrift/c_glib/processor/thrift_dispatch_processor.h>" << endl <<
     endl;
   f_header_ <<
     "#include \"" << this->nspace_lc << program_name_lc << "_types.h\"" << endl;
@@ -453,8 +453,8 @@ void t_c_glib_generator::generate_service (t_service *tservice) {
   // include the headers
   f_service_ <<
     "#include <string.h>" << endl <<
-    "#include <thrift/c_glib/thrift.h>" << endl <<
-    "#include <thrift/c_glib/thrift_application_exception.h>" << endl <<
+    "#include <p4thrift/c_glib/thrift.h>" << endl <<
+    "#include <p4thrift/c_glib/thrift_application_exception.h>" << endl <<
     "#include \"" << filename << ".h\"" << endl <<
     endl;
 

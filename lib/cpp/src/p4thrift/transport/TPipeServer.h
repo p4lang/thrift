@@ -20,13 +20,13 @@
 #ifndef _THRIFT_TRANSPORT_TSERVERWINPIPES_H_
 #define _THRIFT_TRANSPORT_TSERVERWINPIPES_H_ 1
 
-#include <thrift/transport/TServerTransport.h>
+#include <p4thrift/transport/TServerTransport.h>
 #include <boost/shared_ptr.hpp>
 #ifndef _WIN32
-#  include <thrift/transport/TServerSocket.h>
+#  include <p4thrift/transport/TServerSocket.h>
 #endif
 #ifdef _WIN32
-#  include <thrift/windows/Sync.h>
+#  include <p4thrift/windows/Sync.h>
 #endif
 
 #define TPIPE_SERVER_MAX_CONNS_DEFAULT PIPE_UNLIMITED_INSTANCES

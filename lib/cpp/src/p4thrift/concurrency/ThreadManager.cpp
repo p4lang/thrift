@@ -17,12 +17,12 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/Exception.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <boost/shared_ptr.hpp>
 

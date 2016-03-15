@@ -21,15 +21,15 @@
 // You should copy it to another filename to avoid overwriting it.
 
 #include "ThreadsTest.h"
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 using boost::shared_ptr;

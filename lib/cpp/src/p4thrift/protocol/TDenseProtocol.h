@@ -20,7 +20,7 @@
 #ifndef _THRIFT_PROTOCOL_TDENSEPROTOCOL_H_
 #define _THRIFT_PROTOCOL_TDENSEPROTOCOL_H_ 1
 
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
 namespace p4 { namespace thrift { namespace protocol {
 

@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/protocol/TDebugProtocol.h>
+#include <p4thrift/protocol/TDebugProtocol.h>
 
 #include <cassert>
 #include <cctype>

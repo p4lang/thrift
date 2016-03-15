@@ -19,13 +19,13 @@
 
 #define __STDC_FORMAT_MACROS
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/server/TNonblockingServer.h>
-#include <thrift/concurrency/Exception.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/server/TNonblockingServer.h>
+#include <p4thrift/concurrency/Exception.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #include <iostream>
 

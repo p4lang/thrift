@@ -20,13 +20,13 @@
 #ifndef _THRIFT_CONCURRENCY_PLATFORMTHREADFACTORY_H_
 #define _THRIFT_CONCURRENCY_PLATFORMTHREADFACTORY_H_ 1
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 #if USE_BOOST_THREAD
-#  include <thrift/concurrency/BoostThreadFactory.h>
+#include <p4thrift/concurrency/BoostThreadFactory.h>
 #elif USE_STD_THREAD
-#  include <thrift/concurrency/StdThreadFactory.h>
+#include <p4thrift/concurrency/StdThreadFactory.h>
 #else
-#  include <thrift/concurrency/PosixThreadFactory.h>
+#include <p4thrift/concurrency/PosixThreadFactory.h>
 #endif
 
 namespace p4 { namespace thrift { namespace concurrency {

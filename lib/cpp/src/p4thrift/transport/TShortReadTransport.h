@@ -22,8 +22,8 @@
 
 #include <cstdlib>
 
-#include <thrift/transport/TTransport.h>
-#include <thrift/transport/TVirtualTransport.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/transport/TVirtualTransport.h>
 
 namespace p4 { namespace thrift { namespace transport { namespace test {
 

@@ -21,7 +21,7 @@
 #include <iostream>
 #include <cmath>
 #include "gen-cpp/DebugProtoTest_types.h"
-#include <thrift/protocol/TDebugProtocol.h>
+#include <p4thrift/protocol/TDebugProtocol.h>
 
 int main() {
   using std::cout;

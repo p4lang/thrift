@@ -20,16 +20,16 @@
 #ifndef _THRIFT_SERVER_TNONBLOCKINGSERVER_H_
 #define _THRIFT_SERVER_TNONBLOCKINGSERVER_H_ 1
 
-#include <thrift/P4Thrift.h>
-#include <thrift/server/TServer.h>
-#include <thrift/transport/PlatformSocket.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/concurrency/ThreadManager.h>
+#include <p4thrift/P4Thrift.h>
+#include <p4thrift/server/TServer.h>
+#include <p4thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/concurrency/ThreadManager.h>
 #include <climits>
-#include <thrift/concurrency/Thread.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Mutex.h>
+#include <p4thrift/concurrency/Thread.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Mutex.h>
 #include <stack>
 #include <vector>
 #include <string>

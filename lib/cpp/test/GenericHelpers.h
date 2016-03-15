@@ -20,9 +20,9 @@
 #ifndef _THRIFT_TEST_GENERICHELPERS_H_
 #define _THRIFT_TEST_GENERICHELPERS_H_ 1
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/P4Thrift.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/P4Thrift.h>
 
 using boost::shared_ptr;
 using namespace p4::thrift::protocol;

@@ -20,7 +20,7 @@
 #ifndef _THRIFT_PROTOCOL_TCOMPACTPROTOCOL_H_
 #define _THRIFT_PROTOCOL_TCOMPACTPROTOCOL_H_ 1
 
-#include <thrift/protocol/TVirtualProtocol.h>
+#include <p4thrift/protocol/TVirtualProtocol.h>
 
 #include <stack>
 #include <boost/shared_ptr.hpp>
@@ -285,6 +285,6 @@ typedef TCompactProtocolFactoryT<TTransport> TCompactProtocolFactory;
 
 }}} // p4::thrift::protocol
 
-#include <thrift/protocol/TCompactProtocol.tcc>
+#include <p4thrift/protocol/TCompactProtocol.tcc>
 
 #endif

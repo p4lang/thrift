@@ -20,7 +20,7 @@
 #ifndef _THRIFT_TRANSPORT_TSIMPLEFILETRANSPORT_H_
 #define _THRIFT_TRANSPORT_TSIMPLEFILETRANSPORT_H_ 1
 
-#include <thrift/transport/TFDTransport.h>
+#include <p4thrift/transport/TFDTransport.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

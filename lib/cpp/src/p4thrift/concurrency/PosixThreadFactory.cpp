@@ -17,10 +17,10 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/concurrency/PosixThreadFactory.h>
-#include <thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/PosixThreadFactory.h>
+#include <p4thrift/concurrency/Exception.h>
 
 #if GOOGLE_PERFTOOLS_REGISTER_THREAD
 #  include <google/profiler.h>

@@ -24,7 +24,7 @@
 #error "windows/Sync.h is only usable on Windows"
 #endif
 
-#include <thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/Exception.h>
 #include <boost/noncopyable.hpp>
 #include <Windows.h>
 

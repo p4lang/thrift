@@ -17,9 +17,9 @@
  * under the License.
  */
 
-#include <thrift/concurrency/TimerManager.h>
-#include <thrift/concurrency/Exception.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/concurrency/TimerManager.h>
+#include <p4thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <assert.h>
 #include <iostream>

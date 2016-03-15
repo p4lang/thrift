@@ -21,22 +21,22 @@
 #include <inttypes.h>
 
 #include <iostream>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TCompactProtocol.h>
-#include <thrift/protocol/TJSONProtocol.h>
-#include <thrift/transport/THttpClient.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TSSLSocket.h>
-#include <thrift/async/TEvhttpClientChannel.h>
-#include <thrift/server/TNonblockingServer.h> // <event.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TCompactProtocol.h>
+#include <p4thrift/protocol/TJSONProtocol.h>
+#include <p4thrift/transport/THttpClient.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TSSLSocket.h>
+#include <p4thrift/async/TEvhttpClientChannel.h>
+#include <p4thrift/server/TNonblockingServer.h> // <event.h>
 
 #include <boost/shared_ptr.hpp>
 #include <boost/program_options.hpp>
 #include <boost/filesystem.hpp>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 #include "ThriftTest.h"

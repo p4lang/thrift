@@ -20,7 +20,7 @@
 #ifndef _THRIFT_TRANSPORT_THTTPSERVER_H_
 #define _THRIFT_TRANSPORT_THTTPSERVER_H_ 1
 
-#include <thrift/transport/THttpTransport.h>
+#include <p4thrift/transport/THttpTransport.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

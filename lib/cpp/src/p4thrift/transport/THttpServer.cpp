@@ -21,8 +21,8 @@
 #include <sstream>
 #include <iostream>
 
-#include <thrift/transport/THttpServer.h>
-#include <thrift/transport/TSocket.h>
+#include <p4thrift/transport/THttpServer.h>
+#include <p4thrift/transport/TSocket.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

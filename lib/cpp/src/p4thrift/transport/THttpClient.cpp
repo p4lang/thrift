@@ -22,8 +22,8 @@
 #include <sstream>
 #include <boost/algorithm/string.hpp>
 
-#include <thrift/transport/THttpClient.h>
-#include <thrift/transport/TSocket.h>
+#include <p4thrift/transport/THttpClient.h>
+#include <p4thrift/transport/TSocket.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

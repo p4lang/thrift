@@ -17,8 +17,8 @@
  * under the License.
  */
 
-#include <thrift/async/TAsyncChannel.h>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/async/TAsyncChannel.h>
+#include <p4thrift/cxxfunctional.h>
 
 namespace p4 { namespace thrift { namespace async {
 

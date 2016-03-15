@@ -24,7 +24,7 @@
 #error "OverlappedSubmissionThread.h is only usable on Windows"
 #endif
 
-#include <thrift/windows/Sync.h>
+#include <p4thrift/windows/Sync.h>
 #include <boost/noncopyable.hpp>
 #include <Windows.h>
 

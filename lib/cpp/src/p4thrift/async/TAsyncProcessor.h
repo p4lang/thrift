@@ -20,10 +20,10 @@
 #ifndef _THRIFT_TASYNCPROCESSOR_H_
 #define _THRIFT_TASYNCPROCESSOR_H_ 1
 
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 #include <boost/shared_ptr.hpp>
-#include <thrift/protocol/TProtocol.h>
-#include <thrift/TProcessor.h>
+#include <p4thrift/protocol/TProtocol.h>
+#include <p4thrift/TProcessor.h>
 
 namespace p4 { namespace thrift { namespace async {
 

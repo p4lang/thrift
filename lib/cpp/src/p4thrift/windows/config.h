@@ -79,12 +79,12 @@ typedef boost::int8_t      int8_t;
 typedef boost::uint8_t    uint8_t;
 #endif
 
-#include <thrift/transport/PlatformSocket.h>
-#include <thrift/windows/GetTimeOfDay.h>
-#include <thrift/windows/Operators.h>
-#include <thrift/windows/TWinsockSingleton.h>
-#include <thrift/windows/WinFcntl.h>
-#include <thrift/windows/SocketPair.h>
+#include <p4thrift/transport/PlatformSocket.h>
+#include <p4thrift/windows/GetTimeOfDay.h>
+#include <p4thrift/windows/Operators.h>
+#include <p4thrift/windows/TWinsockSingleton.h>
+#include <p4thrift/windows/WinFcntl.h>
+#include <p4thrift/windows/SocketPair.h>
 
 // windows
 #include <Winsock2.h>

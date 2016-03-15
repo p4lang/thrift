@@ -20,9 +20,9 @@
 #ifndef _THRIFT_TRANSPORT_TTRANSPORT_H_
 #define _THRIFT_TRANSPORT_TTRANSPORT_H_ 1
 
-#include <thrift/P4Thrift.h>
+#include <p4thrift/P4Thrift.h>
 #include <boost/shared_ptr.hpp>
-#include <thrift/transport/TTransportException.h>
+#include <p4thrift/transport/TTransportException.h>
 #include <string>
 
 namespace p4 { namespace thrift { namespace transport {

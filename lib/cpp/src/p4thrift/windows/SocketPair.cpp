@@ -27,8 +27,8 @@
  * under the License.
  */
 
-#include <thrift/windows/SocketPair.h>
-#include <thrift/P4Thrift.h>
+#include <p4thrift/windows/SocketPair.h>
+#include <p4thrift/P4Thrift.h>
 
 // stl
 #include <string.h>

@@ -20,8 +20,8 @@
 #include <cerrno>
 #include <exception>
 
-#include <thrift/transport/TFDTransport.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/transport/TFDTransport.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #ifdef HAVE_UNISTD_H
 #include <unistd.h>

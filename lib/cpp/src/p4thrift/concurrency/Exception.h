@@ -21,7 +21,7 @@
 #define _THRIFT_CONCURRENCY_EXCEPTION_H_ 1
 
 #include <exception>
-#include <thrift/P4Thrift.h>
+#include <p4thrift/P4Thrift.h>
 
 namespace p4 { namespace thrift { namespace concurrency {
 

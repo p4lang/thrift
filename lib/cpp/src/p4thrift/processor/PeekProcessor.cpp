@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/processor/PeekProcessor.h>
+#include <p4thrift/processor/PeekProcessor.h>
 
 using namespace p4::thrift::transport;
 using namespace p4::thrift::protocol;

@@ -19,10 +19,10 @@
 #ifndef _THRIFT_TEST_SERVERTHREAD_H_
 #define _THRIFT_TEST_SERVERTHREAD_H_ 1
 
-#include <thrift/TProcessor.h>
-#include <thrift/protocol/TProtocol.h>
-#include <thrift/server/TServer.h>
-#include <thrift/transport/TTransport.h>
+#include <p4thrift/TProcessor.h>
+#include <p4thrift/protocol/TProtocol.h>
+#include <p4thrift/server/TServer.h>
+#include <p4thrift/transport/TTransport.h>
 
 #include "EventLog.h"
 

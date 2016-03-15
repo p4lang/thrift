@@ -17,11 +17,11 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
-#include <thrift/concurrency/Thread.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/thrift-config.h>
+#include <p4thrift/concurrency/Thread.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <assert.h>
 #include <iostream>

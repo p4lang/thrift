@@ -1,6 +1,6 @@
 #include <iostream>
 #include <cstdlib>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
 #include "zmq.hpp"
 #include "TZmqClient.h"

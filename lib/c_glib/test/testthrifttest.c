@@ -1,8 +1,8 @@
 #include <assert.h>
 #include <netdb.h>
 
-#include <thrift/c_glib/transport/thrift_server_transport.h>
-#include <thrift/c_glib/transport/thrift_server_socket.h>
+#include <p4thrift/c_glib/transport/thrift_server_transport.h>
+#include <p4thrift/c_glib/transport/thrift_server_socket.h>
 
 static const char TEST_ADDRESS[] = "localhost";
 static const int TEST_PORT = 64444;

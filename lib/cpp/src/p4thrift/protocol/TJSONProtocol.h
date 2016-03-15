@@ -20,7 +20,7 @@
 #ifndef _THRIFT_PROTOCOL_TJSONPROTOCOL_H_
 #define _THRIFT_PROTOCOL_TJSONPROTOCOL_H_ 1
 
-#include <thrift/protocol/TVirtualProtocol.h>
+#include <p4thrift/protocol/TVirtualProtocol.h>
 
 #include <stack>
 
@@ -314,7 +314,7 @@ class TJSONProtocolFactory : public TProtocolFactory {
 
 
 // TODO(dreiss): Move part of ThriftJSONString into a .cpp file and remove this.
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TBufferTransports.h>
 
 namespace p4 { namespace thrift {
 

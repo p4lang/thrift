@@ -17,12 +17,12 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #include <algorithm>
 #include <iostream>
 
-#include <thrift/transport/TSocketPool.h>
+#include <p4thrift/transport/TSocketPool.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

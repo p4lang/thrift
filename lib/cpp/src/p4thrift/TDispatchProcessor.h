@@ -19,7 +19,7 @@
 #ifndef _THRIFT_TDISPATCHPROCESSOR_H_
 #define _THRIFT_TDISPATCHPROCESSOR_H_ 1
 
-#include <thrift/TProcessor.h>
+#include <p4thrift/TProcessor.h>
 
 namespace p4 { namespace thrift {
 

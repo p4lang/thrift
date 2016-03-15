@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/P4Thrift.h>
+#include <p4thrift/P4Thrift.h>
 
 // Do nothing if virtual call profiling is not enabled
 #if T_GLOBAL_DEBUG_VIRTUAL > 1
@@ -36,7 +36,7 @@
 #endif // !__GLIBC__
 
 
-#include <thrift/concurrency/Mutex.h>
+#include <p4thrift/concurrency/Mutex.h>
 
 #include <ext/hash_map>
 #include <execinfo.h>

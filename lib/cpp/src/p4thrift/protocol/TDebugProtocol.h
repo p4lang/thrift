@@ -20,7 +20,7 @@
 #ifndef _THRIFT_PROTOCOL_TDEBUGPROTOCOL_H_
 #define _THRIFT_PROTOCOL_TDEBUGPROTOCOL_H_ 1
 
-#include <thrift/protocol/TVirtualProtocol.h>
+#include <p4thrift/protocol/TVirtualProtocol.h>
 
 #include <boost/shared_ptr.hpp>
 
@@ -171,7 +171,7 @@ class TDebugProtocolFactory : public TProtocolFactory {
 
 
 // TODO(dreiss): Move (part of) ThriftDebugString into a .cpp file and remove this.
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TBufferTransports.h>
 
 namespace p4 { namespace thrift {
 

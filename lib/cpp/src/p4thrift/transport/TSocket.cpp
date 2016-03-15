@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #include <cstring>
 #include <sstream>
@@ -40,10 +40,10 @@
 #endif
 #include <fcntl.h>
 
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TTransportException.h>
-#include <thrift/transport/PlatformSocket.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TTransportException.h>
+#include <p4thrift/transport/PlatformSocket.h>
 
 #ifndef SOCKOPT_CAST_T
 #   ifndef _WIN32

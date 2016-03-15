@@ -17,8 +17,8 @@
  * under the License.
  */
 
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/transport/TTransportException.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/transport/TTransportException.h>
 #include <string>
 #include <iostream>
 

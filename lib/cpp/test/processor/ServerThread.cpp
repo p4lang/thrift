@@ -21,11 +21,11 @@
 
 #include "ServerThread.h"
 
-#include <thrift/concurrency/PosixThreadFactory.h>
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TServerSocket.h>
+#include <p4thrift/concurrency/PosixThreadFactory.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TServerSocket.h>
 
 namespace p4 { namespace thrift { namespace test {
 

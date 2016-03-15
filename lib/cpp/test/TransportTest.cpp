@@ -20,7 +20,7 @@
 #include <time.h>
 #include <sstream>
 #include <fstream>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 
 #include <boost/mpl/list.hpp>
 #include <boost/shared_array.hpp>
@@ -28,15 +28,15 @@
 #include <boost/type_traits.hpp>
 #include <boost/test/unit_test.hpp>
 
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TFDTransport.h>
-#include <thrift/transport/TFileTransport.h>
-#include <thrift/transport/TZlibTransport.h>
-#include <thrift/transport/TSocket.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TFDTransport.h>
+#include <p4thrift/transport/TFileTransport.h>
+#include <p4thrift/transport/TZlibTransport.h>
+#include <p4thrift/transport/TSocket.h>
 
-#include <thrift/concurrency/FunctionRunner.h>
+#include <p4thrift/concurrency/FunctionRunner.h>
 #if _WIN32
-  #include <thrift/windows/TWinsockSingleton.h>
+  #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 

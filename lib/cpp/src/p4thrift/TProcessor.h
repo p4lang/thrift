@@ -21,7 +21,7 @@
 #define _THRIFT_TPROCESSOR_H_ 1
 
 #include <string>
-#include <thrift/protocol/TProtocol.h>
+#include <p4thrift/protocol/TProtocol.h>
 #include <boost/shared_ptr.hpp>
 
 namespace p4 { namespace thrift {

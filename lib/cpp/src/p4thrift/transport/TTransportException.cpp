@@ -17,11 +17,11 @@
  * under the License.
  */
 
-#include <thrift/transport/TTransportException.h>
+#include <p4thrift/transport/TTransportException.h>
 #include <boost/lexical_cast.hpp>
 #include <cstring>
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 using std::string;
 using boost::lexical_cast;

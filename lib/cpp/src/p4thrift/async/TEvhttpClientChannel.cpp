@@ -17,10 +17,10 @@
  * under the License.
  */
 
-#include <thrift/async/TEvhttpClientChannel.h>
+#include <p4thrift/async/TEvhttpClientChannel.h>
 #include <evhttp.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TProtocolException.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TProtocolException.h>
 
 #include <iostream>
 #include <sstream>

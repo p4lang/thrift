@@ -17,11 +17,11 @@
 * under the License.
 */
 
-#include <thrift/transport/TTransportException.h>
-#include <thrift/transport/TPipe.h>
+#include <p4thrift/transport/TTransportException.h>
+#include <p4thrift/transport/TPipe.h>
 #ifdef _WIN32
-  #include <thrift/windows/OverlappedSubmissionThread.h>
-  #include <thrift/windows/Sync.h>
+  #include <p4thrift/windows/OverlappedSubmissionThread.h>
+  #include <p4thrift/windows/Sync.h>
 #endif
 
 namespace p4 { namespace thrift { namespace transport {

@@ -25,12 +25,12 @@
 
 #include <sys/time.h>
 
-#include <thrift/c_glib/thrift.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
-#include <thrift/c_glib/transport/thrift_buffered_transport.h>
-#include <thrift/c_glib/transport/thrift_framed_transport.h>
-#include <thrift/c_glib/transport/thrift_socket.h>
-#include <thrift/c_glib/transport/thrift_transport.h>
+#include <p4thrift/c_glib/thrift.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/transport/thrift_buffered_transport.h>
+#include <p4thrift/c_glib/transport/thrift_framed_transport.h>
+#include <p4thrift/c_glib/transport/thrift_socket.h>
+#include <p4thrift/c_glib/transport/thrift_transport.h>
 
 #include "../gen-c_glib/t_test_thrift_test.h"
 

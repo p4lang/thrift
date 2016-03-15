@@ -21,8 +21,8 @@
 #include <iostream>
 #include <climits>
 #include <cassert>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 #include "gen-cpp/ThriftTest_types.h"
 
 BOOST_AUTO_TEST_SUITE( TMemoryBufferTest )

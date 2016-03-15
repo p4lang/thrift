@@ -28,7 +28,7 @@
 #error This is a MSVC header only.
 #endif
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 // boost
 #include <boost/noncopyable.hpp>

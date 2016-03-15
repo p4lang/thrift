@@ -21,10 +21,10 @@
 #define PEEKPROCESSOR_H
 
 #include <string>
-#include <thrift/TProcessor.h>
-#include <thrift/transport/TTransport.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/TProcessor.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/transport/TBufferTransports.h>
 #include <boost/shared_ptr.hpp>
 
 namespace p4 { namespace thrift { namespace processor {

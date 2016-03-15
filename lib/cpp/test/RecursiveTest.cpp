@@ -22,8 +22,8 @@
  */
 
 #include "gen-cpp/Recursive_types.h"
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
 using p4::thrift::transport::TMemoryBuffer;
 using p4::thrift::protocol::TBinaryProtocol;

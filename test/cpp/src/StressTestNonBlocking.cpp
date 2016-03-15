@@ -17,21 +17,21 @@
  * under the License.
  */
 
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Util.h>
-#include <thrift/concurrency/Mutex.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/server/TNonblockingServer.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/transport/TFileTransport.h>
-#include <thrift/TLogging.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Util.h>
+#include <p4thrift/concurrency/Mutex.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/server/TNonblockingServer.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/transport/TFileTransport.h>
+#include <p4thrift/TLogging.h>
 
 #include "Service.h"
 
@@ -43,7 +43,7 @@
 #include <sstream>
 #include <map>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 using namespace std;

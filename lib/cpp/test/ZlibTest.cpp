@@ -29,14 +29,14 @@
 #include <cstddef>
 #include <fstream>
 #include <iostream>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 
 #include <boost/random.hpp>
 #include <boost/shared_array.hpp>
 #include <boost/test/unit_test.hpp>
 
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TZlibTransport.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TZlibTransport.h>
 
 using namespace std;
 using namespace p4::thrift::transport;

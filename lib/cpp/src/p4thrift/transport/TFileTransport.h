@@ -20,9 +20,9 @@
 #ifndef _THRIFT_TRANSPORT_TFILETRANSPORT_H_
 #define _THRIFT_TRANSPORT_TFILETRANSPORT_H_ 1
 
-#include <thrift/transport/TTransport.h>
-#include <thrift/P4Thrift.h>
-#include <thrift/TProcessor.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/P4Thrift.h>
+#include <p4thrift/TProcessor.h>
 
 #include <string>
 #include <stdio.h>
@@ -30,10 +30,10 @@
 #include <boost/scoped_ptr.hpp>
 #include <boost/shared_ptr.hpp>
 
-#include <thrift/concurrency/Mutex.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Thread.h>
+#include <p4thrift/concurrency/Mutex.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Thread.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

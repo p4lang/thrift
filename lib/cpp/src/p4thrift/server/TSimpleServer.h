@@ -20,8 +20,8 @@
 #ifndef _THRIFT_SERVER_TSIMPLESERVER_H_
 #define _THRIFT_SERVER_TSIMPLESERVER_H_ 1
 
-#include <thrift/server/TServer.h>
-#include <thrift/transport/TServerTransport.h>
+#include <p4thrift/server/TServer.h>
+#include <p4thrift/transport/TServerTransport.h>
 
 namespace p4 { namespace thrift { namespace server {
 

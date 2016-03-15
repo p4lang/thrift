@@ -17,15 +17,15 @@
  * under the License.
  */
 
-#include <thrift/qt/TQTcpServer.h>
-#include <thrift/qt/TQIODeviceTransport.h>
+#include <p4thrift/qt/TQTcpServer.h>
+#include <p4thrift/qt/TQIODeviceTransport.h>
 
 #include <QTcpSocket>
 
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 
-#include <thrift/protocol/TProtocol.h>
-#include <thrift/async/TAsyncProcessor.h>
+#include <p4thrift/protocol/TProtocol.h>
+#include <p4thrift/async/TAsyncProcessor.h>
 
 using boost::shared_ptr;
 using p4::thrift::protocol::TProtocol;

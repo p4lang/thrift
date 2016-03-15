@@ -20,10 +20,10 @@
 #ifndef _THRIFT_TRANSPORT_TPIPE_H_
 #define _THRIFT_TRANSPORT_TPIPE_H_ 1
 
-#include <thrift/transport/TTransport.h>
-#include <thrift/transport/TVirtualTransport.h>
+#include <p4thrift/transport/TTransport.h>
+#include <p4thrift/transport/TVirtualTransport.h>
 #ifndef _WIN32
-#  include <thrift/transport/TSocket.h>
+#  include <p4thrift/transport/TSocket.h>
 #endif
 #include <boost/noncopyable.hpp>
 

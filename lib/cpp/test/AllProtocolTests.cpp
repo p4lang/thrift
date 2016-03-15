@@ -19,9 +19,9 @@
 
 #include <stdio.h>
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TCompactProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TCompactProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
 #include "AllProtocolTests.tcc"
 
 using namespace p4::thrift;

@@ -22,10 +22,10 @@
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TDebugProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/transport/TServerSocket.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TDebugProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/transport/TServerSocket.h>
 #include "ThriftTest.h"
 #include "ThriftTest_types.h"
 
@@ -314,9 +314,9 @@ extern "C" {
 
 #include "t_test_thrift_test.h"
 #include "t_test_thrift_test_types.h"
-#include <thrift/c_glib/transport/thrift_socket.h>
-#include <thrift/c_glib/protocol/thrift_protocol.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/transport/thrift_socket.h>
+#include <p4thrift/c_glib/protocol/thrift_protocol.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
 
 static void
 test_thrift_client (void)

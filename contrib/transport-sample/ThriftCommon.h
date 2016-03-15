@@ -26,18 +26,18 @@
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Required Includes
 //'server' side #includes
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/server/TSimpleServer.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/server/TSimpleServer.h>
 //'client' side #includes
-#include <thrift/transport/TPipeServer.h>
-#include <thrift/transport/TPipe.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TTransport.h>
+#include <p4thrift/transport/TPipeServer.h>
+#include <p4thrift/transport/TPipe.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TTransport.h>
 
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

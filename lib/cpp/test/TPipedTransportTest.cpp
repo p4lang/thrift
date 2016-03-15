@@ -19,9 +19,9 @@
 
 #include <cstdlib>
 #include <stdexcept>
-#include <thrift/P4Thrift.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/P4Thrift.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/transport/TBufferTransports.h>
 using namespace std;
 using p4::thrift::transport::TTransportException;
 using p4::thrift::transport::TPipedTransport;

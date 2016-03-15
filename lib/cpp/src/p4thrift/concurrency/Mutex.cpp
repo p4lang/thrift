@@ -17,11 +17,11 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
-#include <thrift/P4Thrift.h>
-#include <thrift/concurrency/Mutex.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/P4Thrift.h>
+#include <p4thrift/concurrency/Mutex.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <assert.h>
 #ifdef HAVE_PTHREAD_H

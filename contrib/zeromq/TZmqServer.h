@@ -21,7 +21,7 @@
 #define _THRIFT_SERVER_TZMQSERVER_H_ 1
 
 #include <zmq.hpp>
-#include <thrift/server/TServer.h>
+#include <p4thrift/server/TServer.h>
 
 namespace p4 { namespace thrift { namespace server {
 

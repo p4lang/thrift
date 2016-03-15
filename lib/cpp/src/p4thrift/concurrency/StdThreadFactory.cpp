@@ -17,12 +17,12 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #ifdef USE_STD_THREAD
 
-#include <thrift/concurrency/StdThreadFactory.h>
-#include <thrift/concurrency/Exception.h>
+#include <p4thrift/concurrency/StdThreadFactory.h>
+#include <p4thrift/concurrency/Exception.h>
 
 #include <cassert>
 

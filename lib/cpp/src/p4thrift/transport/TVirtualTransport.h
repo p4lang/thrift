@@ -20,7 +20,7 @@
 #ifndef _THRIFT_TRANSPORT_TVIRTUALTRANSPORT_H_
 #define _THRIFT_TRANSPORT_TVIRTUALTRANSPORT_H_ 1
 
-#include <thrift/transport/TTransport.h>
+#include <p4thrift/transport/TTransport.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

@@ -21,7 +21,7 @@
 #define _THRIFT_TRANSPORT_TSSLSERVERSOCKET_H_ 1
 
 #include <boost/shared_ptr.hpp>
-#include <thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TServerSocket.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

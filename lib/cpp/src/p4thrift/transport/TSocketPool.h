@@ -21,7 +21,7 @@
 #define _THRIFT_TRANSPORT_TSOCKETPOOL_H_ 1
 
 #include <vector>
-#include <thrift/transport/TSocket.h>
+#include <p4thrift/transport/TSocket.h>
 
 namespace p4 { namespace thrift { namespace transport {
 

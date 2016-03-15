@@ -17,7 +17,7 @@
  * under the License.
  */
 
-#include <thrift/async/TAsyncProtocolProcessor.h>
+#include <p4thrift/async/TAsyncProtocolProcessor.h>
 
 using p4::thrift::transport::TBufferBase;
 using p4::thrift::protocol::TProtocol;

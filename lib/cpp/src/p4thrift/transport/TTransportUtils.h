@@ -24,10 +24,10 @@
 #include <cstring>
 #include <string>
 #include <algorithm>
-#include <thrift/transport/TTransport.h>
+#include <p4thrift/transport/TTransport.h>
 // Include the buffered transports that used to be defined here.
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/transport/TFileTransport.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TFileTransport.h>
 
 namespace p4 { namespace thrift { namespace transport {
 
