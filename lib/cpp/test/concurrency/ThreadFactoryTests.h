@@ -17,20 +17,20 @@
  * under the License.
  */
 
-#include <thrift/thrift-config.h>
-#include <thrift/concurrency/Thread.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/thrift-config.h>
+#include <p4thrift/concurrency/Thread.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <assert.h>
 #include <iostream>
 #include <set>
 
-namespace apache { namespace thrift { namespace concurrency { namespace test {
+namespace p4 { namespace thrift { namespace concurrency { namespace test {
 
 using boost::shared_ptr;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 /**
  * ThreadManagerTests class
@@ -350,4 +350,4 @@ public:
 
 const double ThreadFactoryTests::TEST_TOLERANCE = .20;
 
-}}}} // apache::thrift::concurrency::test
+}}}} // p4::thrift::concurrency::test

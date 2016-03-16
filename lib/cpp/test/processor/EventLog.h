@@ -19,9 +19,9 @@
 #ifndef _THRIFT_TEST_EVENTLOG_H_
 #define _THRIFT_TEST_EVENTLOG_H_ 1
 
-#include <thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Monitor.h>
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 // Initially I made EventType an enum, but using char* results
 // in much more readable error messages when there is a mismatch.
@@ -89,6 +89,6 @@ class EventLog {
   static uint32_t nextId_;
 };
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test
 
 #endif // _THRIFT_TEST_EVENTLOG_H_

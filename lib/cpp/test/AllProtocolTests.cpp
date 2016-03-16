@@ -19,14 +19,14 @@
 
 #include <stdio.h>
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TCompactProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TCompactProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
 #include "AllProtocolTests.tcc"
 
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 
 char errorMessage[ERR_LEN];
 

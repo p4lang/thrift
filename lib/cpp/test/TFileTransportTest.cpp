@@ -20,7 +20,7 @@
 #define _GNU_SOURCE // needed for getopt_long
 #endif
 
-#include <thrift/thrift-config.h>
+#include <p4thrift/thrift-config.h>
 
 #ifdef HAVE_SYS_TIME_H
 #include <sys/time.h>
@@ -28,9 +28,9 @@
 #include <getopt.h>
 #include <boost/test/unit_test.hpp>
 
-#include <thrift/transport/TFileTransport.h>
+#include <p4thrift/transport/TFileTransport.h>
 
-using namespace apache::thrift::transport;
+using namespace p4::thrift::transport;
 
 /**************************************************************************
  * Global state
@@ -100,7 +100,7 @@ class TempFile {
 
     fd_ = mkstemp(path_);
     if (fd_ < 0) {
-      throw apache::thrift::TException("mkstemp() failed");
+      throw p4::thrift::TException("mkstemp() failed");
     }
   }
 

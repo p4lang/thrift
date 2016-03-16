@@ -20,7 +20,7 @@
 #include <glib.h>
 #include <string.h>
 
-#include <thrift/c_glib/thrift_application_exception.h>
+#include <p4thrift/c_glib/thrift_application_exception.h>
 
 static void
 test_create_and_destroy (void)

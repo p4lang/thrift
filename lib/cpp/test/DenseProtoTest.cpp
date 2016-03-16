@@ -39,8 +39,8 @@ g++ -Wall -g -I../lib/cpp/src -I/usr/local/include/boost-1_33_1 \
 #include <string>
 #include "gen-cpp/DebugProtoTest_types.h"
 #include "gen-cpp/OptionalRequiredTest_types.h"
-#include <thrift/protocol/TDenseProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TDenseProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
 
 
 // Can't use memcmp here.  GCC is too smart.
@@ -60,8 +60,8 @@ int main() {
   using std::endl;
   using boost::shared_ptr;
   using namespace thrift::test::debug;
-  using namespace apache::thrift::transport;
-  using namespace apache::thrift::protocol;
+  using namespace p4::thrift::transport;
+  using namespace p4::thrift::protocol;
 
 
   OneOfEach ooe;
@@ -75,7 +75,7 @@ int main() {
   ooe.some_characters  = "Debug THIS!";
   ooe.zomg_unicode     = "\xd7\n\a\t";
 
-  //cout << apache::thrift::ThriftDebugString(ooe) << endl << endl;
+  //cout << p4::thrift::ThriftDebugString(ooe) << endl << endl;
 
 
   Nesting n;
@@ -91,7 +91,7 @@ int main() {
   n.my_bonk.type    = 31337;
   n.my_bonk.message = "I am a bonk... xor!";
 
-  //cout << apache::thrift::ThriftDebugString(n) << endl << endl;
+  //cout << p4::thrift::ThriftDebugString(n) << endl << endl;
 
 
   HolyMoley hm;
@@ -134,7 +134,7 @@ int main() {
   stage2.back().message = "nevermore";
   hm.bonks["poe"] = stage2;
 
-  //cout << apache::thrift::ThriftDebugString(hm) << endl << endl;
+  //cout << p4::thrift::ThriftDebugString(hm) << endl << endl;
 
   shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
   shared_ptr<TDenseProtocol> proto(new TDenseProtocol(buffer));

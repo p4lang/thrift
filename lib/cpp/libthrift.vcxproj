@@ -94,7 +94,7 @@
     <ClInclude Include="src\thrift\server\TThreadPoolServer.h" />
     <ClInclude Include="src\thrift\server\TThreadedServer.h" />
     <ClInclude Include="src\thrift\TApplicationException.h" />
-    <ClInclude Include="src\thrift\Thrift.h" />
+    <ClInclude Include="src\thrift\P4Thrift.h" />
     <ClInclude Include="src\thrift\TProcessor.h" />
     <ClInclude Include="src\thrift\transport\TBufferTransports.h" />
     <ClInclude Include="src\thrift\transport\TFDTransport.h" />

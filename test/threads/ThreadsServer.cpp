@@ -21,24 +21,24 @@
 // You should copy it to another filename to avoid overwriting it.
 
 #include "ThreadsTest.h"
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 using boost::shared_ptr;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
+using namespace p4::thrift::concurrency;
 
 
 class ThreadsTestHandler : virtual public ThreadsTestIf {

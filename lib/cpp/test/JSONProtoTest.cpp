@@ -20,16 +20,16 @@
 #define _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TJSONProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TJSONProtocol.h>
 #include "gen-cpp/DebugProtoTest_types.h"
 
 int main() {
   using std::cout;
   using std::endl;
   using namespace thrift::test::debug;
-  using apache::thrift::transport::TMemoryBuffer;
-  using apache::thrift::protocol::TJSONProtocol;
+  using p4::thrift::transport::TMemoryBuffer;
+  using p4::thrift::protocol::TJSONProtocol;
 
   OneOfEach ooe;
   ooe.im_true   = true;
@@ -42,7 +42,7 @@ int main() {
   ooe.some_characters  = "JSON THIS! \"\1";
   ooe.zomg_unicode     = "\xd7\n\a\t";
   ooe.base64 = "\1\2\3\255";
-  cout << apache::thrift::ThriftJSONString(ooe) << endl << endl;
+  cout << p4::thrift::ThriftJSONString(ooe) << endl << endl;
 
 
   Nesting n;
@@ -58,7 +58,7 @@ int main() {
   n.my_bonk.type    = 31337;
   n.my_bonk.message = "I am a bonk... xor!";
 
-  cout << apache::thrift::ThriftJSONString(n) << endl << endl;
+  cout << p4::thrift::ThriftJSONString(n) << endl << endl;
 
 
   HolyMoley hm;
@@ -101,7 +101,7 @@ int main() {
   stage2.back().message = "nevermore";
   hm.bonks["poe"] = stage2;
 
-  cout << apache::thrift::ThriftJSONString(hm) << endl << endl;
+  cout << p4::thrift::ThriftJSONString(hm) << endl << endl;
 
   boost::shared_ptr<TMemoryBuffer> buffer(new TMemoryBuffer());
   boost::shared_ptr<TJSONProtocol> proto(new TJSONProtocol(buffer));
@@ -137,7 +137,7 @@ int main() {
   dub.tiny = 1E-305;
   dub.zero = 0.0;
   dub.negzero = -0.0;
-  cout << apache::thrift::ThriftJSONString(dub) << endl << endl;
+  cout << p4::thrift::ThriftJSONString(dub) << endl << endl;
 
   cout << "Testing base" << endl;
 

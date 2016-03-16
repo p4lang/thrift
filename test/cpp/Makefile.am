@@ -30,7 +30,7 @@ nodist_libtestgencpp_la_SOURCES = \
 	gen-cpp/ThriftTest.tcc \
 	src/ThriftTest_extras.cpp
 
-libtestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libthrift.la
+libtestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libp4thrift.la
 
 nodist_libstresstestgencpp_la_SOURCES = \
 	gen-cpp/StressTest_constants.cpp \
@@ -40,7 +40,7 @@ nodist_libstresstestgencpp_la_SOURCES = \
 	gen-cpp/Service.cpp \
 	gen-cpp/Service.h
 
-libstresstestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libthrift.la
+libstresstestgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libp4thrift.la
 
 check_PROGRAMS = \
 	TestServer \
@@ -57,9 +57,9 @@ TestServer_SOURCES = \
 
 TestServer_LDADD = \
 	libtestgencpp.la \
-	$(top_builddir)/lib/cpp/libthrift.la \
-	$(top_builddir)/lib/cpp/libthriftz.la \
-	$(top_builddir)/lib/cpp/libthriftnb.la \
+	$(top_builddir)/lib/cpp/libp4thrift.la \
+	$(top_builddir)/lib/cpp/libp4thriftz.la \
+	$(top_builddir)/lib/cpp/libp4thriftnb.la \
 	-levent -lboost_program_options -lboost_system -lboost_filesystem
 
 TestClient_SOURCES = \
@@ -67,9 +67,9 @@ TestClient_SOURCES = \
 
 TestClient_LDADD = \
 	libtestgencpp.la \
-	$(top_builddir)/lib/cpp/libthrift.la \
-	$(top_builddir)/lib/cpp/libthriftz.la \
-	$(top_builddir)/lib/cpp/libthriftnb.la \
+	$(top_builddir)/lib/cpp/libp4thrift.la \
+	$(top_builddir)/lib/cpp/libp4thriftz.la \
+	$(top_builddir)/lib/cpp/libp4thriftnb.la \
 	-levent -lboost_program_options -lboost_system -lboost_filesystem
 
 StressTest_SOURCES = \
@@ -77,19 +77,19 @@ StressTest_SOURCES = \
 
 StressTest_LDADD = \
 	libstresstestgencpp.la \
-	$(top_builddir)/lib/cpp/libthrift.la
+	$(top_builddir)/lib/cpp/libp4thrift.la
 
 StressTestNonBlocking_SOURCES = \
 	src/StressTestNonBlocking.cpp
 
 StressTestNonBlocking_LDADD = \
 	libstresstestgencpp.la \
-	$(top_builddir)/lib/cpp/libthriftnb.la \
+	$(top_builddir)/lib/cpp/libp4thriftnb.la \
 	-levent
 #
 # Common thrift code generation rules
 #
-THRIFT = $(top_builddir)/compiler/cpp/thrift
+THRIFT = $(top_builddir)/compiler/cpp/p4thrift
 
 gen-cpp/ThriftTest.cpp gen-cpp/ThriftTest_types.cpp gen-cpp/ThriftTest_constants.cpp: $(top_srcdir)/test/ThriftTest.thrift
 	$(THRIFT) --gen cpp:templates,cob_style -r $<

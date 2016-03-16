@@ -20,12 +20,12 @@
 #ifndef _THRIFT_TEST_GENERICHELPERS_H_
 #define _THRIFT_TEST_GENERICHELPERS_H_ 1
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/Thrift.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/P4Thrift.h>
 
 using boost::shared_ptr;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift::protocol;
 
 /* ClassName Helper for cleaner exceptions */
 class ClassNames {

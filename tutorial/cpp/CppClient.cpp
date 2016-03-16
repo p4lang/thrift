@@ -19,16 +19,16 @@
 
 #include <iostream>
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/transport/TSocket.h>
-#include <thrift/transport/TTransportUtils.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TSocket.h>
+#include <p4thrift/transport/TTransportUtils.h>
 
 #include "../gen-cpp/Calculator.h"
 
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 
 using namespace tutorial;
 using namespace shared;

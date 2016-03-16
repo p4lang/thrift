@@ -18,7 +18,7 @@
 #
 AUTOMAKE_OPTIONS = serial-tests
 
-THRIFT = $(top_srcdir)/compiler/cpp/thrift
+THRIFT = $(top_srcdir)/compiler/cpp/p4thrift
 
 py_unit_tests = RunClientServer.py
 

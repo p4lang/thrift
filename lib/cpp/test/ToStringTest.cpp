@@ -22,13 +22,13 @@
 
 #include <boost/test/auto_unit_test.hpp>
 
-#include <thrift/TToString.h>
+#include <p4thrift/TToString.h>
 
 #include "gen-cpp/ThriftTest_types.h"
 #include "gen-cpp/OptionalRequiredTest_types.h"
 #include "gen-cpp/DebugProtoTest_types.h"
 
-using apache::thrift::to_string;
+using p4::thrift::to_string;
 
 BOOST_AUTO_TEST_SUITE( ToStringTest )
 

@@ -21,10 +21,10 @@
 #include <netdb.h>
 #include <signal.h>
 
-#include <thrift/c_glib/transport/thrift_transport.h>
-#include <thrift/c_glib/transport/thrift_socket.h>
-#include <thrift/c_glib/transport/thrift_server_transport.h>
-#include <thrift/c_glib/transport/thrift_server_socket.h>
+#include <p4thrift/c_glib/transport/thrift_transport.h>
+#include <p4thrift/c_glib/transport/thrift_socket.h>
+#include <p4thrift/c_glib/transport/thrift_server_transport.h>
+#include <p4thrift/c_glib/transport/thrift_server_socket.h>
 
 #define TEST_DATA { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j' }
 

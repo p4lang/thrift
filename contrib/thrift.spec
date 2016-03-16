@@ -200,7 +200,7 @@ cd ../..
 export GEM_HOME=${PWD}/.gem-home
 export RUBYLIB=${PWD}/lib/rb/lib
 %makeinstall
-ln -s libthrift-%{version}.so ${RPM_BUILD_ROOT}%{_libdir}/libthrift.so.0
+ln -s libthrift-%{version}.so ${RPM_BUILD_ROOT}%{_libdir}/libp4thrift.so.0
 ln -s libthriftnb-%{version}.so ${RPM_BUILD_ROOT}%{_libdir}/libthriftnb.so.0
 ln -s libthriftz-%{version}.so ${RPM_BUILD_ROOT}%{_libdir}/libthriftz.so.0
 

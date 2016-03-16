@@ -22,10 +22,10 @@
 #include <signal.h>
 #include <sys/types.h>
 #include <sys/wait.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TDebugProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/transport/TServerSocket.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TDebugProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/transport/TServerSocket.h>
 #include "ThriftTest.h"
 #include "ThriftTest_types.h"
 
@@ -34,11 +34,11 @@
 using namespace std;
 using namespace boost;
 
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
 
 using namespace thrift::test;
 
@@ -48,7 +48,7 @@ using namespace thrift::test;
 namespace thrift { namespace test {
 
 bool Insanity::operator<(thrift::test::Insanity const& other) const {
-  using apache::thrift::ThriftDebugString;
+  using p4::thrift::ThriftDebugString;
   return ThriftDebugString(*this) < ThriftDebugString(other);
 }
 
@@ -264,7 +264,7 @@ class TestHandler : public ThriftTestIf {
   }
 
   void testException(const std::string &arg)
-    throw(Xception, apache::thrift::TException)
+    throw(Xception, p4::thrift::TException)
   {
     printf("[C -> C++] testException(%s)\n", arg.c_str());
     if (arg.compare("Xception") == 0) {
@@ -273,7 +273,7 @@ class TestHandler : public ThriftTestIf {
       e.message = arg;
       throw e;
     } else if (arg.compare("ApplicationException") == 0) {
-      apache::thrift::TException e;
+      p4::thrift::TException e;
       throw e;
     } else {
       Xtruct result;
@@ -314,9 +314,9 @@ extern "C" {
 
 #include "t_test_thrift_test.h"
 #include "t_test_thrift_test_types.h"
-#include <thrift/c_glib/transport/thrift_socket.h>
-#include <thrift/c_glib/protocol/thrift_protocol.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/transport/thrift_socket.h>
+#include <p4thrift/c_glib/protocol/thrift_protocol.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
 
 static void
 test_thrift_client (void)

@@ -21,7 +21,7 @@
 #include <stdarg.h>
 
 using namespace std;
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 namespace {
 
@@ -39,7 +39,7 @@ void debug(const char* fmt, ...) {
 
 }
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 uint32_t EventLog::nextId_ = 0;
 
@@ -126,4 +126,4 @@ Event EventLog::waitForConnEvent(uint32_t connId, int64_t timeout) {
   }
 }
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test

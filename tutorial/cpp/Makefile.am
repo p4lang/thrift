@@ -35,7 +35,7 @@ nodist_libtutorialgencpp_la_SOURCES = \
 
 
 
-libtutorialgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libthrift.la
+libtutorialgencpp_la_LIBADD = $(top_builddir)/lib/cpp/libp4thrift.la
 
 noinst_PROGRAMS = \
 	TutorialServer \
@@ -46,19 +46,19 @@ TutorialServer_SOURCES = \
 
 TutorialServer_LDADD = \
 	libtutorialgencpp.la \
-	$(top_builddir)/lib/cpp/libthrift.la
+	$(top_builddir)/lib/cpp/libp4thrift.la
 
 TutorialClient_SOURCES = \
 	CppClient.cpp
 
 TutorialClient_LDADD = \
 	libtutorialgencpp.la \
-	$(top_builddir)/lib/cpp/libthrift.la
+	$(top_builddir)/lib/cpp/libp4thrift.la
 
 #
 # Common thrift code generation rules
 #
-THRIFT = $(top_builddir)/compiler/cpp/thrift
+THRIFT = $(top_builddir)/compiler/cpp/p4thrift
 
 gen-cpp/Calculator.cpp gen-cpp/SharedService.cpp gen-cpp/shared_constants.cpp gen-cpp/shared_types.cpp gen-cpp/tutorial_constants.cpp gen-cpp/tutorial_types.cpp: $(top_srcdir)/tutorial/tutorial.thrift
 	$(THRIFT) --gen cpp -r $<

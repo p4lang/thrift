@@ -19,14 +19,14 @@
 #ifndef _THRIFT_TEST_SERVERTHREAD_H_
 #define _THRIFT_TEST_SERVERTHREAD_H_ 1
 
-#include <thrift/TProcessor.h>
-#include <thrift/protocol/TProtocol.h>
-#include <thrift/server/TServer.h>
-#include <thrift/transport/TTransport.h>
+#include <p4thrift/TProcessor.h>
+#include <p4thrift/protocol/TProtocol.h>
+#include <p4thrift/server/TServer.h>
+#include <p4thrift/transport/TTransport.h>
 
 #include "EventLog.h"
 
-namespace apache { namespace thrift { namespace test {
+namespace p4 { namespace thrift { namespace test {
 
 /**
  * A helper class to tell ServerThread how to create the server
@@ -138,6 +138,6 @@ class ServerThread {
   boost::shared_ptr<concurrency::Thread> thread_;
 };
 
-}}} // apache::thrift::test
+}}} // p4::thrift::test
 
 #endif // _THRIFT_TEST_SERVERTHREAD_H_

@@ -21,8 +21,8 @@
 #include <string.h>
 #include <unistd.h>
 
-#include <thrift/c_glib/thrift.h>
-#include <thrift/c_glib/thrift_application_exception.h>
+#include <p4thrift/c_glib/thrift.h>
+#include <p4thrift/c_glib/thrift_application_exception.h>
 
 #include "thrift_test_handler.h"
 

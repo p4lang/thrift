@@ -3,9 +3,9 @@
 #include "Storage.h"
 
 using boost::shared_ptr;
-using apache::thrift::TProcessor;
-using apache::thrift::server::TZmqServer;
-using apache::thrift::server::TZmqMultiServer;
+using p4::thrift::TProcessor;
+using p4::thrift::server::TZmqServer;
+using p4::thrift::server::TZmqMultiServer;
 
 class StorageHandler : virtual public StorageIf {
  public:

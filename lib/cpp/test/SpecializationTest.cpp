@@ -1,15 +1,15 @@
 #define _USE_MATH_DEFINES
 #include <iostream>
 #include <cmath>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 #include <gen-cpp/DebugProtoTest_types.h>
 
 using std::cout;
 using std::endl;
 using namespace thrift::test::debug;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::protocol;
 
 typedef TBinaryProtocolT<TMemoryBuffer> MyProtocol;
 //typedef TBinaryProtocolT<TTransport> MyProtocol;

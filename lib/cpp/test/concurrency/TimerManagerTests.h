@@ -17,17 +17,17 @@
  * under the License.
  */
 
-#include <thrift/concurrency/TimerManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/concurrency/Monitor.h>
-#include <thrift/concurrency/Util.h>
+#include <p4thrift/concurrency/TimerManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/concurrency/Monitor.h>
+#include <p4thrift/concurrency/Util.h>
 
 #include <assert.h>
 #include <iostream>
 
-namespace apache { namespace thrift { namespace concurrency { namespace test {
+namespace p4 { namespace thrift { namespace concurrency { namespace test {
 
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 
 class TimerManagerTests {
 
@@ -145,4 +145,4 @@ class TimerManagerTests {
 
 const double TimerManagerTests::TEST_TOLERANCE = .20;
 
-}}}} // apache::thrift::concurrency
+}}}} // p4::thrift::concurrency

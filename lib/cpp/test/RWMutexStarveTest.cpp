@@ -23,14 +23,14 @@
 #include <boost/shared_ptr.hpp>
 #include <boost/test/unit_test.hpp>
 
-#include "thrift/concurrency/Mutex.h"
-#include "thrift/concurrency/PosixThreadFactory.h"
+#include "p4thrift/concurrency/Mutex.h"
+#include "p4thrift/concurrency/PosixThreadFactory.h"
 
 using boost::shared_ptr;
 using boost::unit_test::test_suite;
 using boost::unit_test::framework::master_test_suite;
 
-using namespace apache::thrift::concurrency;
+using namespace p4::thrift::concurrency;
 using namespace std;
 
 class Locker : public Runnable

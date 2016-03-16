@@ -1,22 +1,22 @@
 #include <tr1/functional>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/async/TAsyncProtocolProcessor.h>
-#include <thrift/async/TEvhttpServer.h>
-#include <thrift/async/TEvhttpClientChannel.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/async/TAsyncProtocolProcessor.h>
+#include <p4thrift/async/TEvhttpServer.h>
+#include <p4thrift/async/TEvhttpClientChannel.h>
 #include "Aggr.h"
 
 using std::tr1::bind;
 using std::tr1::placeholders::_1;
 
-using apache::thrift::TException;
-using apache::thrift::protocol::TBinaryProtocolFactory;
-using apache::thrift::protocol::TProtocolFactory;
-using apache::thrift::async::TEvhttpServer;
-using apache::thrift::async::TAsyncProcessor;
-using apache::thrift::async::TAsyncBufferProcessor;
-using apache::thrift::async::TAsyncProtocolProcessor;
-using apache::thrift::async::TAsyncChannel;
-using apache::thrift::async::TEvhttpClientChannel;
+using p4::thrift::TException;
+using p4::thrift::protocol::TBinaryProtocolFactory;
+using p4::thrift::protocol::TProtocolFactory;
+using p4::thrift::async::TEvhttpServer;
+using p4::thrift::async::TAsyncProcessor;
+using p4::thrift::async::TAsyncBufferProcessor;
+using p4::thrift::async::TAsyncProtocolProcessor;
+using p4::thrift::async::TAsyncChannel;
+using p4::thrift::async::TEvhttpClientChannel;
 
 class AggrAsyncHandler : public AggrCobSvIf {
  protected:
@@ -42,7 +42,7 @@ class AggrAsyncHandler : public AggrCobSvIf {
 
   void getValues(std::tr1::function<void(
         std::vector<int32_t> const& _return)> cob,
-      std::tr1::function<void(::apache::thrift::TDelayedException* _throw)> exn_cob) {
+      std::tr1::function<void(::p4::thrift::TDelayedException* _throw)> exn_cob) {
     RequestContext* ctx = new RequestContext();
     ctx->cob = cob;
     ctx->pending_calls = leaf_ports_.size();

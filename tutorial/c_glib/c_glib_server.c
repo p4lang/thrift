@@ -22,14 +22,14 @@
 #include <stdio.h>
 #include <string.h>
 
-#include <thrift/c_glib/thrift.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol_factory.h>
-#include <thrift/c_glib/protocol/thrift_protocol_factory.h>
-#include <thrift/c_glib/server/thrift_server.h>
-#include <thrift/c_glib/server/thrift_simple_server.h>
-#include <thrift/c_glib/transport/thrift_buffered_transport_factory.h>
-#include <thrift/c_glib/transport/thrift_server_socket.h>
-#include <thrift/c_glib/transport/thrift_server_transport.h>
+#include <p4thrift/c_glib/thrift.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol_factory.h>
+#include <p4thrift/c_glib/protocol/thrift_protocol_factory.h>
+#include <p4thrift/c_glib/server/thrift_server.h>
+#include <p4thrift/c_glib/server/thrift_simple_server.h>
+#include <p4thrift/c_glib/transport/thrift_buffered_transport_factory.h>
+#include <p4thrift/c_glib/transport/thrift_server_socket.h>
+#include <p4thrift/c_glib/transport/thrift_server_transport.h>
 
 #include "gen-c_glib/calculator.h"
 

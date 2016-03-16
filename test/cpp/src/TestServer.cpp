@@ -20,24 +20,24 @@
 #define __STDC_FORMAT_MACROS
 #include <inttypes.h>
 
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PlatformThreadFactory.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/protocol/TCompactProtocol.h>
-#include <thrift/protocol/TJSONProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/async/TEvhttpServer.h>
-#include <thrift/async/TAsyncBufferProcessor.h>
-#include <thrift/async/TAsyncProtocolProcessor.h>
-#include <thrift/server/TNonblockingServer.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/TSSLServerSocket.h>
-#include <thrift/transport/TSSLSocket.h>
-#include <thrift/transport/THttpServer.h>
-#include <thrift/transport/THttpTransport.h>
-#include <thrift/transport/TTransportUtils.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PlatformThreadFactory.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TCompactProtocol.h>
+#include <p4thrift/protocol/TJSONProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/async/TEvhttpServer.h>
+#include <p4thrift/async/TAsyncBufferProcessor.h>
+#include <p4thrift/async/TAsyncProtocolProcessor.h>
+#include <p4thrift/server/TNonblockingServer.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TSSLServerSocket.h>
+#include <p4thrift/transport/TSSLSocket.h>
+#include <p4thrift/transport/THttpServer.h>
+#include <p4thrift/transport/THttpTransport.h>
+#include <p4thrift/transport/TTransportUtils.h>
 #include "ThriftTest.h"
 
 #include <iostream>
@@ -46,21 +46,21 @@
 
 #include <boost/program_options.hpp>
 #include <boost/filesystem.hpp>
-#include <thrift/cxxfunctional.h>
+#include <p4thrift/cxxfunctional.h>
 
 #include <signal.h>
 #if _WIN32
-   #include <thrift/windows/TWinsockSingleton.h>
+   #include <p4thrift/windows/TWinsockSingleton.h>
 #endif
 
 using namespace std;
 
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
-using namespace apache::thrift::async;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
+using namespace p4::thrift::async;
 
 using namespace thrift::test;
 
@@ -284,7 +284,7 @@ class TestHandler : public ThriftTestIf {
   }
 
   void testException(const std::string &arg)
-    throw(Xception, apache::thrift::TException)
+    throw(Xception, p4::thrift::TException)
   {
     printf("testException(%s)\n", arg.c_str());
     if (arg.compare("Xception") == 0) {
@@ -293,7 +293,7 @@ class TestHandler : public ThriftTestIf {
       e.message = arg;
       throw e;
     } else if (arg.compare("TException") == 0) {
-      apache::thrift::TException e;
+      p4::thrift::TException e;
       throw e;
     } else {
       Xtruct result;
@@ -466,22 +466,22 @@ public:
     cob(res);
   }
 
-  virtual void testException(tcxx::function<void()> cob, tcxx::function<void(::apache::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg) {
+  virtual void testException(tcxx::function<void()> cob, tcxx::function<void(::p4::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg) {
     try {
       _delegate->testException(arg);
-    } catch(const apache::thrift::TException& e) {
-      exn_cob(apache::thrift::TDelayedException::delayException(e));
+    } catch(const p4::thrift::TException& e) {
+      exn_cob(p4::thrift::TDelayedException::delayException(e));
       return;
     }
     cob();
   }
 
-  virtual void testMultiException(tcxx::function<void(Xtruct const& _return)> cob, tcxx::function<void(::apache::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg0, const std::string& arg1) {
+  virtual void testMultiException(tcxx::function<void(Xtruct const& _return)> cob, tcxx::function<void(::p4::thrift::TDelayedException* _throw)> exn_cob, const std::string& arg0, const std::string& arg1) {
     Xtruct res;
     try {
       _delegate->testMultiException(res, arg0, arg1);
-    } catch(const apache::thrift::TException& e) {
-      exn_cob(apache::thrift::TDelayedException::delayException(e));
+    } catch(const p4::thrift::TException& e) {
+      exn_cob(p4::thrift::TDelayedException::delayException(e));
       return;
     }
     cob(res);
@@ -645,7 +645,7 @@ int main(int argc, char **argv) {
   cout << endl;
 
   // Server
-  boost::shared_ptr<apache::thrift::server::TServer> server;
+  boost::shared_ptr<p4::thrift::server::TServer> server;
 
   if (server_type == "simple") {
     server.reset(new TSimpleServer(testProcessor,
@@ -693,10 +693,10 @@ int main(int argc, char **argv) {
 
   if(server.get() != NULL)
   {
-    apache::thrift::concurrency::PlatformThreadFactory factory;
+    p4::thrift::concurrency::PlatformThreadFactory factory;
     factory.setDetached(false);
-    boost::shared_ptr<apache::thrift::concurrency::Runnable> serverThreadRunner(server);
-    boost::shared_ptr<apache::thrift::concurrency::Thread> thread = factory.newThread(serverThreadRunner);
+    boost::shared_ptr<p4::thrift::concurrency::Runnable> serverThreadRunner(server);
+    boost::shared_ptr<p4::thrift::concurrency::Thread> thread = factory.newThread(serverThreadRunner);
     thread->start();
 
     // HACK: cross language test suite is unable to handle cin properly

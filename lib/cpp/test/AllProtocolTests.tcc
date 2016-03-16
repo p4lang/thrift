@@ -22,16 +22,16 @@
 
 #include <limits>
 
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/Thrift.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/P4Thrift.h>
 
 #include "GenericHelpers.h"
 
 using boost::shared_ptr;
-using namespace apache::thrift;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
+using namespace p4::thrift;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
 
 #define ERR_LEN 512
 extern char errorMessage[ERR_LEN];

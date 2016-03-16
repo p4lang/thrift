@@ -20,9 +20,9 @@
 #include <stdio.h>
 #include <glib-object.h>
 
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
-#include <thrift/c_glib/transport/thrift_buffered_transport.h>
-#include <thrift/c_glib/transport/thrift_socket.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/transport/thrift_buffered_transport.h>
+#include <p4thrift/c_glib/transport/thrift_socket.h>
 
 #include "gen-c_glib/calculator.h"
 

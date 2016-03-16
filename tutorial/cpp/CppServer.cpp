@@ -17,15 +17,15 @@
  * under the License.
  */
 
-#include <thrift/concurrency/ThreadManager.h>
-#include <thrift/concurrency/PosixThreadFactory.h>
-#include <thrift/protocol/TBinaryProtocol.h>
-#include <thrift/server/TSimpleServer.h>
-#include <thrift/server/TThreadPoolServer.h>
-#include <thrift/server/TThreadedServer.h>
-#include <thrift/transport/TServerSocket.h>
-#include <thrift/transport/TTransportUtils.h>
-#include <thrift/TToString.h>
+#include <p4thrift/concurrency/ThreadManager.h>
+#include <p4thrift/concurrency/PosixThreadFactory.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/server/TSimpleServer.h>
+#include <p4thrift/server/TThreadPoolServer.h>
+#include <p4thrift/server/TThreadedServer.h>
+#include <p4thrift/transport/TServerSocket.h>
+#include <p4thrift/transport/TTransportUtils.h>
+#include <p4thrift/TToString.h>
 
 #include <iostream>
 #include <stdexcept>
@@ -34,11 +34,11 @@
 #include "../gen-cpp/Calculator.h"
 
 using namespace std;
-using namespace apache::thrift;
-using namespace apache::thrift::concurrency;
-using namespace apache::thrift::protocol;
-using namespace apache::thrift::transport;
-using namespace apache::thrift::server;
+using namespace p4::thrift;
+using namespace p4::thrift::concurrency;
+using namespace p4::thrift::protocol;
+using namespace p4::thrift::transport;
+using namespace p4::thrift::server;
 
 using namespace tutorial;
 using namespace shared;

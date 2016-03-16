@@ -22,11 +22,11 @@
  */
 
 #include "gen-cpp/Recursive_types.h"
-#include <thrift/transport/TBufferTransports.h>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/transport/TBufferTransports.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
-using apache::thrift::transport::TMemoryBuffer;
-using apache::thrift::protocol::TBinaryProtocol;
+using p4::thrift::transport::TMemoryBuffer;
+using p4::thrift::protocol::TBinaryProtocol;
     using boost::shared_ptr;
 
 int main() {
@@ -69,7 +69,7 @@ int main() {
   try {
     depthLimit->write(prot.get());
     assert(false);
-  } catch (const apache::thrift::protocol::TProtocolException& e) {
+  } catch (const p4::thrift::protocol::TProtocolException& e) {
   }
 
 }

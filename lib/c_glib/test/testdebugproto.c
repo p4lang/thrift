@@ -26,8 +26,8 @@
 #define M_PI 3.1415926535897932385
 #endif
 
-#include <thrift/c_glib/protocol/thrift_protocol.h>
-#include <thrift/c_glib/protocol/thrift_binary_protocol.h>
+#include <p4thrift/c_glib/protocol/thrift_protocol.h>
+#include <p4thrift/c_glib/protocol/thrift_binary_protocol.h>
 
 #include "gen-c_glib/t_test_debug_proto_test_types.h"
 #include "gen-c_glib/t_test_srv.h"

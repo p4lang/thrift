@@ -1,14 +1,14 @@
 #include <iostream>
 #include <cstdlib>
-#include <thrift/protocol/TBinaryProtocol.h>
+#include <p4thrift/protocol/TBinaryProtocol.h>
 
 #include "zmq.hpp"
 #include "TZmqClient.h"
 #include "Storage.h"
 
 using boost::shared_ptr;
-using apache::thrift::transport::TZmqClient;
-using apache::thrift::protocol::TBinaryProtocol;
+using p4::thrift::transport::TZmqClient;
+using p4::thrift::protocol::TBinaryProtocol;
 
 int main(int argc, char** argv) {
   const char* endpoint = "tcp://127.0.0.1:9090";

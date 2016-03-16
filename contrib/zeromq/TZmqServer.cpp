@@ -18,14 +18,14 @@
  */
 
 #include "TZmqServer.h"
-#include <thrift/transport/TBufferTransports.h>
+#include <p4thrift/transport/TBufferTransports.h>
 #include <boost/scoped_ptr.hpp>
 
 using boost::shared_ptr;
-using apache::thrift::transport::TMemoryBuffer;
-using apache::thrift::protocol::TProtocol;
+using p4::thrift::transport::TMemoryBuffer;
+using p4::thrift::protocol::TProtocol;
 
-namespace apache { namespace thrift { namespace server {
+namespace p4 { namespace thrift { namespace server {
 
 
 bool TZmqServer::serveOne(int recv_flags) {
@@ -93,4 +93,4 @@ void TZmqMultiServer::serveActive(zmq::pollitem_t* items, long timeout) {
 }
 
 
-}}} // apache::thrift::server
+}}} // p4::thrift::server
