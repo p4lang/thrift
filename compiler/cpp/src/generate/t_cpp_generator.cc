@@ -1908,7 +1908,7 @@ void t_cpp_generator::generate_service(t_service* tservice) {
     "#include \"" << get_include_prefix(*get_program()) << svcname << ".h\"" << endl;
   if (gen_cob_style_) {
     f_service_ <<
-      "#include \"thrift/async/TAsyncChannel.h\"" << endl;
+      "#include \"p4thrift/async/TAsyncChannel.h\"" << endl;
   }
   if (gen_templates_) {
     f_service_ <<
@@ -1930,7 +1930,7 @@ void t_cpp_generator::generate_service(t_service* tservice) {
 
     if (gen_cob_style_) {
       f_service_tcc_ <<
-        "#include \"thrift/async/TAsyncChannel.h\"" << endl;
+        "#include \"p4thrift/async/TAsyncChannel.h\"" << endl;
     }
   }
 
